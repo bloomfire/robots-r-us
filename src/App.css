@@ -1,4 +1,5 @@
 .App {
+  background-color: #9932CC;
   text-align: center;
 }
 
@@ -7,22 +8,52 @@
   pointer-events: none;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+  padding: 20px;
+}
+.card {
+  background-color: white;
+  min-height: 300px;
+  border-radius: 50%;
+  color: #282c34;
+}
+.avatar {
+  background-color: #9932CC;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+.name {
+font-size: 26px;
+font-weight: bold;
+padding: 10px;
+text-transform: lowercase;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  text-transform: uppercase;
+}
+.email {
+  font-size: 14px;
+  padding: 10px;
+  font-style: italic;
+}
+
+.header{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 60px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
 .App-link {
   color: #61dafb;
