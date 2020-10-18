@@ -14,10 +14,10 @@ const RobotList = () => {
             <div>{robot.email}</div>
             <img
               src={
-                robot.avatar ? robot.avatar : "https://i.imgur.com/KDiU0M8.jpeg"
+                robot.avatar ? robot.avatar : "https://i.imgur.com/CsQIkSE.jpg"
               }
             ></img>
-            <div>{robot.title}</div>
+            <div>{robot.title ? robot.title : "No Purpose Yet Defined"}</div>
           </div>
         );
       })}
