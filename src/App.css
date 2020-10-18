@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  color: #edc8fb;
+  background-image: url("https://i.imgur.com/we3k8IZ.jpg");
+  background-size: 100%;
+  background-attachment: fixed;
 }
 
 .App-logo {
@@ -25,7 +29,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #ece1e5;
 }
 
 @keyframes App-logo-spin {
@@ -39,6 +43,10 @@
 
 .robotCard {
   display: flex;
+  width: 30%;
+  border: 3px solid;
+  margin-top: 30px;
+  justify-content: center;
 }
 
 .nameText {

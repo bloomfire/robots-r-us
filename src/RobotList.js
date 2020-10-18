@@ -27,9 +27,11 @@ const RobotList = () => {
                 {/* <Button variant="primary">Go somewhere</Button> */}
                 <ListGroup variant="flush">
                   <ListGroup.Item>
-                    {robot.email
-                      ? robot.email
-                      : "No Email to dispaly, robot probably fake"}
+                    {robot.email ? (
+                      <a href={robot.email}>{robot.email}</a>
+                    ) : (
+                      "No Email to display, robot probably fake"
+                    )}
                   </ListGroup.Item>
                   <ListGroup.Item>
                     {robot.title ? robot.title : "No Purpose Yet Defined"}
