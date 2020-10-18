@@ -6,7 +6,20 @@ const RobotList = () => {
   return (
     <div className="App">
       {data.map((robot) => {
-        return <div>{robot.first_name}</div>;
+        return (
+          <div key={robot.id}>
+            <div>
+              {robot.first_name} {robot.last_name}
+            </div>
+            <div>{robot.email}</div>
+            <img
+              src={
+                robot.avatar ? robot.avatar : "https://i.imgur.com/KDiU0M8.jpeg"
+              }
+            ></img>
+            <div>{robot.title}</div>
+          </div>
+        );
       })}
     </div>
   );
