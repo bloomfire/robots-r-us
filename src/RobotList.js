@@ -1,6 +1,6 @@
 import React from "react";
 import data from "./data";
-import { Card } from "react-bootstrap";
+import { Card, ListGroup } from "react-bootstrap";
 import "./App.css";
 
 const RobotList = () => {
@@ -25,11 +25,18 @@ const RobotList = () => {
                   }
                 />
                 {/* <Button variant="primary">Go somewhere</Button> */}
+                <ListGroup variant="flush">
+                  <ListGroup.Item>
+                    {robot.email
+                      ? robot.email
+                      : "No Email to dispaly, robot probably fake"}
+                  </ListGroup.Item>
+                  <ListGroup.Item>
+                    {robot.title ? robot.title : "No Purpose Yet Defined"}
+                  </ListGroup.Item>
+                </ListGroup>
               </Card.Body>
             </Card>
-
-            <div>{robot.email}</div>
-            <div>{robot.title ? robot.title : "No Purpose Yet Defined"}</div>
           </div>
         );
       })}
