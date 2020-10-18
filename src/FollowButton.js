@@ -18,12 +18,7 @@ function FollowButton() {
 
   return (
     <div>
-      <Button
-        type="button"
-        variant="primary"
-        className={buttonStyle}
-        onClick={handleClick}
-      >
+      <Button variant="primary" className={buttonStyle} onClick={handleClick}>
         {follow}
       </Button>
     </div>
