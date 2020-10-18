@@ -55,7 +55,14 @@
   font-size: 2em;
 }
 
-.robot-follow-button {
+.robot-follow-button-unclicked {
+  margin: 10px 0px;
+}
+
+.robot-follow-button-clicked {
+  background-color: hotpink;
+  color: black;
+  text-emphasis: bold;
   margin: 10px 0px;
 }
 
