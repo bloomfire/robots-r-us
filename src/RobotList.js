@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import data from "./data";
-import { Card, ListGroup } from "react-bootstrap";
+import { Card, ListGroup, Button } from "react-bootstrap";
 import "./App.css";
 
 const RobotList = () => {
+  let [buttonStyle, setButtonStyle] = useState("false");
+
+  const handleClick = (e) => {
+    e.preventDefault;
+    if (!buttonStyle) {
+      setButtonStyle("true")
+    } else {
+      setButtonStyle("false");
+  };
+
   return (
     <div className="App">
       {data.map((robot) => {
@@ -16,17 +26,8 @@ const RobotList = () => {
                     {robot.first_name} {robot.last_name}
                   </div>
                 </Card.Title>
-                <Card.Img
-                  variant="bottom"
-                  src={
-                    robot.avatar
-                      ? robot.avatar
-                      : "https://i.imgur.com/CsQIkSE.jpg"
-                  }
-                />
-                {/* <Button variant="primary">Go somewhere</Button> */}
                 <ListGroup variant="flush">
-                  <ListGroup.Item>
+                  <ListGroup.Item id="card-email-text-color">
                     {robot.email ? (
                       <a href={robot.email}>{robot.email}</a>
                     ) : (
@@ -37,6 +38,23 @@ const RobotList = () => {
                     {robot.title ? robot.title : "No Purpose Yet Defined"}
                   </ListGroup.Item>
                 </ListGroup>
+                <Card.Img
+                  variant="bottom"
+                  src={
+                    robot.avatar
+                      ? robot.avatar
+                      : "https://i.imgur.com/CsQIkSE.jpg"
+                  }
+                />
+                <div>
+                  <Button
+                    variant="primary"
+                    className="robot-follow-button"
+                    onClick={handleClick}
+                  >
+                    Follow This Robot
+                  </Button>
+                </div>
               </Card.Body>
             </Card>
           </div>
