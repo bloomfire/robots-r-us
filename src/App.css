@@ -66,6 +66,6 @@
   margin: 10px 0px;
 }
 
-#card-email-text-color {
-  color: #ece1e5;
+a {
+  color: greenyellow;
 }
