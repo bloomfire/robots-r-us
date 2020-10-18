@@ -1,16 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import data from "./data";
-import { Card, ListGroup, Button } from "react-bootstrap";
+import { Card, ListGroup } from "react-bootstrap";
 import "./App.css";
+import FollowButton from "./FollowButton.js";
 
 const RobotList = () => {
-  const [follow, setFollow] = useState("Follow");
-
-  const handleClick = (e) => {
-    e.preventDefault();
-    setFollow("Following");
-  };
-
   return (
     <div className="App">
       {data.map((robot) => {
@@ -43,16 +37,7 @@ const RobotList = () => {
                       : "https://i.imgur.com/CsQIkSE.jpg"
                   }
                 />
-                <div>
-                  <Button
-                    type="button"
-                    variant="primary"
-                    className="robot-follow-button"
-                    onClick={handleClick}
-                  >
-                    {follow}
-                  </Button>
-                </div>
+                <FollowButton />
               </Card.Body>
             </Card>
           </div>
