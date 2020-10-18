@@ -2,8 +2,9 @@
   text-align: center;
   color: #edc8fb;
   background-image: url("https://i.imgur.com/we3k8IZ.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .App-logo {

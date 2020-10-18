@@ -4,14 +4,11 @@ import { Card, ListGroup, Button } from "react-bootstrap";
 import "./App.css";
 
 const RobotList = () => {
-  let [buttonStyle, setButtonStyle] = useState("false");
+  const [follow, setFollow] = useState("Follow");
 
   const handleClick = (e) => {
-    e.preventDefault;
-    if (!buttonStyle) {
-      setButtonStyle("true")
-    } else {
-      setButtonStyle("false");
+    e.preventDefault();
+    setFollow("Following");
   };
 
   return (
@@ -48,11 +45,12 @@ const RobotList = () => {
                 />
                 <div>
                   <Button
+                    type="button"
                     variant="primary"
                     className="robot-follow-button"
                     onClick={handleClick}
                   >
-                    Follow This Robot
+                    {follow}
                   </Button>
                 </div>
               </Card.Body>
