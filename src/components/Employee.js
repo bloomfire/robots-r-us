@@ -51,6 +51,9 @@ const EmployeeCard = styled.div`
     :hover{
         box-shadow: 5px 10px 5px rgba(0,255,0,0.6);
     }
+    @media(max-width: 500px){
+        width: 80%;
+    }
 `
 const EmployeeAvatar = styled.img`
     height: 100px;
