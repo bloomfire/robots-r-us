@@ -37,6 +37,22 @@
   }
 }
 
+/* Main app CSS */
+.App {
+  background-color: rgb(196, 140, 196);
+}
+
+/* User Card CSS */
+.userCard {
+  display: inline-block;
+  width: 23%;
+  height: 200px;
+  vertical-align: top;
+  margin: 5px;
+  border: solid 2px black;
+  border-radius: 5px;
+  background-color: rgb(225, 220, 220);
+}
 /* Follow Button CSS */
 .followButton {
   border-radius: 5px;

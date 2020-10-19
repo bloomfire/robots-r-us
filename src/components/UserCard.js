@@ -3,9 +3,9 @@ import FollowButton from "./FollowButton";
 
 const UserCard = ({ user }) => {
   return (
-    <div>
+    <div className="userCard">
       <div>
-        <img className="Avatar" src={user.avatar}></img>
+        <img className="avatar" src={user.avatar}></img>
       </div>
       <div>
         {`${user.first_name} ${user.last_name}`} <br></br>
