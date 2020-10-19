@@ -49,6 +49,17 @@
   margin: auto;
 }
 
+/* Header CSS */
+.header {
+  height: 100px;
+  font-size: 50px;
+  margin-bottom: 5px;
+  border: 2px solid black;
+  margin: auto;
+  color: white;
+  background-color: navy;
+}
+
 /* User Card CSS */
 .userCard {
   display: inline-block;
