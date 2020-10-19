@@ -1,11 +1,14 @@
-import React from 'react';
-import data from './data';
-import './App.css';
+import React from "react";
+import data from "./data";
+import "./App.css";
+import Header from "./components/Header";
+import Directory from "./components/Directory";
 
 function App() {
   return (
     <div className="App">
-      <h1>Robots-R-Us</h1>
+      <Header />
+      <Directory />
       {/* {data.map(robot => ...)} */}
     </div>
   );
