@@ -4,14 +4,21 @@ import "./App.css";
 import Header from "./components/Header";
 import Directory from "./components/Directory";
 
-function App() {
+const App = () => {
+  //sorts robots by last name
+  data.sort((a, b) => {
+    if (a.last_name < b.last_name) {
+      return -1;
+    }
+    return 1;
+  });
+
   return (
     <div className="App">
       <Header />
       <Directory data={data} />
-      {/* {data.map(robot => ...)} */}
     </div>
   );
-}
+};
 
 export default App;
