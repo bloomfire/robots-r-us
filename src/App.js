@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Directory />
+      <Directory data={data} />
       {/* {data.map(robot => ...)} */}
     </div>
   );

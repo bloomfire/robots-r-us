@@ -1,11 +1,18 @@
 import React from "react";
 import FollowButton from "./FollowButton";
 
-const UserCard = () => {
+const UserCard = ({ user }) => {
   return (
     <div>
-      UserCard
-      <FollowButton />
+      <div>
+        <img className="Avatar" src={user.avatar}></img>
+      </div>
+      <div>
+        {`${user.first_name} ${user.last_name}`} <br></br>
+        <FollowButton /> <br></br>
+        {user.title} <br></br>
+        {user.email}
+      </div>
     </div>
   );
 };
