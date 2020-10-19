@@ -18,8 +18,16 @@ code {
 
 .robot{
   display: inline-block;
+  font-family: Verdana;
+  padding: 20px;
+  padding-bottom: 100px;
 }
 
 #followButton{
   background-color: white;
+}
+
+#name{
+  font-size: large;
+  font-weight: 100;
 }
