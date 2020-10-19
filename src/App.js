@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import data from './data';
+import styled from 'styled-components';
 import './App.css';
 import Directory from './components/Directory';
 
@@ -62,9 +63,39 @@ function App() {
   return (
     <div className="App">
       <h1>Robots-R-Us</h1>
+      <ShowButtons className='show-button-container'>
+        <ShowAll className='show-all-btn' onClick={showAll}>Show All</ShowAll>
+        <ShowFollowing className='show-following-btn' onClick={showFollowing}>Show Following</ShowFollowing>
+      </ShowButtons>
       <Directory data={displayData} toggleFollow={toggleFollow}/>
     </div>
   );
 }
 
+const ShowButtons = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding: auto;
+  margin: auto;
+  width: 80%;
+  justify-content: center;
+  @media(max-width: 500px){
+    flex-direction: column;
+    width: 60%;
+  }
+`
+const ShowAll = styled.button`
+  margin: 2%;
+  padding: 2%;
+  font-size: 1.1rem;
+  background: lightgray;
+  color: midnightblue;
+`
+const ShowFollowing = styled.button`
+  margin: 2%;
+  padding: 2%;
+  font-size: 1.1rem;
+  background: green;
+  color: white;
+`
 export default App;
