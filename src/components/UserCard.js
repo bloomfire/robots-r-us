@@ -17,8 +17,8 @@ const UserCard = ({ user }) => {
       <div>
         {`${user.first_name} ${user.last_name}`} <br></br>
         <FollowButton userID={user.id} /> <br></br>
-        {user.title} <br></br>
-        {user.email}
+        {user.title ? user.title : "New Hire"} <br></br>
+        {user.email ? user.email : "Email coming soon!"}
       </div>
     </div>
   );

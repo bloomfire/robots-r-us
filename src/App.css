@@ -42,6 +42,13 @@
   background-color: rgb(196, 140, 196);
 }
 
+/* Directory CSS */
+
+.directory {
+  width: 70%;
+  margin: auto;
+}
+
 /* User Card CSS */
 .userCard {
   display: inline-block;
