@@ -53,6 +53,11 @@
   border-radius: 5px;
   background-color: rgb(225, 220, 220);
 }
+
+.avatar {
+  height: 100px;
+  width: 100px;
+}
 /* Follow Button CSS */
 .followButton {
   border-radius: 5px;
