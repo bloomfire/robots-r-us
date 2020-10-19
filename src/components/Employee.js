@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Employee = () => {
+const Employee = ({employeeData}) => {
     return (
         <div className='employee-card'>
-            Employee Info
+            {employeeData.first_name + ' ' + employeeData.last_name}
         </div>
     )
 }

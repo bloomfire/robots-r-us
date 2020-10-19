@@ -26,12 +26,11 @@ function App() {
     }
   }))
   const [displayData, setDisplayData] = useState(allData)
-  
+
   return (
     <div className="App">
       <h1>Robots-R-Us</h1>
-      {/* {data.map(robot => ...)} */}
-      <Directory />
+      <Directory data={displayData}/>
     </div>
   );
 }
