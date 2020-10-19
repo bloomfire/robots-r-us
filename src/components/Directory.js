@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import Employee from './Employee';
 
-const Directory = ({data}) => {
+const Directory = ({data, toggleFollow}) => {
     return (
         <DirectoryContainer className='directory-container'>
             {data.map(d => {
                 return (
-                    <Employee employeeData={d} />
+                    <Employee employeeData={d} toggleFollow={toggleFollow} key={d.id}/>
                 )
             })}
         </DirectoryContainer>

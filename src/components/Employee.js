@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Employee = ({employeeData}) => {
+const Employee = ({employeeData, toggleFollow}) => {
     const avatarImg = employeeData.avatar ? employeeData.avatar : 'https://robohash.org/default';
     return (
         <EmployeeCard className='employee-card'>
@@ -25,7 +25,7 @@ const Employee = ({employeeData}) => {
                     : ''
                 }
             </EmployeeInfo>
-            <FollowButton className='follow-btn'>
+            <FollowButton className='follow-btn' onClick={() => toggleFollow(employeeData.id)}>
                 {employeeData.following
                     ? <Unfollow>Unfollow</Unfollow>
                     : <Follow>Follow</Follow>

@@ -27,10 +27,42 @@ function App() {
   }))
   const [displayData, setDisplayData] = useState(allData)
 
+  const showAll = () => {
+    setDisplayData(allData)
+  }
+  const showFollowing = () => {
+    setDisplayData(displayData.filter(d => d.following))
+  }
+  const toggleFollow = employeeId => {
+    console.log('pressed follow button for', employeeId)
+    setAllData(allData.map(d => {
+      if (d.id === employeeId)
+      { 
+        return {...d, following: !d.following}
+      } else {
+        return d
+      }
+    }))
+    setDisplayData(allData.map(d => {
+      if (d.id === employeeId)
+      { 
+        return {...d, following: !d.following}
+      } else {
+        return d
+      }
+    }))
+  }
+  useEffect(() => {
+    console.log('data updated', allData)
+  }, [allData])
+  useEffect(() => {
+    console.log('display data updated', displayData)
+  }, [displayData])
+
   return (
     <div className="App">
       <h1>Robots-R-Us</h1>
-      <Directory data={displayData}/>
+      <Directory data={displayData} toggleFollow={toggleFollow}/>
     </div>
   );
 }
