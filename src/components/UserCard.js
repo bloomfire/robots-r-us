@@ -9,7 +9,7 @@ const UserCard = ({ user }) => {
       </div>
       <div>
         {`${user.first_name} ${user.last_name}`} <br></br>
-        <FollowButton /> <br></br>
+        <FollowButton userID={user.id} /> <br></br>
         {user.title} <br></br>
         {user.email}
       </div>

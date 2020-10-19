@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+/* Follow Button CSS */
+.followButton {
+  border-radius: 5px;
+}
+
+.following {
+  background-color: green;
+}
