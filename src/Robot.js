@@ -19,19 +19,22 @@ const RobotPhoto = styled.img`
   border: 2px solid black;
   // margin: 20px;
   // padding: 15px;
-  // width: 50px;
-  // height: 50px;
+  width: 100px;
+  height: 100px;
 `;
 
+const MrSparkle = 'https://pbs.twimg.com/profile_images/3555009298/146c8cd1fca9ab61b0b1b86fad1d627f.jpeg';
 
 function Robot(props) { 
     console.log(props.robot)
     
     return (
       <RobotProfile className="robot">
-        <RobotPhoto src={props.robot.avatar}/>
+        <RobotPhoto src={props.robot.avatar ? props.robot.avatar : MrSparkle}/>
         <h3>{props.robot.first_name} {props.robot.last_name}</h3>
-        <h4>Follow</h4>
+        {/* <button onClick={activateLasers}>
+          Activate Lasers
+        </button> */}
         <h4>{props.robot.title}</h4>
         <h4>{props.robot.email}</h4>
       </RobotProfile>
