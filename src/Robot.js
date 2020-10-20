@@ -28,17 +28,34 @@ class Robot extends React.Component {
   constructor() {
     super();
     this.state = {
-      followed: false
+      following: false
     };
+    this.handleFollowRobotClick = this.handleFollowRobotClick.bind(this);
+  }
+
+  handleFollowRobotClick() {
+    this.setState(state => ({
+      following: !state.following
+    }));
+    console.log(this.state.following)
   }
 
   render(){
+    let isFollowingRobot = this.state.following;
+    let followingButton;
+    if (isFollowingRobot) {
+      followingButton = <button onClick={this.handleFollowRobotClick}>Unfollow</button>
+    } else {
+      followingButton = <button onClick={this.handleFollowRobotClick}>Follow</button>
+    }
+
     return (
       <RobotProfile className="robot">
         <RobotPhoto src={this.props.robot.avatar ? this.props.robot.avatar : defaultAvatarFry}/>
         <h3>{this.props.robot.first_name} {this.props.robot.last_name}</h3>
         <h4>{this.props.robot.title}</h4>
         <h4>{this.props.robot.email}</h4>
+        {followingButton}
       </RobotProfile>
     );
   }

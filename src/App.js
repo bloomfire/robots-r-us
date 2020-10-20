@@ -24,8 +24,6 @@ class App extends React.Component {
     this.sortRobotsByLastName(data)
   }
 
-
-
   render(){
     return (
       <div className="App">
