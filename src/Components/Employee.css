@@ -1,0 +1,11 @@
+.Employee {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Employee-card {
+    border-radius: 5px;
+    background-color: white;
+}

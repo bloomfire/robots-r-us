@@ -1,6 +1,7 @@
 import React from 'react';
 import data from '../data';
 import FollowButton from './FollowButton';
+import './Employee.css';
 
 class Employee extends React.Component {
     render() {
