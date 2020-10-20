@@ -10,19 +10,18 @@ class App extends React.Component {
     this.state = {
       data: data
     };
-    this.sortRobots = this.sortRobots.bind(this);
+    this.sortRobotsByLastName = this.sortRobotsByLastName.bind(this);
   }
 
-  sortRobots(robotData){
-    let sortedData = robotData.sort((a, b) => (a.last_name > b.last_name) ? 1 : -1);
+  sortRobotsByLastName(robotData){
+    let sortedRobotData = robotData.sort((a, b) => (a.last_name > b.last_name) ? 1 : -1);
     this.setState({
-      data: sortedData
+      data: sortedRobotData
     })
-    // console.log(sorted);
-
   }
+
   componentDidMount() {
-    this.sortRobots(data)
+    this.sortRobotsByLastName(data)
   }
 
 
