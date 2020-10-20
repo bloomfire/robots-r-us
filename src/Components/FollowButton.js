@@ -15,7 +15,13 @@ class FollowButton extends React.Component {
 
     render() {
         return <div class="FollowButton">
-            <button onClick={this.toggleFollow}>
+            <button onClick={this.toggleFollow}
+                style={{
+                    borderRadius: "3px",
+                    backgroundColor: this.state.isFollowed ? "#008001" : "#FFFFFF",
+                    color: this.state.isFollowed ? "#FFFFFF" : "#000000",
+                    borderWidth: "1px",
+                }}>
                 {this.state.isFollowed ? 'Following' : 'Follow'}
             </button>
         </div>
