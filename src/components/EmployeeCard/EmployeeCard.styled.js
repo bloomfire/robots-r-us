@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
 export const EmployeeCardCtr = styled.div`
-  background: blue;
-  width: 400px;
+  background: white;
+  width: 300px;
+  height: 350px;
   flex-direction: column;
   display: flex;
   padding: 10px;
+  margin: 10px;
 `;
 
 export const AvatarImg = styled.img`
