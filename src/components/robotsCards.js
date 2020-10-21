@@ -19,14 +19,11 @@ function RobotCards(){
         setFollowing(robotsIds);
         localStorage.setItem('robotsIds', JSON.stringify(robotsIds))
     }
-
-    console.log(following)
     return(
         <RobotCardsWrapper>
             {data.map(robot => {
                 let robotAvatar = robot.avatar ? robot.avatar : defaultAvatar;
                 const isFollowingRobot = following.includes(robot.id);
-                // console.log(robot)
                 return(
                     <div className="robot_info_card" key={robot.id}>
                         <img src={robotAvatar} alt={`Avatar for ${robot.first_name}`} />
