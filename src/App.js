@@ -10,7 +10,20 @@ class App extends React.Component {
     this.state = {
       followers: []
     };
+
+    this.addFollower = this.addFollower.bind(this);
+    this.removeFollower = this.removeFollower.bind(this);
+
   }
+
+  addFollower = () => {
+
+  }
+
+  removeFollower = () => {
+
+  }
+
   render() {
     return (
       <div className="App">
