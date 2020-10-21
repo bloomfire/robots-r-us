@@ -3,6 +3,13 @@ import React from 'react';
 
 export default class Card extends React.Component {
     render() {
-        return <div>Hi</div>;
+        let cardId = this.props.card.id;
+        let key = this.props.key;
+
+        return (
+            <div className="element" key={key}>
+                {cardId}
+            </div>
+        );
     }
 }
