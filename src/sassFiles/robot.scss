@@ -1,0 +1,107 @@
+.App {
+  max-width: 1500px;
+  margin: 2rem auto;
+
+  @media (max-width: $desktop) {
+    width: 80%;
+  }
+
+  h1 {
+    text-align: center;
+    margin: 1rem 0 2rem;
+    color: white;
+  }
+
+  .robot-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .inner-wrapper {
+      border-radius: 4px;
+      width: 350px;
+      margin-bottom: 2rem;
+      padding: 1rem;
+      text-align: center;
+      background: #f4f4f4;
+
+      @media (max-width: $mobile) {
+        width: 320px;
+      }
+
+      @media (max-width: $small-phone) {
+        width: 280px;
+      }
+
+      img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: contain;
+        margin-bottom: 1rem;
+        background: #050e1a;
+
+        @media (max-width: $small-phone) {
+          width: 90px;
+          height: 90px;
+        }
+      }
+
+      .button-wrapper {
+        margin-bottom: 1rem;
+        .btn {
+          padding: 0.3rem 0.6rem;
+          border-radius: 4px;
+          border: 1px solid grey;
+          text-transform: capitalize;
+          transition: background 0.2s ease;
+
+          &:hover {
+            background: #ebe9e9;
+          }
+
+          @media (max-width: $small-phone) {
+            font-size: 0.9rem;
+          }
+        }
+
+        // add class when click on follow button
+        .following {
+          background: green;
+          color: white;
+          border-color: green;
+
+          &:hover {
+            background: lighten(green, $amount: 5);
+          }
+        }
+      }
+
+      .title {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+
+        @media (max-width: $small-phone) {
+          font-size: 1.1rem;
+        }
+      }
+
+      // add class when tittle is null
+      .null-title {
+        font-style: italic;
+      }
+
+      p {
+        margin-bottom: 0.5rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        @media (max-width: $small-phone) {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
