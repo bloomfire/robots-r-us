@@ -5,7 +5,12 @@ function EmployeeData() {
 	return (
 		<div>
 			{data.map((info) => {
-				console.log(info);
+				return (
+					<div className="employeeData" key={info.id}>
+						{info.first_name}
+						{info.last_name}
+					</div>
+				);
 			})}
 		</div>
 	);

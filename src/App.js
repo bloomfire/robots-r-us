@@ -1,5 +1,5 @@
 import React from 'react';
-import data from './data';
+
 import EmployeeData from './components/EmployeeData';
 import './App.css';
 
