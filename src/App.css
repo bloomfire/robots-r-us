@@ -11,13 +11,18 @@
   display: inline-flex;
   justify-content: center;
   width: 25%;
+  min-width: 300px;
 }
 
 .robotCard {
   display: inline-block;
   width: 65%;
+  margin: 3%;
+  padding: 5%;
   justify-content: center;
   background: #ccd9ff;
+  border: 2.5px solid;
+  border-radius: 8px;
 }
 
 .profileName {

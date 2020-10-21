@@ -13,11 +13,11 @@ const RobotCard = (props) => {
                     <img src={avatar ? avatar : "https://www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png"} alt='robot avatar'/>
                 </div>
 
-                <div>
-                  <p>{first_name}{last_name}</p>
-                  <p>{title ? title : "No title yet.."}</p>
-                  <p>{email ? email: "No email on file"}</p>
+                <div className="profileName">
+                  <p>{first_name} {last_name}</p>
                 </div>
+                  <p>{title ? title : "No title yet.."}<br/></p>
+                  <p>{email ? (<a href={email}>{email}</a>) : ("No email on file")}<br/></p>
             </div>
         </div>
     )
