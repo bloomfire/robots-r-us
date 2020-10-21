@@ -36,13 +36,20 @@
 
 /* Button style for following robot */
 .robot-container button {
-    padding: 2px;
-    border: 1px solid black;
+    padding: 4px;
+    border: 1px solid rgb(255, 255, 255);
+    background: #8594a5;
     border-radius: 5px;
     cursor: pointer;
 }
+.robot-container button:hover {
+    border: 1px solid #237ce2;
+    background: #237ce2;
+    color: white;
+
+}
 button.following {
-    background: #108505;
+    background: #237ce2;
     color: white;
     border: 1px solid #237ce2;
 }
