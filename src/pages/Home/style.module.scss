@@ -8,11 +8,10 @@
 
 .robotGrid {
   margin: 0 auto;
-  padding-top: 2%;
+  padding: 2% 0;
   width: 95%;
   display: grid;
   vertical-align: middle;
-  justify-content: center;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-column-gap: 5%;
   grid-row-gap: 1%;
@@ -21,12 +20,27 @@
 .robotCard {
   background-color: white;
   text-align: center;
-  height: 275px;
+  height: 285px;
   border-radius: 4px;
   padding: 7%;
 }
 
 .robotName {
-  font-size: 1.5rem;
-  margin: 0;
+  font-size: 1.4rem;
+}
+
+.robotAvatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #7099c8;
+  object-fit: cover;
+}
+
+.robotTitle {
+  font-size: 1.1rem;
+}
+
+.robotEmail {
+  font-size: 1rem;
 }
