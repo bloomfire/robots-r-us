@@ -1,0 +1,47 @@
+$desktop: 1440px;
+$tablet: 1220px;
+$phone: 865px;
+
+@mixin desktop-lg {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+@mixin desktop-md {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+@mixin phone {
+  @media (max-width: #{$phone}) {
+    @content;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  height: 100%;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  text-decoration: none;
+  color: #000000;
+  overflow-x: hidden;
+  font-family: "Arial";
+  background: #7099c8;
+}
+
+div {
+  display: block;
+}

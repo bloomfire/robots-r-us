@@ -1,6 +1,6 @@
 import React from 'react';
-import data from './data';
-import './App.css';
+import robotData from './robotData';
+import './index.scss';
 
 function App() {
   return (
