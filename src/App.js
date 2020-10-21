@@ -8,7 +8,7 @@ function App() {
         <div className="App">
             <h1>Robots-R-Us</h1>
             {data.map((card, i) => {
-                return <Card card={card} key={i} />;
+                return <Card card={card} id={i} />;
             })}
         </div>
     );

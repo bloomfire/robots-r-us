@@ -2,6 +2,6 @@ import React from 'react';
 
 export default class ProfileImg extends React.Component {
     render() {
-        return;
+        return <div>Image goes here</div>;
     }
 }

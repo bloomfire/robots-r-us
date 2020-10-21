@@ -2,6 +2,6 @@ import React from 'react';
 
 export default class FollowButton extends React.Component {
     render() {
-        return;
+        return <button className="follow-button">Follow</button>;
     }
 }

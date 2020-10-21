@@ -1,14 +1,23 @@
 import React from 'react';
+import FollowButton from './follow-button';
+import ProfileImg from './profile-img';
 // import data from '../data';
 
 export default class Card extends React.Component {
     render() {
-        let cardId = this.props.card.id;
-        let key = this.props.key;
+        let card = this.props.card;
+        let id = this.props.id;
 
         return (
-            <div className="element" key={key}>
-                {cardId}
+            <div className="element" key={id}>
+                <ProfileImg />
+                <div className="full-name">
+                    {card.first_name}
+                    {card.last_name}
+                </div>
+                <FollowButton />
+                {card.title}
+                {card.email}
             </div>
         );
     }
