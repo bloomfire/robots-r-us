@@ -1,4 +1,12 @@
-.followButton {
+.followButton,
+.followButton-true,
+.followButton-false {
   padding: 2% 6%;
   cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  outline: 0;
+  &-true {
+    background: #377d22;
+  }
 }
