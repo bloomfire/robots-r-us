@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import data from "./data";
 import "./App.css";
+import _ from "lodash";
 
 //import components
 import Card from "./components/Card";
@@ -19,7 +20,7 @@ function App() {
     <Wrapper>
       <h1>Robots-R-Us</h1>
       <Grid>
-        {data.map((robot) => (
+        {_.sortBy(data, "last_name").map((robot) => (
           <div key={robot.id}>
             <Card
               id={robot.id}
