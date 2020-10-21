@@ -12,8 +12,13 @@
     text-align: center;
     width: 200px;
     height: 250px;
-    margin: 20px;
+    margin: 10px 20px;
     border-radius: 5px;
+}
+.robot-container img {
+    width: 35%;
+    border-radius: 50px;
+    background: #237ce2;
 }
 .robot-container > * {
     margin: 5px auto;
