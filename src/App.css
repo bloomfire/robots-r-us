@@ -17,17 +17,43 @@
 .robotCard {
   display: inline-block;
   width: 65%;
+  border: 3px solid;
+  border-radius: 10px;
   margin: 3%;
   padding: 5%;
   justify-content: center;
   background: #ccd9ff;
-  border: 2.5px solid;
-  border-radius: 8px;
+  background: -moz-linear-gradient(top, #ccd9ff 0%, #E1EAED 50%, #59E3FF 100%);
+  background: -webkit-linear-gradient(top, #ccd9ff 0%, #E1EAED 50%, #59E3FF 100%);
+  background: linear-gradient(to bottom, #ccd9ff 0%, #E1EAED 50%, #59E3FF 100%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .profileName {
   font-size: 1.4em;
   padding: 3px;
+}
+
+.follow-button {
+  margin: 2.5px;
+  padding: 7px;
+  background-color:#f48fb1;
+}
+
+.follow-button:hover {
+  background-color: #4CAF50;
+  text-emphasis: bold;
+  color: white;
+  margin: 2.5px;
+  padding: 7px;
+}
+
+.following-button {
+  background-color:#4CAF50;
+  color: white;
+  text-emphasis: bold;
+  margin: 2.5px;
+  padding: 7px;
 }
 
 div.avatar img {

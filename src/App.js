@@ -20,14 +20,14 @@ export default class App extends Component {
   }
 
   handleSort = (event) => {
-    console.log(event)
+    //console.log(event)
     if(event.target.value === 'ID'){
       let updatedDisplayRobots = this.state.robotsDisplay.sort(function(a, b){
         if(a.id < b.id) { return -1; }
         if(a.id > b.id) { return 1; }
         return 0;
       })
-      console.log(updatedDisplayRobots)
+      //console.log(updatedDisplayRobots)
       this.setState({
         robotsDisplay: updatedDisplayRobots
       })
@@ -39,7 +39,7 @@ export default class App extends Component {
         if(a.last_name > b.last_name) { return 1; }
         return 0;
       })
-      console.log(updatedDisplayRobots)
+      //console.log(updatedDisplayRobots)
       this.setState({
         robotsDisplay: updatedDisplayRobots
       })}

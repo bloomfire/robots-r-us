@@ -1,4 +1,6 @@
 import React from 'react'
+import DynamicButton from './DynamicButton'
+
 
 const RobotCard = (props) => {
     //deconstruct for every robot instance then generate display
@@ -18,6 +20,9 @@ const RobotCard = (props) => {
                 </div>
                   <p>{title ? title : "No title yet.."}<br/></p>
                   <p>{email ? (<a href={email}>{email}</a>) : ("No email on file")}<br/></p>
+                <div>
+                  <DynamicButton/>
+                </div>
             </div>
         </div>
     )
