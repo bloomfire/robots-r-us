@@ -3,6 +3,7 @@ import React from 'react';
 const SingleRobotComponent = ({robot, followRobot}) => {
    const defaultImg = 'https://robohash.org/providentperspiciatiset.bmp?size=100x100&set=set1'
 
+   // use variables depending if their value exist or not
    const toggleButtonText = robot.following ? 'following' : 'follow';
    const toggleButtonClass = robot.following ? "btn following": "btn";
    const toggleTitleClass = robot.title ? 'title': "title null-title"
