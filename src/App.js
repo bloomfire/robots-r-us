@@ -6,7 +6,6 @@ import Robot from './Robot';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    // this.handleChange = this.handleChange.bind(this);
     this.state = {
       data: data
     };
@@ -28,11 +27,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>Robots-R-Us</h1>
-  
-  
         {this.state.data.map(robot => <Robot robot={robot} key={robot.id}/>)}
-  
-  
       </div>
     );
   }
