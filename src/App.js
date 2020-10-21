@@ -10,10 +10,12 @@ function App() {
       {/* title */}
       <h1>Robots-R-Us</h1>
 
-      {/* render each robot's info to its own robot card using map func */}
-      {data.map((robot) => {
-        return <Card robotData={robot} key={robot.id} />;
-      })}
+        {/* render each robot's info to its own robot card using map func */}
+      <div className="CardContainer">
+        {data.map((robot) => {
+          return <Card robotData={robot} key={robot.id} />;
+        })}
+      </div>
 
     </div>
   );
