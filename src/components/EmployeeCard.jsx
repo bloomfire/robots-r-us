@@ -8,14 +8,14 @@ import Button from './Button';
 // "title": "Pharmacist",
 // "avatar": "https://robohash.org/autautet.bmp?size=100x100&set=set1"
 
-const EmployeeCard = ({ id, name, title, email, avatar  }) => {
+const EmployeeCard = ({ id, name, title, email, avatar, className  }) => {
   //avatar
   //name
   //button 
   //title
   //email
   return (
-    <div>
+    <div className={className}>
       <img alt="robot-avatar" src={avatar} />
       <h3>{ name }</h3>
       <Button id={id} />

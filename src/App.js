@@ -11,11 +11,13 @@ import EmployeeCard from './components/EmployeeCard';
         console.log('robot ', robot)
         cards.push(
           <EmployeeCard
+            key={robot.id}
+            className="employee-card"
             id={robot.id}
             name={`${robot.first_name} ${robot.last_name}`}
             title={robot.title}
             email={robot.email}
-            avatar={robot.avatar}
+            avatar={robot.avatar || 'https://robohash.org/DEFAULT?size=100x100&set=set1'}
           />
         )
       });
@@ -46,7 +48,7 @@ function App() {
   return (
     <div className="App">
       <h1>Robots-R-Us</h1>
-      <div>
+      <div className="container">
         { robotCards || null }
       </div>
     </div>
