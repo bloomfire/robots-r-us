@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import data from "./data";
 import "./App.css";
 
@@ -9,6 +9,7 @@ import Card from "./components/Card";
 import styled from "styled-components";
 
 function App() {
+  const [following, setFollowing] = useState(false);
   return (
     <Wrapper>
       <h1>Robots-R-Us</h1>
@@ -21,6 +22,9 @@ function App() {
               primary={`${robot.first_name} ${robot.last_name}`}
               secondary={robot.title}
               tertiary={robot.email}
+              active={following}
+              onClick={() => setFollowing(!following)}
+              // onClick={() => console.log("clicked", robot.id)}
             ></Card>
           </div>
         ))}
@@ -44,6 +48,13 @@ const Wrapper = styled.div`
 const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+
+  div {
+    margin: 1em;
+  }
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export default App;

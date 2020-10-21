@@ -1,16 +1,21 @@
 import React from "react";
 
+//import components
+// import Button from "./Button";
+
 //import styles and assets
 import styled from "styled-components";
 
-const Card = ({ avatar, primary, secondary, tertiary }) => {
+const Card = ({ avatar, active, primary, secondary, tertiary, onClick }) => {
   return (
     <Container>
       <Avatar>
         {avatar ? <img src={avatar} alt={primary} /> : <div>empty</div>}
       </Avatar>
       <Primary>{primary && primary}</Primary>
-      <Button>Follow</Button>
+      <Button onClick={onClick}>
+        {active ? <div>Unfollow</div> : <div>Follow</div>}
+      </Button>
       <Secondary>{secondary && secondary}</Secondary>
       <Tertiary>{tertiary && tertiary}</Tertiary>
     </Container>
@@ -19,9 +24,8 @@ const Card = ({ avatar, primary, secondary, tertiary }) => {
 
 const Container = styled.div`
   width: 100%;
-  height: 300px;
-  background-color: yellow;
-  margin: 1em;
+  height: 400px;
+  background-color: #eee;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,12 +48,18 @@ const Avatar = styled.div`
   }
 `;
 
-const Primary = styled.div``;
+const Primary = styled.h4``;
 
-const Button = styled.button``;
+const Button = styled.button`
+  border-radius: 25px;
+  padding: 0 0.5em;
+  background-color: red;
+  outline: transparent;
+  border: transparent;
+  cursor: pointer;
+`;
+const Secondary = styled.p``;
 
-const Secondary = styled.div``;
-
-const Tertiary = styled.div``;
+const Tertiary = styled.p``;
 
 export default Card;
