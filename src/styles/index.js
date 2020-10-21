@@ -35,10 +35,21 @@ export const RobotCardsWrapper = styled.div`
             box-shadow: 0px 2px 8px rgba(102, 119, 153, 0.15);
         }
     }
-
     img{
         background-color: #FCFCFD;
         border-radius: 50%;
+    }
+
+    @media screen and (min-width: 500px){
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    @media screen and (min-width: 1200px){
+        width: 1200px;
+        margin: 0 auto;
+        .robot_info_card{
+            margin: 20px;
+        }
     }
 
 `;
