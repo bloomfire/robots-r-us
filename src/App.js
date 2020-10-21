@@ -49,9 +49,9 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Robots-R-Us</h1>
-          <FilterBar handleSort={this.handleSort}/>
-          <RobotContainer robotsDisplay={this.state.robotsDisplay}/>
+        <h1>Robots-R-Us by: <a href='https://github.com/tienphandev'>Tien Phan</a><span role="img" aria-label='Hello'>👋</span></h1>
+        <FilterBar handleSort={this.handleSort}/>
+        <RobotContainer robotsDisplay={this.state.robotsDisplay}/>
      </div>
     )
   }
