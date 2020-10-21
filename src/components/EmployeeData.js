@@ -6,7 +6,7 @@ function EmployeeData() {
 		<div>
 			{data.map((info) => {
 				return (
-					<div className="employeeData" key={info.id}>
+					<div className="employee__card" key={info.id}>
 						<Card style={{ width: '20rem' }}>
 							<Card.Img variant="top" src={info.avatar} />
 							<Card.Body>
