@@ -1,3 +1,7 @@
+body{
+  background-color: cyan;
+}
+
 .App {
   text-align: center;
 }
@@ -37,10 +41,10 @@
   }
 }
 
-{
-  background-color: lightgrey;
+li{
+  background-color: orange;
   width: 300px;
-  border: 15px solid green;
+  border: 15px solid blueviolet;
   padding: 50px;
   margin: 20px;
 }

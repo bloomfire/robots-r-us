@@ -23,9 +23,11 @@ class App extends React.Component {
     {data.map((robot,index) =>(
       <li key={index}>
         {robot.first_name + ' ' + robot.last_name + ' Title: ' + robot.title + ', Email:' + robot.email} 
+        <button className='FollowButton'>Follow</button>
       </li>
     ))}
       </ul>
+
     </div>
   );
 }
