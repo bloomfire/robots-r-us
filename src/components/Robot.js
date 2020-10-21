@@ -9,7 +9,12 @@ export default function Robot({ robot }) {
     }
     return (
         <div className="robot-container">
-            <img src={avatar} alt={first_name} />
+            { //render image if url is present
+                avatar ?
+                    <img src={avatar} alt={first_name} />
+                    :
+                    null
+            }
             <h3>{`${first_name} ${last_name} `}</h3>
             <button onClick={handleOnClick} className={following ? 'following' : ''}>
                 {following ? 'Following' : 'Follow'}
