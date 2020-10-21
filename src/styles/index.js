@@ -8,9 +8,30 @@ export const RobotAppWrapper = styled.div`
 `;
 
 export const Button = styled.button `
+    background-color: #0FB5BA;
+    color: white;
+    border: transparent;
+    border-radius: 4px;
+    padding: 5px 20px;
+    outline: transparent;
+    &:hover{
+        background-color: rgba(15, 181, 186, 0.5)
+    }
 `;
 
 export const RobotCardsWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .robot_info_card{
+        background-color: #EDEFF2;
+        margin: 20px auto;
+        width: 200px;
+        border-radius: 6px;
+        padding: 10px;
+        text-align: center;
+    }
 
 `;
 

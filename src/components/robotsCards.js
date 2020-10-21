@@ -24,7 +24,7 @@ function RobotCards(){
             {data.map(robot => {
                 let robotAvatar = robot.avatar ? robot.avatar : defaultAvatar;
                 const isFollowingRobot = following.includes(robot.id);
-                // console.log(robot)
+                console.log(robot)
                 return(
                     <div className="robot_info_card">
                         <img src={robotAvatar} alt={`Avatar for ${robot.first_name}`} />
@@ -32,7 +32,8 @@ function RobotCards(){
                         <Button type="submit" onClick={() => followRobot(robot.id)}>
                             {isFollowingRobot ? 'Following' : 'Follow'}
                         </Button>
-
+                        <p>{robot.title}</p>
+                        <p>{robot.email}</p>
                     </div>
                 )
             })}
