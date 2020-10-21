@@ -1,15 +1,36 @@
+body {
+  background-color: #282b33;
+  color: #8c91a0;
+}
+
 .App {
   text-align: center;
 }
 
-.CardContainer {
+.card-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .card {
   width: 250px;
-  height: 250px
+  height: 250px;
+  background-color: #4d5363;
+  color: #ccd5ec;
+  margin: 8px 0px 0px 0px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  margin: 20px 0px 20px 0px;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 750;
+  margin-bottom: 10px;
 }
 
 .App-logo {

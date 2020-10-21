@@ -11,7 +11,7 @@ function App() {
       <h1>Robots-R-Us</h1>
 
         {/* render each robot's info to its own robot card using map func */}
-      <div className="CardContainer">
+      <div className="card-container">
         {data.map((robot) => {
           return <Card robotData={robot} key={robot.id} />;
         })}
