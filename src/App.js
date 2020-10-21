@@ -4,13 +4,17 @@ import Card from './Card.js';
 import './App.css';
 
 function App() {
-  console.log(data);
   return (
     <div className="App">
+
+      {/* title */}
       <h1>Robots-R-Us</h1>
+
+      {/* render each robot's info to its own robot card using map func */}
       {data.map((robot) => {
-        return <Card key={robot.id} />;
+        return <Card robotData={robot} key={robot.id} />;
       })}
+
     </div>
   );
 }
