@@ -15,7 +15,7 @@ export default class Card extends React.Component {
         let id = this.props.id;
 
         return (
-            <div className="element" key={id}>
+            <div className="card" key={id}>
                 <img src={card.avatar} alt="Robot" className="profile-img" />
                 <div className="full-name">
                     {card.first_name}
