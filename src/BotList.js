@@ -1,9 +1,11 @@
 import data from './data'
 import React, { useState } from 'react'
 import { Card, ListGroup } from 'react-bootstrap'
+import FollowButton from './FollowButton'
 import "./App.css"
 
 const BotList = () => {
+    // for sorting by last name later
     // const [info, setInfo] = useState(data)
     return (
         <div>
@@ -13,12 +15,14 @@ const BotList = () => {
                         <Card style={{  width: "18rem", backgroundColor: "#fff" }} className="innerCard">
                             <Card.Body>
                                 <Card.Img variant="bottom" src={bot.avatar ? bot.avatar : "https://i.imgur.com/r8nO62Vs.jpg"} className="botImg"/>
-                                {/*  Need follow button*/}
                                 <Card.Title>
                                     <div className="nameText">
                                         <h3>{bot.first_name} {bot.last_name}</h3> 
                                     </div>
                                 </Card.Title>
+
+                                <FollowButton />
+                                
                                 <ListGroup variant="flush">
                                     <ListGroup.Item className="emailText">
                                         {bot.email ? (

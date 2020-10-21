@@ -40,7 +40,7 @@
 }
 
 .botCard {
-  display: flex;
+  display: inline-block;
   width: 30%;
   margin-top: 30px;
   border-radius: 20px;
@@ -63,4 +63,14 @@
 
 .emailText {
   color: black;
+}
+
+.unclicked {
+  margin: 10px 0px;
+}
+
+.clicked {
+  background-color: green;
+  color: white;
+  margin: 10px 0px;
 }
