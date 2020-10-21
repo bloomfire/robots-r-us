@@ -23,7 +23,7 @@ export default ({ robot }) => {
     <div className={style.robotCard}>
       {renderAvatar(avatar)}
       <h1 className={style.robotName}>{first_name + " " + last_name}</h1>
-      <FollowButton />
+      <FollowButton robot={robot} />
       <h2 className={style.robotTitle}>{title}</h2>
       <h3 className={style.robotEmail}>{email}</h3>
     </div>
