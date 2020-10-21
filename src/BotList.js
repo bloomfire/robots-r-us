@@ -1,6 +1,7 @@
 import data from './data'
 import React, { useState } from 'react'
 import { Card, ListGroup } from 'react-bootstrap'
+import "./App.css"
 
 const BotList = () => {
     // const [info, setInfo] = useState(data)
@@ -19,15 +20,15 @@ const BotList = () => {
                                     </div>
                                 </Card.Title>
                                 <ListGroup variant="flush">
-                                    <ListGroup.Item>
+                                    <ListGroup.Item className="emailText">
                                         {bot.email ? (
-                                            <a href={bot.email}>{bot.email}</a>
+                                            <h4>{bot.email}</h4>
                                         ) : (
-                                            "I has No Email"
+                                            <h4>"I has No Email"</h4>
                                         )}
                                     </ListGroup.Item>
                                     <ListGroup.Item>
-                                        {bot.title ? bot.title : "what am I doing?"}
+                                        {bot.title ? <h5>{bot.title}</h5> : <h5>"what am I doing?"</h5>}
                                     </ListGroup.Item>
                                 </ListGroup>
                             </Card.Body>
