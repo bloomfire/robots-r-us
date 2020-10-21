@@ -8,7 +8,10 @@ import robotData from "../../robotData";
 
 export default () => {
   const renderRobotData = () => {
-    return R.map(robot => <RobotCard robot={robot} />, robotData);
+    return R.map(
+      robot => <RobotCard key={robot.id} robot={robot} />,
+      robotData
+    );
   };
 
   return (
