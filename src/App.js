@@ -8,9 +8,17 @@ function App() {
    const [robotData, setRobotData] = useState(data);
 
    useEffect(() => {
-      setRobotData(updateRobotData);
-      
+      const getRobotData = JSON.parse(localStorage.getItem('robots'));
+      if(getRobotData) {
+         setRobotData(getRobotData);
+      } else {
+         setRobotData(updateRobotData);
+      }
    },[]);
+
+   useEffect(() => {
+      localStorage.setItem('robots', JSON.stringify(robotData));
+   },[robotData]);
 
 
    const followRobot = robot => {
