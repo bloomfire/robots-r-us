@@ -11,7 +11,11 @@ export default class FollowButton extends React.Component {
     render() {
         return (
             <button
-                className="follow-button"
+                className={
+                    this.state.buttonClicked === false
+                        ? 'follow-button'
+                        : 'following-button'
+                }
                 onClick={() => {
                     if (this.state.buttonClicked === false) {
                         this.setState({
