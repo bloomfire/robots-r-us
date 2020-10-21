@@ -1,9 +1,12 @@
 import React from 'react';
+import data from '../data';
 
 function EmployeeData() {
 	return (
 		<div>
-			<p>Hello Data</p>
+			{data.map((info) => {
+				console.log(info);
+			})}
 		</div>
 	);
 }
