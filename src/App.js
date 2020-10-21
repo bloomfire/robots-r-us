@@ -9,22 +9,26 @@ import Card from "./components/Card";
 import styled from "styled-components";
 
 function App() {
-  const [following, setFollowing] = useState(false);
+  const [following, setFollowing] = useState({});
+
+  const handleClick = (id) => {
+    console.log(id);
+  };
+
   return (
     <Wrapper>
       <h1>Robots-R-Us</h1>
       <Grid>
         {data.map((robot) => (
-          <div>
+          <div key={robot.id}>
             <Card
-              key={robot.id}
+              id={robot.id}
               avatar={robot.avatar}
               primary={`${robot.first_name} ${robot.last_name}`}
               secondary={robot.title}
               tertiary={robot.email}
-              active={following}
-              onClick={() => setFollowing(!following)}
-              // onClick={() => console.log("clicked", robot.id)}
+              active={following.id}
+              onClick={() => handleClick()}
             ></Card>
           </div>
         ))}
@@ -52,6 +56,11 @@ const Grid = styled.div`
   div {
     margin: 1em;
   }
+
+  @media (max-width: 850px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   @media (max-width: 640px) {
     grid-template-columns: repeat(1, 1fr);
   }
