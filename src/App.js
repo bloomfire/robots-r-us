@@ -1,12 +1,12 @@
-import React from 'react';
-import robotData from './robotData';
-import './index.scss';
+import React from "react";
+import robotData from "./robotData";
+import "./index.scss";
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
     <div className="App">
-      <h1>Robots-R-Us</h1>
-      {/* {data.map(robot => ...)} */}
+      <Home />
     </div>
   );
 }
