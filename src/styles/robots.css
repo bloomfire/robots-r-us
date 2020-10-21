@@ -23,3 +23,16 @@
 .robot-container > * {
     margin: 5px auto;
 }
+
+/* Button style for following robot */
+.robot-container button {
+    padding: 2px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button.following {
+    background: #108505;
+    color: white;
+    border: 1px solid #237ce2;
+}
