@@ -5,10 +5,8 @@ import EmployeeCard from './components/EmployeeCard';
 
   // add employee card components to robotcards to dynamically populate employee cards
   const makeEmployeeCards = (robots) => {
-    console.log('in make employees')
     const cards = []
       robots.forEach(robot => {
-        console.log('robot ', robot)
         cards.push(
           <EmployeeCard
             key={robot.id}
