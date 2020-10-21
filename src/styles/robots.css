@@ -26,6 +26,10 @@
     border-radius: 50px;
     background: #237ce2;
 }
+
+.robot-container h3 {
+    box-shadow: 0px 2px 2px #237ce2;
+}
 .robot-container > * {
     margin: 5px auto;
 }
