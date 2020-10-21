@@ -1,5 +1,6 @@
 import React from 'react';
 import FollowButton from './follow-button';
+import r2d2 from '../assets/r2d2.png';
 // import data from '../data';
 
 export default class Card extends React.Component {
@@ -16,7 +17,11 @@ export default class Card extends React.Component {
 
         return (
             <div className="card" key={id}>
-                <img src={card.avatar} alt="Robot" className="profile-img" />
+                <img
+                    src={card.avatar ? card.avatar : r2d2}
+                    alt="Robot"
+                    className="profile-img"
+                />
                 <div className="full-name">
                     {card.first_name}
                     {card.last_name}
