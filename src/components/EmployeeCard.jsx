@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Button from './Button';
 
 // "id": 1,
 // "first_name": "Red",
@@ -16,9 +16,9 @@ const EmployeeCard = ({ id, name, title, email, avatar  }) => {
   //email
   return (
     <div>
-      {/* <img src={nothingyet} /> */}
+      <img alt="robot-avatar" src={avatar} />
       <h3>{ name }</h3>
-      {/* <Button /> */}
+      <Button id={id} />
       <h3>{ title }</h3>
       <h3>{ email }</h3>
     </div>
