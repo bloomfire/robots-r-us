@@ -1,12 +1,13 @@
 import React from 'react';
-import data from './data';
-import './App.css';
+//styles
+import { GlobalStyle } from './styles/index';
 
 function App() {
   return (
     <div className="App">
+      <GlobalStyle />
       <h1>Robots-R-Us</h1>
-      {/* {data.map(robot => ...)} */}
+
     </div>
   );
 }
