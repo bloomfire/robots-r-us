@@ -1,6 +1,6 @@
 body {
   background-color: #282b33;
-  color: #8c91a0;
+  color: #5297be;
 }
 
 .App {
@@ -19,6 +19,8 @@ body {
   background-color: #4d5363;
   color: #ccd5ec;
   margin: 8px 0px 0px 0px;
+  text-align: center;
+  display: block;
 }
 
 .avatar {
@@ -31,6 +33,36 @@ body {
   font-size: 20px;
   font-weight: 750;
   margin-bottom: 10px;
+}
+
+.title {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.email {
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.follow {
+  display: inline-block;
+  width: 75px;
+  height: 20px;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.follow:hover {
+  cursor: pointer;
+}
+
+#unfollowed {
+  background-color: #282b33;
+}
+
+#followed {
+  background-color: white;
 }
 
 .App-logo {
