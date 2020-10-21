@@ -27,7 +27,7 @@ export const RobotCardsWrapper = styled.div`
     .robot_info_card{
         background-color: #EDEFF2;
         margin: 20px auto;
-        width: 200px;
+        width: 220px;
         border-radius: 6px;
         padding: 10px;
         text-align: center;
