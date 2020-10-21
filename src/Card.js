@@ -1,8 +1,9 @@
 import React from 'react';
 
 function Card({ robotData }) {
-  console.log(robotData)
+
   var followStatus = 'unfollowed';
+
   return (
     <div className="card">
       <img className="avatar" src={robotData.avatar} alt={robotData.last_name}></img>
