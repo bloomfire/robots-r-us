@@ -4,6 +4,13 @@ import ProfileImg from './profile-img';
 // import data from '../data';
 
 export default class Card extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            buttonClicked: false,
+        };
+    }
     render() {
         let card = this.props.card;
         let id = this.props.id;
