@@ -14,6 +14,11 @@
     height: 250px;
     margin: 10px 20px;
     border-radius: 5px;
+    filter: brightness(80%);
+    box-shadow: inset 0px 0px 5px black;
+}
+.robot-container:hover {
+    filter: brightness(100%);
 }
 .robot-container img {
     width: 35%;
