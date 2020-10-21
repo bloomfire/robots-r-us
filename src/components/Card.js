@@ -19,8 +19,13 @@ const Card = ({ avatar, primary, secondary, tertiary }) => {
 
 const Container = styled.div`
   width: 100%;
+  height: 300px;
   background-color: yellow;
   margin: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Avatar = styled.div`

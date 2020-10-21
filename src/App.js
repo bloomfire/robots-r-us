@@ -10,27 +10,40 @@ import styled from "styled-components";
 
 function App() {
   return (
-    <div className="App">
+    <Wrapper>
       <h1>Robots-R-Us</h1>
       <Grid>
-        {/* {data.map((robot) => (
+        {data.map((robot) => (
           <div>
             <Card
               key={robot.id}
               avatar={robot.avatar}
-              primary={robot.first_name}
+              primary={`${robot.first_name} ${robot.last_name}`}
               secondary={robot.title}
               tertiary={robot.email}
             ></Card>
           </div>
-        ))} */}
+        ))}
       </Grid>
 
       {/* {data.map(robot => ...)} */}
-    </div>
+    </Wrapper>
   );
 }
 
-const Grid = styled.div``;
+const Wrapper = styled.div`
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+
+  h1 {
+    text-align: center;
+  }
+`;
+
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+`;
 
 export default App;
