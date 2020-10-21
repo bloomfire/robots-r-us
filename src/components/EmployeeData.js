@@ -8,8 +8,14 @@ function EmployeeData() {
 				return (
 					<div className="employeeData" key={info.id}>
 						<Card style={{ width: '20rem' }}>
-							{info.first_name}
-							{info.last_name}
+							<Card.Img variant="top" src={info.avatar} />
+							<Card.Body>
+								<Card.Text>
+									{info.first_name} {info.last_name}
+								</Card.Text>
+								<Card.Text>{info.title}</Card.Text>
+								<Card.Text>{info.email}</Card.Text>
+							</Card.Body>
 						</Card>
 					</div>
 				);
