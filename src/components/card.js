@@ -22,8 +22,8 @@ export default class Card extends React.Component {
                     {card.last_name}
                 </div>
                 <FollowButton />
-                {card.title}
-                {card.email}
+                <p className="title">{card.title}</p>
+                <p className="email">{card.email}</p>
             </div>
         );
     }
