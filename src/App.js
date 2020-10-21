@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className="App">
       <h1>Robots-R-Us</h1>
-      <RobotsList />
+      <RobotsList botData={botData} />
     </div>
   );
 };
