@@ -1,14 +1,29 @@
-import React from 'react';
-import data from './data';
+import React, { Component } from 'react'
 import './App.css';
+import data from "./data";
+import RobotContainer from './RobotContainer'
+import FilterBar from './FilterBar' 
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Robots-R-Us</h1>
-      {/* {data.map(robot => ...)} */}
-    </div>
-  );
+export default class App extends Component {
+  state = {
+    robots: [],
+    robotsDisplay: []
+  }
+
+  componentDidMount(){
+    this.setState({
+      robots: data,
+      robotsDisplay: data
+    })
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <h1>Robots-R-Us</h1>
+          <FilterBar/>
+          <RobotContainer robotsDisplay={this.state.robotsDisplay}/>
+     </div>
+    )
+  }
 }
-
-export default App;
