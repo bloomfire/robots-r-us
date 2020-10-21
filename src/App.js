@@ -1,14 +1,17 @@
-import React from 'react';
-import data from './data';
-import './App.css';
+import React, { useState } from "react";
+import data from "./data";
+import "./App.css";
+import RobotsList from "../src/components/RobotsList";
 
-function App() {
+const App = () => {
+  const [botData, setBotData] = useState(data);
+
   return (
     <div className="App">
       <h1>Robots-R-Us</h1>
-      {/* {data.map(robot => ...)} */}
+      <RobotsList />
     </div>
   );
-}
+};
 
 export default App;
