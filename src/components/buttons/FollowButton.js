@@ -2,16 +2,21 @@ import React, { useState } from "react";
 import style from "./style.module.scss";
 
 export default ({ robot }) => {
+  const { id } = robot;
   let followedRobots = JSON.parse(localStorage.getItem("followedRobots"));
-  const [isFollowing, setIsFollowing] = useState(
-    followedRobots.includes(robot.id)
-  );
+  const [isFollowing, setIsFollowing] = useState(followedRobots.includes(id));
 
   const follow = () => {
     setIsFollowing(!isFollowing);
-    if (!followedRobots.includes(robot.id)) {
-      followedRobots.push(robot.id);
+    if (!followedRobots.includes(id)) {
+      followedRobots.push(id);
       localStorage.setItem("followedRobots", JSON.stringify(followedRobots));
+    } else {
+      const index = followedRobots.indexOf(id);
+      if (index > -1) {
+        followedRobots.splice(index, 1);
+        localStorage.setItem("followedRobots", JSON.stringify(followedRobots));
+      }
     }
   };
   return (
@@ -19,9 +24,7 @@ export default ({ robot }) => {
       className={style[`followButton-${isFollowing}`]}
       onClick={() => follow()}
     >
-      {isFollowing || followedRobots.includes(robot.id)
-        ? "Following"
-        : "Follow"}
+      {followedRobots.includes(id) ? "Following" : "Follow"}
     </button>
   );
 };
