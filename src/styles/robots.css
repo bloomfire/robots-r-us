@@ -21,7 +21,8 @@
     filter: brightness(100%);
 }
 .robot-container img {
-    width: 35%;
+    width: 60px;
+    height: 60px;
     border-radius: 50px;
     background: #237ce2;
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 
+import DefaultImage from '../assets/bloomfire-logo.png'
 export default function Robot({ robot }) {
     const [following, setFollowing] = useState(false)
     const { first_name, last_name, email, title, avatar } = robot
@@ -13,7 +14,7 @@ export default function Robot({ robot }) {
                 avatar ?
                     <img src={avatar} alt={first_name} />
                     :
-                    null
+                    <img src={DefaultImage} />
             }
             <h3>{`${first_name} ${last_name} `}</h3>
             <button onClick={handleOnClick} className={following ? 'following' : ''}>
