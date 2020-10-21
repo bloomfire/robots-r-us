@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  color: #4dcef1;
+  background-color: rgba(3, 33, 204, 0.774);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .App-logo {
@@ -35,4 +40,26 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.botCard {
+  display: flex;
+  width: 30%;
+  margin-top: 30px;
+  border-radius: 20px;
+  justify-content: center;
+}
+
+.nameText {
+  color: black
+}
+
+.botImg {
+  background-color: cornflowerblue;
+  border-radius: 70px;
+  margin-top: 15px;
+}
+
+.innerCard {
+  border-radius: 20px;
 }

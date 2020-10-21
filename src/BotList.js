@@ -9,14 +9,16 @@ const BotList = () => {
             {data.map((bot) => {
                 return (
                     <div key={bot.id} className="botCard">
-                        <Card style={{ width: "18rem" }}>
+                        <Card style={{  width: "18rem", backgroundColor: "#fff" }} className="innerCard">
                             <Card.Body>
+                                <Card.Img variant="bottom" src={bot.avatar ? bot.avatar : "https://i.imgur.com/r8nO62Vs.jpg"} className="botImg"/>
+                                {/*  Need follow button*/}
                                 <Card.Title>
                                     <div className="nameText">
-                                        {bot.first_name} {bot.last_name}
+                                        <h3>{bot.first_name} {bot.last_name}</h3> 
                                     </div>
                                 </Card.Title>
-                                <ListGroup>
+                                <ListGroup variant="flush">
                                     <ListGroup.Item>
                                         {bot.email ? (
                                             <a href={bot.email}>{bot.email}</a>
@@ -28,8 +30,6 @@ const BotList = () => {
                                         {bot.title ? bot.title : "what am I doing?"}
                                     </ListGroup.Item>
                                 </ListGroup>
-                                <Card.Img src={bot.avatar ? bot.avatar : "https://i.imgur.com/r8nO62V.jpg"}/>
-                                {/*  Need follow button*/}
                             </Card.Body>
                         </Card>
                     </div>
