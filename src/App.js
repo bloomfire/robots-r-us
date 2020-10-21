@@ -1,7 +1,6 @@
 import React from "react";
-import robotData from "./robotData";
 import "./index.scss";
-import Home from "./pages/Home/Home";
+import Home from "./pages/Home";
 
 function App() {
   return (

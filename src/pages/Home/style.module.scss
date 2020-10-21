@@ -3,4 +3,30 @@
 
 .homeHeader {
   text-align: center;
+  font-size: 1.7rem;
+}
+
+.robotGrid {
+  margin: 0 auto;
+  padding-top: 2%;
+  width: 95%;
+  display: grid;
+  vertical-align: middle;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 5%;
+  grid-row-gap: 1%;
+}
+
+.robotCard {
+  background-color: white;
+  text-align: center;
+  height: 275px;
+  border-radius: 4px;
+  padding: 7%;
+}
+
+.robotName {
+  font-size: 1.5rem;
+  margin: 0;
 }
