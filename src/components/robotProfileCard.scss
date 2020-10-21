@@ -1,0 +1,22 @@
+.profile {
+  border-style: solid;
+  border-width: thick;
+  border-color: #2AA29A;
+  border-radius: 0;
+  background-color: #F7F7F7;
+  box-shadow: 0 0 #30384C;
+  transition: 0.25s;
+  height: 100%;
+  text-align: center;
+  padding: 1em;
+  display: block;
+  border: none;
+  margin-top: 1em;
+
+
+  img {
+    padding: 20px;
+    width: 70%;
+    border-radius: 50%;
+  }
+}
