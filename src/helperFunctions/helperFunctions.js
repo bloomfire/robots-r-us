@@ -4,6 +4,7 @@ export const updateRobotData = data => {
          ...robot,
          following: false
       }
-   })
-   return addFollowProperty;
+   });
+   const sortByLastName = addFollowProperty.sort((a, b) => (a.last_name > b.last_name) ? 1 : -1);
+   return sortByLastName;
 }
