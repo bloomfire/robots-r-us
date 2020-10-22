@@ -5,7 +5,7 @@ import FollowButton from './FollowButton';
 
 function EmployeeData() {
 	return (
-		<div>
+		<div className="parent">
 			{data.map((info) => {
 				return (
 					<div className="employee__card" key={info.id}>
