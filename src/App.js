@@ -8,15 +8,31 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      followed: [1, 3, 5]
+      followed: []
     };
 
     this.toggleFollower = this.toggleFollower.bind(this);
 
   }
 
-  toggleFollower = () => {
-    console.log('click')
+  toggleFollower = (e) => {
+    // create copy of followers array from state
+    let robotsFollowed = this.state.followed;
+
+    // check if id of element w/ click event is included in followed robots array
+    // if not, add the id
+    if (!robotsFollowed.includes(parseInt(e.target.id))) {
+      robotsFollowed.push(parseInt(e.target.id));
+    } else {
+      // if id already exists, remove it
+      let indexToRemove = robotsFollowed.indexOf(parseInt(e.target.id));
+      robotsFollowed.splice(indexToRemove, 1)
+    }
+
+    // set state with new array of followed robots
+    this.setState({
+      followed: robotsFollowed
+    });
   }
 
   render() {

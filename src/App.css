@@ -45,7 +45,7 @@ body {
   font-size: 13px;
 }
 
-.follow {
+.followed, .unfollowed {
   display: inline-block;
   width: 75px;
   height: 20px;
@@ -53,15 +53,15 @@ body {
   line-height: 20px;
 }
 
-.follow:hover {
+.followed:hover, .unfollowed:hover {
   cursor: pointer;
 }
 
-#unfollowed {
+.unfollowed {
   background-color: #282b33;
 }
 
-#followed {
+.followed {
   background-color: #1a2546;
 }
 
