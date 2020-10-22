@@ -9,12 +9,16 @@ import '../styles/robots.css'
 import Robot from '../components/Robot'
 
 export default function Robots() {
-    const [robots, setRobots] = useState([...data]) // make new copy of data
+    const [robots, setRobots] = useState(data) // make new copy of data
 
     const handleOnChange = e => {
         const sort = e.target.value
-        const sortedRobots = [...robots].sort((a, b) => a[sort].localeCompare(b[sort]))
-        setRobots(sortedRobots)
+        if (sort === 'default') {
+            setRobots(data)
+        } else {
+            const sortedRobots = [...robots].sort((a, b) => a[sort].localeCompare(b[sort]))
+            setRobots(sortedRobots)
+        }
     }
     return (
         <div>
