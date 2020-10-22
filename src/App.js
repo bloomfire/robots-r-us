@@ -4,7 +4,10 @@ import './App.css';
 const defaultAvatar = 'https://purepng.com/public/uploads/medium/purepng.com-futurama-benderfuturamaanimated-sciencefictionsitcomcartoonfuturama-benderbender-1701528563136my4l2.png';
 
 function App() {
-  const [followedRobots, setFollowedRobots] = useState(new Set());
+  const savedFollowedRobots = window.localStorage.getItem("followedRobots")
+    ? new Set(JSON.parse(window.localStorage.getItem("followedRobots")))
+    : new Set();
+  const [followedRobots, setFollowedRobots] = useState(savedFollowedRobots);
 
   const toggleFollow = (robot) => {
     const updatedSet = new Set(followedRobots);
@@ -15,6 +18,7 @@ function App() {
       updatedSet.delete(robot.id);
       setFollowedRobots(updatedSet);
     }
+    window.localStorage.setItem("followedRobots", JSON.stringify(Array.from(updatedSet)));
   }
 
   const sortRobotsByLastName = (robots) => {
