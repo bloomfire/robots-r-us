@@ -19,12 +19,21 @@ h1 {
 	justify-content: space-evenly;
 }
 .employee__card {
-	background-color: orange;
 	display: flex;
+	overflow: hidden;
+	background-color: orange;
 	margin-top: 5%;
 	border: 3px solid lawngreen;
 	border-radius: 5%;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	width: 20%;
+}
+.avatar {
+	margin: 8px;
+}
+.employee__info {
+	width: 100%;
+	white-space: pre-wrap;
+	text-overflow: ellipsis;
 }

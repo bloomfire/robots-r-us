@@ -22,6 +22,7 @@ function EmployeeData() {
 					<div className="employee__card" key={info.id}>
 						<Card style={{ width: '20rem' }}>
 							<Card.Img
+								className="avatar"
 								variant="top"
 								src={
 									info.avatar
@@ -30,12 +31,12 @@ function EmployeeData() {
 								}
 							/>
 							<Card.Body>
-								<Card.Text>
+								<Card.Text className="employee__info">
 									{info.first_name} {info.last_name}
 								</Card.Text>
 								<FollowButton />
-								<Card.Text>{info.title}</Card.Text>
-								<Card.Text>
+								<Card.Text className="employee__info">{info.title}</Card.Text>
+								<Card.Text className="employee__info">
 									{info.email ? info.email : 'Email Not Found'}
 								</Card.Text>
 							</Card.Body>
