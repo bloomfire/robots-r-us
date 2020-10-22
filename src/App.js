@@ -24,15 +24,15 @@ const App = () => {
     localStorage.setItem("robot-data", JSON.stringify(robotData));
   }, [robotData]);
 
-  const handleFollow = (idx) => {
+  const handleFollow = (firstName) => {
     setRobotData((robotData) =>
       robotData.map((item) => {
         if (item.isFollowing === false) {
-          return item.id === idx + 1 ? { ...item, isFollowing: true } : item;
+          return item.first_name === firstName ? { ...item, isFollowing: true } : item;
         }
 
         if (item.isFollowing === true) {
-          return item.id === idx + 1 ? { ...item, isFollowing: false } : item;
+          return item.first_name === firstName ? { ...item, isFollowing: false } : item;
         }
 
         return item;
@@ -44,7 +44,7 @@ const App = () => {
     <div className="App">
       <Title>Robots-R-Us</Title>
       <RobotCardWrapper>
-        {robotData.map((robot, index) => (
+        {robotData.map((robot) => (
           <RobotCard
             key={robot.id}
             firstName={robot.first_name}
@@ -53,7 +53,7 @@ const App = () => {
             title={robot.title}
             email={robot.email}
             follow={robot.isFollowing}
-            clickFollow={() => handleFollow(index)}
+            clickFollow={() => handleFollow(robot.first_name)}
           />
         ))}
       </RobotCardWrapper>
@@ -61,7 +61,7 @@ const App = () => {
   );
 };
 
-export const Title = styled.h1`
+const Title = styled.h1`
   color: ${colors.offWhite};
 `;
 
