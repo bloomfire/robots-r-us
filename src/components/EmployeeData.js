@@ -1,6 +1,8 @@
 import React from 'react';
 import data from '../data';
 import { Card } from 'react-bootstrap';
+import FollowButton from './FollowButton';
+
 function EmployeeData() {
 	return (
 		<div>
@@ -13,6 +15,7 @@ function EmployeeData() {
 								<Card.Text>
 									{info.first_name} {info.last_name}
 								</Card.Text>
+								<FollowButton />
 								<Card.Text>{info.title}</Card.Text>
 								<Card.Text>{info.email}</Card.Text>
 							</Card.Body>

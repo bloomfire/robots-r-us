@@ -15,4 +15,10 @@ h1 {
 
 .employee__card {
 	background-color: orange;
+	display: flex;
+	border: 3px solid lawngreen;
+	border-radius: 5%;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	width: 20%;
 }
