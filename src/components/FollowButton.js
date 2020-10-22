@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 
 function FollowButton() {
+	//initialize state with unfollowed
+	const [follow, setFollow] = useState('Unfollowed');
 	const clickedFollow = (e) => {
 		e.preventDefault();
-		console.log(e);
+		//if the state is unfollowed the set it to following
+		if (follow === 'Unfollowed') {
+			setFollow('Following');
+		} else {
+			setFollow('Unfollowed');
+		}
+		//console.log(follow)
 	};
 	return (
 		<div>
 			<Button variant="primary" value="follow" onClick={clickedFollow}>
-				Follow
+				{follow}
 			</Button>
 		</div>
 	);
