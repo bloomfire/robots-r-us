@@ -26,7 +26,7 @@ function EmployeeData() {
 								src={
 									info.avatar
 										? info.avatar
-										: 'https://api.adorable.io/avatars/172/a.png'
+										: 'https://api.adorable.io/avatars/152/a.png'
 								}
 							/>
 							<Card.Body>
@@ -35,7 +35,9 @@ function EmployeeData() {
 								</Card.Text>
 								<FollowButton />
 								<Card.Text>{info.title}</Card.Text>
-								<Card.Text>{info.email}</Card.Text>
+								<Card.Text>
+									{info.email ? info.email : 'Email Not Found'}
+								</Card.Text>
 							</Card.Body>
 						</Card>
 					</div>
