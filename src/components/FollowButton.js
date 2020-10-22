@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 
 const FollowButton = () => {
-  return <button>Follow</button>;
+  const [click, setClick] = useState(false);
+  const [buttonText, setButtonText] = useState("Follow");
+
+  const handleFollowButtonClick = (e) => {
+    e.preventDefault();
+    setClick(true);
+    setButtonText("Following");
+  };
+
+  return <button onClick={handleFollowButtonClick}>{buttonText}</button>;
 };
 
 export default FollowButton;
