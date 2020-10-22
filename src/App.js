@@ -13,7 +13,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Robots-R-Us</h1>
+        <h2>Robots-R-Us</h2>
         <div className="robotContain">
           {data.map((robot, i) => {
             return (

@@ -1,3 +1,4 @@
+@import url('https://rsms.me/inter/inter.css');
 * {
   box-sizing: border-box;
 }
@@ -5,6 +6,7 @@
 .App {
   text-align: center;
   font-size: 16px;
+  font-family: 'Inter', sans-serif;
 }
 
 span {
@@ -71,8 +73,14 @@ span {
   margin-top: 5px;
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 855px) {
   .robotGroup {
-    flex: 1 1 33%;
+    flex: 1 1 30%;
+  }
+}
+
+@media all and (max-width: 533px) {
+  .robotGroup {
+    flex: 1 1 100%;
   }
 }
