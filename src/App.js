@@ -30,7 +30,11 @@ function App() {
   // Get robots list from data on component mount
   useEffect(() => {
       // sort by last name before adding
-      let sortedData = data.sort((a, b) => a.last_name - b.last_name);
+      let sortedData = data.sort((a, b) => {
+        if (a.last_name < b.last_name) return -1;
+        if (a.last_name > b.last_name) return 1;
+        return 0;
+      });
       setRobots(sortedData);
   }, []);
 
