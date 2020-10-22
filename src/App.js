@@ -6,7 +6,7 @@ function App() {
   // sets follow state to 'Follow'
   const [follow, setFollow] = useState('Follow');
 
-  // sets robots state
+  // sets robots state to empty array
   const [robots, setRobots] = useState([]);
 
   // sorts by last name and changes the robots state once, when the app is mounted
@@ -14,9 +14,9 @@ function App() {
     let sort = data.sort((a,b) =>{
       return a.last_name > b.last_name ? 1 : -1;
     });
-    setRobots(sort)
+    setRobots(sort);
   }, []);
-
+  
   // if follow value is set to the follow state, then change it to 'following', otherwise,
   // change it to the follow state
   const handleFollow = (e) => {
