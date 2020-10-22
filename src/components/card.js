@@ -23,8 +23,8 @@ export default class Card extends React.Component {
                     className="profile-img"
                 />
                 <div className="full-name">
-                    {card.first_name}
-                    {card.last_name}
+                    <p className="first-name">{card.first_name}</p>
+                    <p className="last-name">{card.last_name}</p>
                 </div>
                 <FollowButton />
                 <p className="title">{card.title}</p>
