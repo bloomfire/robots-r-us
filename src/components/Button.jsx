@@ -1,13 +1,22 @@
-import React, { useState } from 'react';
-// import useLocalStorage from '../hooks/useLocalStorage';
-
+import React, { useEffect } from 'react';
+import { useState } from 'react';
 
 const Button = ({ id }) => {
 
-  const [followButtonState, setFollowButtonState] = useState('Follow')
+const [followed, setFollowed] = useState((localStorage.getItem(id) || false))
 
+const onClick = () => {
+  setFollowed(!followed);
+  localStorage.setItem(id, followed);
+}
   return (
-  <button id={id} onClick={() => {console.log('button clicked', id)}}>{followButtonState}</button>
+  <button 
+    className={followed ? "button-followed" : "button-unfollowed"}
+    id={id}
+    onClick={onClick}
+  >
+    {followed ? "Following" : "Follow"}
+  </button>
   )
 };
 

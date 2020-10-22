@@ -17,5 +17,14 @@
   background-color: aquamarine;
 }
 
+.button-followed {
+  border-radius: 10px;
+  background-color: green;
+}
+
+.button-unfollowed {
+  border-radius: 10px;
+}
+
 
 
