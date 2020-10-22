@@ -21,7 +21,14 @@ function EmployeeData() {
 				return (
 					<div className="employee__card" key={info.id}>
 						<Card style={{ width: '20rem' }}>
-							<Card.Img variant="top" src={info.avatar} />
+							<Card.Img
+								variant="top"
+								src={
+									info.avatar
+										? info.avatar
+										: 'https://api.adorable.io/avatars/172/a.png'
+								}
+							/>
 							<Card.Body>
 								<Card.Text>
 									{info.first_name} {info.last_name}
