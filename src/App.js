@@ -9,7 +9,8 @@ import colors from "./theme/colors";
 
 const App = () => {
   const withFollowData = data.map((prevData) => ({ ...prevData, isFollowing: false }));
-  const [robotData, setRobotData] = useState(withFollowData);
+  const sortRobotData = withFollowData.sort((a, b) => (a.last_name > b.last_name ? 1 : -1));
+  const [robotData, setRobotData] = useState(sortRobotData);
 
   useEffect(() => {
     const localData = localStorage.getItem("robot-data");
