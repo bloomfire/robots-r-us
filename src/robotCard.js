@@ -13,7 +13,7 @@ const PlayerCard = (props) => {
     
 
 
-    const urlChecker = (avatar) => {
+    const avatarChecker = (avatar) => {
       if (avatar === null){
         return `https://via.placeholder.com/300`
       }
@@ -22,7 +22,18 @@ const PlayerCard = (props) => {
       }
     }
     
-    const avatarMarkup = urlChecker(avatar)
+    const avatarMarkup = avatarChecker(avatar)
+
+    const titleChecker = (title) => {
+      if (title === null){
+        return 'No Title Given'
+      }
+      else {
+        return title
+      }
+    }
+
+    const titleMarkup = titleChecker(title)
 
     let cardColor = isToggled ? ('blue') : ('green')
 
@@ -59,7 +70,7 @@ const PlayerCard = (props) => {
               </Button>
     
               <h3>Name: {first_name} {last_name}</h3>
-              <h2>Title: {title}</h2>
+              <h2>Title: {titleMarkup}</h2>
             <h3>Email: {email}</h3>
               <br/>
     

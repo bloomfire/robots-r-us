@@ -2,7 +2,7 @@ import React from 'react';
 import data from './data';
 import './App.css';
 import RobotCard from './robotCard'
-// import 'primeflex/primeflex.css';
+import 'primeflex/primeflex.css';
 
 
 function App() {
@@ -29,7 +29,11 @@ function App() {
   return (
     <div className="App">
       <h1>Robots-R-Us</h1>
+      <div
+      className="p-grid"
+      style={searchStyle}>
       {cardMarkup}
+      </div>
     </div>
   );
 }
