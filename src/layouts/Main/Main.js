@@ -3,20 +3,23 @@ import { AppBar, Toolbar, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import PropTypes from "prop-types";
 
+// Generate CSS in JS.
 const useStyles = makeStyles(() => ({
   root: {
     display: "flex",
     flexDirection: "column",
+    justifyContent: "flex-start",
     height: "100%",
     width: "100%",
   },
   child: {
     flexGrow: 1,
-    height: "100%",
+    overflow: "hidden",
     width: "100%",
   },
 }));
 
+// Just a simple page layout.
 const Main = ({ children }) => {
   const classes = useStyles();
   return (
