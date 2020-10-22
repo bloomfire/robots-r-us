@@ -1,16 +1,16 @@
 import React from "react";
-import styled from "styled-components"
+import styled from "styled-components";
 
 import Avatar from "../avatar";
 
-const RobotCard = ({ firstName, lastName, email, title, avatar }) => {
+const RobotCard = ({ firstName, lastName, email, title, avatar, follow }) => {
   return (
     <CardContainer>
       <Avatar avatarUrl={avatar} avatarAlt={`${firstName} ${lastName}'s Avatar`} />
       <h2>
         {firstName} {lastName}
       </h2>
-      <StyledButton>Follow</StyledButton>
+      <StyledButton>{follow ? "Following" : "Follow"}</StyledButton>
       <h3>{title}</h3>
       <p>{email}</p>
     </CardContainer>

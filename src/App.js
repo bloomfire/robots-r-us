@@ -22,6 +22,7 @@ const App = () => {
             avatar={robot.avatar}
             title={robot.title}
             email={robot.email}
+            follow={robot.isFollowing}
           />
         ))}
       </RobotCardWrapper>
