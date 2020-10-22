@@ -16,14 +16,14 @@ function App() {
               value={robotName}
             >
               <div className="image-container">
-                <img src={robot.avatar} />
+                <img className="robot-image" src={robot.avatar} />
               </div>
               <div className="robot-name">{robotName}</div>
               <div className="follow-button-container">
                 <button className="follow-button">Follow</button>
               </div>
               <div className="robot-title">{robot.title}</div>
-              <div className="email">{robot.email}</div>
+              <div className="robot-email">{robot.email}</div>
             </div>
           );
         })}

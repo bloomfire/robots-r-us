@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: lightblue;
 }
 .robot-images-container{
   display: flex;
@@ -8,4 +9,24 @@
 .robot-card-container{
   height: 300px;
   width: 300px;
+  background-color: white;
+  border-radius: 5%;
+  margin: 1em;
+}
+.robot-image{
+  border-radius: 50%;
+  background-color: lightblue;
+}
+.robot-name,
+.robot-title,
+.robot-email{
+  font-weight: bold;
+}
+.robot-image,
+.robot-name,
+.follow-button-container,
+.robot-title,
+.robot-email {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
