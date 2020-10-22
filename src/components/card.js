@@ -1,16 +1,8 @@
 import React from 'react';
 import FollowButton from './follow-button';
 import r2d2 from '../assets/r2d2.png';
-// import data from '../data';
 
 export default class Card extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            buttonClicked: false,
-        };
-    }
     render() {
         let card = this.props.card;
         let id = this.props.id;
