@@ -3,7 +3,9 @@ import data from './data';
 import './App.css';
 
 function App() {
-
+  let sort = data.sort((a,b) =>{
+    return a.last_name > b.last_name ? 1 : -1;
+  })
   const handleFollow = (e) => {
     let value = e.target.text;
     // console.log(value)
