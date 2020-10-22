@@ -23,9 +23,10 @@ class App extends React.Component {
                   style={{ backgroundImage: "url(" + robot.avatar + ")" }}
                   className="robotAvatar"
                 ></div>
-                <div className="robotFollowButton"></div>
-                <span className="robotTitle"></span>
-                <span className="robotEmail"></span>
+                <div className="robotName">{robot.first_name + " " + robot.last_name}</div>
+                <div className="robotFollowButton">Follow</div>
+            <span className="robotTitle">{robot.title}</span>
+            <span className="robotEmail">{robot.email}</span>
               </div>
             );
           })}

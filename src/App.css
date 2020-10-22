@@ -1,5 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
+  font-size: 16px;
+}
+
+span {
+  font-size: .8em;
 }
 
 /* ROBOT CARD  */
@@ -10,6 +19,10 @@
 }
 
 .robotGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   flex: 1 1 20%;
   margin: 5px;
   height: 200px;
@@ -19,12 +32,29 @@
 }
 
 .robotAvatar {
-  width: 50px;
-  height: 50px;
+  margin-top: 10px;
+  width: 65px;
+  height: 65px;
   background-size: cover;
+  border:1px solid black;
+  border-radius: 50%;
 }
 
+.robotName {
+  margin-top: 10px;
+}
 
+.robotFollowButton {
+  margin-top: 10px;
+  color: gray;
+  border: 1px gray solid;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.robotFollowedButton {
+  
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
