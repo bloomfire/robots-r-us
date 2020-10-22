@@ -1,16 +1,8 @@
 import React from 'react';
 import FollowButton from './follow-button';
 import r2d2 from '../assets/r2d2.png';
-// import data from '../data';
 
 export default class Card extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            buttonClicked: false,
-        };
-    }
     render() {
         let card = this.props.card;
         let id = this.props.id;
@@ -23,10 +15,10 @@ export default class Card extends React.Component {
                     className="profile-img"
                 />
                 <div className="full-name">
-                    {card.first_name}
-                    {card.last_name}
+                    <p className="first-name">{card.first_name}</p>
+                    <p className="last-name">{card.last_name}</p>
                 </div>
-                <FollowButton />
+                <FollowButton id={id} />
                 <p className="title">{card.title}</p>
                 <p className="email">{card.email}</p>
             </div>

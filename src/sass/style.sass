@@ -21,13 +21,10 @@ body
         margin-top: -65px
 
 .card
-    width: fit-content
-    max-width: 300px
-    min-width: 230px
+    width: 300px
     background-color: $lightgrey
-    height: fit-content
+    height: 350px
     margin: 0px 7px 50px 7px
-    min-height: 315px
     display: flex
     flex-direction: column
     align-items: center
@@ -35,6 +32,7 @@ body
     padding: 25px
     box-sizing: border-box
     word-break: break-word
+    border-radius: 25px
     @media screen and (max-width: 415px)
         margin: 0px 0px 50px 0px
     @media screen and (max-width: 615px)
@@ -49,6 +47,11 @@ body
     font-weight: 900
     margin: 10px 0px
     font-size: 1.3em
+    display: flex
+    flex-direction: row
+
+.first-name
+    margin-right: 7px
 
 .follow-button
     margin: 0px 0px 15px 0px
@@ -56,8 +59,14 @@ body
     height: 35px
     background-color: white
     border: black solid 2px
+<<<<<<< HEAD
     border-radius: 7%
     cursor: pointer
+=======
+    border-radius: 10px
+    cursor: pointer
+    outline: none
+>>>>>>> grover_initial_branch
 
 .following-button
     margin: 0px 0px 15px 0px
@@ -65,8 +74,9 @@ body
     height: 35px
     background-color: green
     border: none
-    border-radius: 7%
+    border-radius: 10px
     color: white
+    outline: none
 
 .title
     font-weight: 700
