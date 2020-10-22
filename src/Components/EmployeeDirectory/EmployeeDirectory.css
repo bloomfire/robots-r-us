@@ -1,5 +1,6 @@
 /* mobile-first style, min 320px */
 .Employee_Info {
+    background-color: #c5a9e1;
     display: flex;
     flex-direction: row; 
     flex-wrap: wrap;
@@ -7,11 +8,13 @@
 }
 
 .Employee_Card {
+    background-color: white;
     flex-basis: 100%; 
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1em;
     text-align: center; 
+    font-size: 1em;
     padding: 1em;
     border: 1px solid black;
     border-radius: 2em;

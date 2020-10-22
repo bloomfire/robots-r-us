@@ -7,7 +7,8 @@ export default function FollowButton() {
     return (
         <button 
             id="follow-button"
-            onClick={() => setFollow(!followed)}>
+            onClick={() => setFollow(!followed)}
+            style={followed ? {backgroundColor: "#3C9152", color: "white", fontWeight: "bold"} : {backgroundColor: "white", fontWeight:"bold"}}>
         
         {followed ? "Following" : "Follow"}
 
