@@ -4,6 +4,7 @@ import "./App.css";
 
 function App() {
   const [following, setFollowing] = useState([]);
+  data.sort((a, b) => a.last_name - b.last_name)
   return (
     <div className="App">
       <h1>Robots-R-Us</h1>
