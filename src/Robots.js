@@ -5,7 +5,20 @@ function Robots({data}) {
    return (
       <div className="robots-grid">
          {console.log(data)}
-         {data.map(rd => <Robot key={rd.id} robotData={rd} />)}
+         {
+            data.sort((a, b) => {
+               let nameA = a.last_name.toUpperCase()
+               let nameB = b.last_name.toUpperCase()
+               if (nameA < nameB) {
+                  return -1
+               }
+               if (nameA > nameB) {
+                  return 1
+               }
+               return 0
+            })
+            .map(rd => <Robot key={rd.id} robotData={rd} />)
+         }
       </div>
    )
 }

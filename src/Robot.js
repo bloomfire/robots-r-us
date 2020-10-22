@@ -15,11 +15,11 @@ function Robot({robotData}) {
             
          }
          <br/>
-         {robotData.first_name + robotData.last_name}
+         <b>{`${robotData.first_name} ${robotData.last_name}`}</b>
          <br/>
          Follow
          <br/>
-         {robotData.title || "No Title"}
+         <i>{robotData.title || "No Title"}</i>
          <br/>
          {robotData.email}
       </div>
