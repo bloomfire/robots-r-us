@@ -4,7 +4,7 @@ import "./App.css";
 import RobotsList from "../src/components/RobotsList";
 
 const App = () => {
-  const [botData, setBotData] = useState(data);
+  const [botData] = useState(data);
 
   return (
     <div className="App">
