@@ -18,16 +18,21 @@ function App() {
    />
   ))
 
+  const background = {
+    backgroundColor: 'lightgreen'
+  }
+
   const searchStyle = {
     display: 'flex',
+    alignItems: 'center',
     justifyContent: 'center',
     padding: "5px",
-    border: '1px',
-    margin: '20px',
+    border: '5px',
+    margin: '10px',
   }
 
   return (
-    <div className="App">
+    <div className="App" style={background}>
       <h1>Robots-R-Us</h1>
       <div
       className="p-grid"

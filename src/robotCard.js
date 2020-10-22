@@ -35,12 +35,31 @@ const PlayerCard = (props) => {
 
     const titleMarkup = titleChecker(title)
 
-    let cardColor = isToggled ? ('blue') : ('green')
+    const emailChecker = (email) => {
+      if (email === null){
+        return 'No Email Given'
+      } else {
+        return email
+      }
+    }
+  
+    const emailMarkup = emailChecker(email)
+
+    const backgroundColorChecker = (isToggled) => {
+      if (isToggled === true){
+        return 'lightblue'
+      } else {
+        return 'orange'
+      }
+    }
+
+    const backgroundColorMarkup = backgroundColorChecker(isToggled)
+
 
 
     let cardStyle = {
-      width: '400px',
-      backgroundColor: {cardColor},
+      width: '300px',
+      backgroundColor: {backgroundColorMarkup},
     }
     
     let robotImage = {
@@ -68,10 +87,10 @@ const PlayerCard = (props) => {
               <Button onClick={toggle}>  
               {buttonMarkup}
               </Button>
-    
+
               <h3>Name: {first_name} {last_name}</h3>
               <h2>Title: {titleMarkup}</h2>
-            <h3>Email: {email}</h3>
+            <h3>Email: {emailMarkup}</h3>
               <br/>
     
           </Card>
