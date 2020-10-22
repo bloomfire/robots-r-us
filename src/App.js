@@ -8,11 +8,11 @@ function App() {
 
   const toggleFollow = (robot) => {
     const updatedSet = new Set(followedRobots);
-    if (!updatedSet.has(robot.first_name+robot.last_name)) {
-      updatedSet.add(robot.first_name+robot.last_name)
+    if (!updatedSet.has(robot.id)) {
+      updatedSet.add(robot.id);
       setFollowedRobots(updatedSet);
     } else {
-      updatedSet.delete(robot.first_name+robot.last_name)
+      updatedSet.delete(robot.id);
       setFollowedRobots(updatedSet);
     }
   }
@@ -20,9 +20,9 @@ function App() {
     <div className="App">
       <h1>Robots-R-Us</h1>
       <div className="Robots-container">
-        {data.map((robot, index) => {
+        {data.map(robot => {
           return(
-            <div className="Robot-container" key={index}>
+            <div className="Robot-container" key={robot.id}>
               <img
                 className="Robot-avatar"
                 alt="avatar"
@@ -31,13 +31,9 @@ function App() {
               <p className="Robot-name">{robot.first_name} {robot.last_name}</p>
               <button
                 onClick={() => toggleFollow(robot)}
-                className={
-                  !followedRobots.has(robot.first_name+robot.last_name)
-                  ? "Follow-button"
-                  : "Following-button"
-                }
+                className={!followedRobots.has(robot.id) ? "Follow-button" : "Following-button"}
                 >
-                {!followedRobots.has(robot.first_name+robot.last_name) ? "Follow" : "Following"}
+                {!followedRobots.has(robot.id) ? "Follow" : "Following"}
               </button>
               <p className="Robot-title">{robot.title}</p>
               <p className="Robot-email">{robot.email}</p>
