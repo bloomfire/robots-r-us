@@ -1,14 +1,16 @@
 import React from "react";
 import Avatar from "../avatar";
 
-const RobotCard = () => {
+const RobotCard = ({ firstName, lastName, email, title, avatar }) => {
   return (
     <div>
-      <Avatar avatarUrl="" avatarAlt="Full Names Avatar" />
-      <h2>Full Name</h2>
+      <Avatar avatarUrl={avatar} avatarAlt={`${firstName} ${lastName}'s Avatar`} />
+      <h2>
+        {firstName} {lastName}
+      </h2>
       <button>Follow</button>
-      <h3>Title</h3>
-      <p>email</p>
+      <h3>{title}</h3>
+      <p>{email}</p>
     </div>
   );
 };
