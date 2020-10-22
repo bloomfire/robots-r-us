@@ -1,12 +1,12 @@
-import React from 'react';
-import data from './data';
-import './App.css';
+import React from "react";
+import "./App.css";
+import SpacingGrid from "./components/Grid";
 
 function App() {
   return (
     <div className="App">
-      <h1>Robots-R-Us</h1>
-      {/* {data.map(robot => ...)} */}
+      <h1 className="mainTitle">Robots-R-Us</h1>
+      <SpacingGrid />
     </div>
   );
 }
