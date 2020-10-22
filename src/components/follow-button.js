@@ -11,7 +11,9 @@ export default class FollowButton extends React.Component {
     }
 
     componentDidMount() {
-        localStorage.setItem(`robot${this.props.id}`, false);
+        if (!localStorage.getItem(`robot${this.props.id}`)) {
+            localStorage.setItem(`robot${this.props.id}`, false);
+        }
     }
 
     render() {
