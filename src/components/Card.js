@@ -25,9 +25,8 @@ const Card = (props) => {
 
   const [follow, setFollow] = useState(following);
 
-  const followUser = (following) => {
+  const followUser = () => {
     follow ? setFollow(false) : setFollow(true);
-
   };
 
   return (
