@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import Cookies from "js-cookie";
 import { makeStyles } from "@material-ui/styles";
 import { Container, CircularProgress, Grid } from "@material-ui/core";
-import { EmployeeCard } from "./components";
+import EmployeeCard from "../../components/EmployeeCard";
 import EMPLOYEE_DIRECTORY from "../../data";
 
 const EMPLOYEES_FOLLOWED_COOKIE_NAME = "EMPLOYEES_FOLLOWED";
@@ -69,7 +69,7 @@ const EmployeeDirectory = () => {
     // eslint-disable-next-line
   }, [employeesFollowed]);
 
-  //
+  // Follow/unfollow callbacks.
   const handleFollowEmployee = useCallback((employeeId) => {
     setEmployeesFollowed((prev) => {
       const updated = { ...prev };

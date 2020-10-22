@@ -1,6 +1,7 @@
 # Jorge's Preface
 
 - This was a fun little neat exercise.
+- I used Hooks and app is responsive and maintains state after refresh.
 - I added a 1 second delay via setTimeout just to simulate loading.
 - I track followed user state by with an object that has followed users ids' as keys and serialize that object
   in a cookie.
