@@ -16,11 +16,18 @@ function App() {
       setFollowedRobots(updatedSet);
     }
   }
+
+  const sortRobotsByLastName = (robots) => {
+    return robots.sort(function(a, b) {
+      return a.last_name.toUpperCase().localeCompare(b.last_name.toUpperCase());
+    });
+  }
+
   return (
     <div className="App">
       <h1>Robots-R-Us</h1>
       <div className="Robots-container">
-        {data.map(robot => {
+        {sortRobotsByLastName(data).map(robot => {
           return(
             <div className="Robot-container" key={robot.id}>
               <img
