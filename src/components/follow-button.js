@@ -5,10 +5,17 @@ export default class FollowButton extends React.Component {
         super(props);
 
         this.state = {
-            buttonClicked: false,
+            buttonClicked:
+                localStorage.getItem(`robot${this.props.id}`) === 'true',
         };
     }
+
+    componentDidMount() {
+        localStorage.setItem(`robot${this.props.id}`, false);
+    }
+
     render() {
+        console.log(localStorage.getItem(`robot${this.props.id}`));
         return (
             <button
                 className={
@@ -21,10 +28,12 @@ export default class FollowButton extends React.Component {
                         this.setState({
                             buttonClicked: true,
                         });
+                        localStorage.setItem(`robot${this.props.id}`, true);
                     } else {
                         this.setState({
                             buttonClicked: false,
                         });
+                        localStorage.setItem(`robot${this.props.id}`, false);
                     }
                 }}
             >

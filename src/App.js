@@ -14,7 +14,7 @@ function App() {
             <img src={logo} alt="Robots R Us Logo" className="logo" />
             <section className="card-list">
                 {sortedRobotData.map((card, i) => {
-                    return <Card card={card} key={i} />;
+                    return <Card card={card} key={i} id={i} />;
                 })}
             </section>
         </div>

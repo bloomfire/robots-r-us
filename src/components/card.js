@@ -18,7 +18,7 @@ export default class Card extends React.Component {
                     <p className="first-name">{card.first_name}</p>
                     <p className="last-name">{card.last_name}</p>
                 </div>
-                <FollowButton />
+                <FollowButton id={id} />
                 <p className="title">{card.title}</p>
                 <p className="email">{card.email}</p>
             </div>
