@@ -8,7 +8,8 @@ import "./App.css";
 import colors from "./theme/colors";
 
 const App = () => {
-  const [robotData] = useState(data);
+  const withFollowData = data.map((prevData) => ({ ...prevData, isFollowing: false }));
+  const [robotData] = useState(withFollowData);
   return (
     <div className="App">
       <Title>Robots-R-Us</Title>
