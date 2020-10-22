@@ -3,8 +3,13 @@ import { Card } from 'react-bootstrap';
 import FollowButton from './FollowButton';
 
 const RobotCard = (props) => {
-    let robot=props.robot;
     const [following, setFollow]=useState(false);
+
+    //add following property to each robot
+    let robot={
+        ...props.robot,
+           following
+        };
 
     //handle button click
     const handleClick=(follow)=>setFollow(follow);
