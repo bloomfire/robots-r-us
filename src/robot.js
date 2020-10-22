@@ -10,15 +10,15 @@ const Robot = props => {
   }
 
   const following = isFollowing ? 'Following' : 'Follow';
-  return <div>
+  return <>
     <div className='card'>
       <img src={isNil(props.avatar) ? '//robohash.org/4TO.png?set=set3&size=100x100' : props.avatar} alt={props.first_name + props.last_name}/>
-      <h3>{props.first_name}{props.last_name}</h3>
+      <h3>{props.first_name} {props.last_name}</h3>
       <button onClick={handleFollow} className={following}>{following}</button>
       <h4>{props.title}</h4>
       <p>{props.email}</p>
     </div>
-  </div>
+  </>
 }
 
 export default Robot;
