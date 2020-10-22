@@ -16,7 +16,11 @@ export default function Robots() {
         if (sort === 'default') {
             setRobots(data)
         } else {
-            const sortedRobots = [...robots].sort((a, b) => a[sort].localeCompare(b[sort]))
+            const sortedRobots = [...robots].sort((a, b) => {
+                if (!a[sort]) return 1;
+                if (!b[sort]) return -1;
+                return a[sort].localeCompare(b[sort])
+            })
             setRobots(sortedRobots)
         }
     }
@@ -26,6 +30,8 @@ export default function Robots() {
                 <option value="default">Sort by</option>
                 <option value="first_name">First Name</option>
                 <option value="last_name">Last Name</option>
+                <option value="title">Title</option>
+                <option value="email">Email</option>
             </select>
             <div className="robots-container">
                 {
