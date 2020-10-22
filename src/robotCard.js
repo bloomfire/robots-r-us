@@ -12,19 +12,47 @@ const PlayerCard = (props) => {
     const toggle = React.useCallback(() => setIsToggled(!isToggled), [isToggled, setIsToggled])
     
 
+
+    const urlChecker = (avatar) => {
+      if (avatar === null){
+        return `https://via.placeholder.com/300`
+      }
+      else {
+        return avatar
+      }
+    }
+    
+    const avatarMarkup = urlChecker(avatar)
+
+    let cardColor = isToggled ? ('blue') : ('green')
+
+
+    let cardStyle = {
+      width: '400px',
+      backgroundColor: {cardColor},
+    }
+    
+    let robotImage = {
+      width: '300px',
+      height: '300px',
+    }
+
     
     let buttonMarkup = isToggled ? (<Button
     style={{backgroundColor: 'red'}}>Follow?</Button>) : (<Button style={{backgroundColor: 'green'}}>Following!</Button>)
     
+
     
     
       return (
         <>
           <Card
+          style={cardStyle}
             >
               <CardMedia
               component='img'
-              src={avatar}
+              src={avatarMarkup}
+              style={robotImage}
               />
               <Button onClick={toggle}>  
               {buttonMarkup}

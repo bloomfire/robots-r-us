@@ -2,6 +2,8 @@ import React from 'react';
 import data from './data';
 import './App.css';
 import RobotCard from './robotCard'
+// import 'primeflex/primeflex.css';
+
 
 function App() {
 
@@ -16,6 +18,13 @@ function App() {
    />
   ))
 
+  const searchStyle = {
+    display: 'flex',
+    justifyContent: 'center',
+    padding: "5px",
+    border: '1px',
+    margin: '20px',
+  }
 
   return (
     <div className="App">
