@@ -5,9 +5,19 @@ import './EmployeeDirectory.css';
 
 export default class EmployeeDirectory extends Component {
     render () {
+        const alphabeticalStore = data.sort((robotA, robotB) => {
+            if (robotA.last_name < robotB.last_name) {
+                return -1;
+            }
+            if (robotA.last_name > robotB.last_name) {
+                return 1;
+            }
+            return data; 
+        });
+
         return (
             <section className="Employee_Info">
-                {data.map(robot => {
+                {alphabeticalStore.map(robot => {
                     return (
                         <div className="Employee_Card" key={robot.id}>
                             <img src={robot.avatar} alt="robot-profile"/>
