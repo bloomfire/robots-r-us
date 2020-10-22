@@ -6,7 +6,7 @@ const RobotCardGridWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 100px;
-    margin: 0 20px 40px 20px;
+    margin: 20px;
 `
 
 const RobotCardGrid = (props) => {
