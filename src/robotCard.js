@@ -47,9 +47,10 @@ const PlayerCard = (props) => {
 
     const backgroundColorChecker = (isToggled) => {
       if (isToggled === true){
-        return 'lightblue'
-      } else {
         return 'orange'
+      }
+      else {
+        return 'lightblue'
       }
     }
 
@@ -61,7 +62,7 @@ const PlayerCard = (props) => {
     let cardStyle = {
       height: '525px',
       width: '300px',
-      backgroundColor: {backgroundColorMarkup},
+      backgroundColor: backgroundColorMarkup,
     }
     
     let robotImage = {
@@ -90,9 +91,9 @@ const PlayerCard = (props) => {
               {buttonMarkup}
               </Button>
 
-              <h3>Name: {first_name} {last_name}</h3>
-              <h2>Title: {titleMarkup}</h2>
-            <h3>Email: {emailMarkup}</h3>
+              <h2>{first_name} {last_name}</h2>
+              <h2>{titleMarkup}</h2>
+            <h3>{emailMarkup}</h3>
               <br/>
     
           </Card>
