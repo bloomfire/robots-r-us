@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
+import FollowButton from './FollowButton'
+import UnfollowButton from './UnfollowButton'
 
 function Robot({robotData}) {
+
+   const [following, followRobot] = useState(false)
+
    return (
       <div className="robot">
 
@@ -17,7 +22,9 @@ function Robot({robotData}) {
          <br/>
          <b>{`${robotData.first_name} ${robotData.last_name}`}</b>
          <br/>
-         Follow
+         <div className="following-button" onClick={() => followRobot(!following)}>
+            {!following ? <FollowButton /> : <UnfollowButton />}
+         </div>
          <br/>
          <i>{robotData.title || "No Title"}</i>
          <br/>
