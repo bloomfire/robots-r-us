@@ -43,40 +43,72 @@ const FollowButton = styled.button`
 const defaultAvatarFry = 'https://pbs.twimg.com/profile_images/3555009298/146c8cd1fca9ab61b0b1b86fad1d627f.jpeg';
 const defaultEmptyRobotInfo = '?';
 
-class Robot extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      following: false
-    };
-    this.handleFollowRobotClick = this.handleFollowRobotClick.bind(this);
-  }
+function Robot(props) {
+  // let isFollowingRobot = this.state.following;
+  // let isFollowingRobot = false;
+  // console.log(props.robot.id)
+  let robotID = props.robot.id;
+  // let robotID = 45;
 
-  handleFollowRobotClick() {
-    this.setState(state => ({
-      following: !state.following
-    }));
-  }
 
-  render(){
-    let isFollowingRobot = this.state.following;
-    let followingBooleanButton;
-    if (isFollowingRobot) {
-      followingBooleanButton = <UnfollowButton onClick={this.handleFollowRobotClick}>Unfollow</UnfollowButton>
-    } else {
-      followingBooleanButton = <FollowButton onClick={this.handleFollowRobotClick}>Follow</FollowButton>
-    }
+  // let isFollowingRobot = this.state[props.robot.id];
 
-    return (
-      <RobotProfile className="robot">
-        <RobotPhoto src={this.props.robot.avatar ? this.props.robot.avatar : defaultAvatarFry}/>
-        <h3>{this.props.robot.first_name} {this.props.robot.last_name}</h3>
-        <h4>{this.props.robot.title ? this.props.robot.title : defaultEmptyRobotInfo}</h4>
-        <h4>{this.props.robot.email ? this.props.robot.email : defaultEmptyRobotInfo}</h4>
-        {followingBooleanButton}
-      </RobotProfile>
-    );
+
+  let followingBooleanButton;
+  // if (props.booleanFollowing === true) {
+  //   followingBooleanButton = <UnfollowButton>Unfollow</UnfollowButton>
+  //   //onClick={this.toggleFollowing(this.props)}
+  //   console.log(followingBooleanButton)
+  // } 
+
+  // else if (props.booleanFollowing === [] || props.booleanFollowing === false) {
+  //   followingBooleanButton = <FollowButton>Follow</FollowButton>
+  //   //onClick={this.toggleFollowing(this.props)}
+  //   console.log(followingBooleanButton)
+
+  // }
+  // onClick={(e) => this.deleteRow(id, e)}
+ 
+
+  if (props.booleanFollowing === true) {
+    // console.log('true')
+    followingBooleanButton = <UnfollowButton onClick={() => props.toggleFollowing(robotID)}>Unfollow</UnfollowButton>
+  } else {
+    // console.log('false')
+    followingBooleanButton = <UnfollowButton onClick={() => props.toggleFollowing(robotID)}>Unfollow</UnfollowButton>
   }
+  // followingBooleanButton = <FollowButton>Follow</FollowButton>
+  // console.log(props.booleanFollowing)
+
+
+  return (
+    <RobotProfile className="robot">
+      <RobotPhoto src={props.robot.avatar ? props.robot.avatar : defaultAvatarFry}/>
+      <h3>{props.robot.first_name} {props.robot.last_name}</h3>
+      <h4>{props.robot.title ? props.robot.title : defaultEmptyRobotInfo}</h4>
+      <h4>{props.robot.email ? props.robot.email : defaultEmptyRobotInfo}</h4>
+      {followingBooleanButton}
+    </RobotProfile>
+  );
 }
 
+
 export default Robot;
+
+
+
+
+
+
+
+// let Robot extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       following: JSON.parse(localStorage.getItem('following')) || false,
+//       [props.robot.id]: JSON.parse(localStorage.getItem('following')) || false,
+//     };
+//     // this.handleFollowRobotClick = this.handleFollowRobotClick.bind(this);
+//     this.toggleFollowing = this.toggleFollowing.bind(this);
+
+//   }
