@@ -13,7 +13,7 @@ code {
 }
 
 .robots-grid{
-  margin: 50px 50px;
+  margin: 25px 50px;
   display: inline-flex;
   flex-flow: row wrap;
 }
@@ -34,7 +34,7 @@ img{
 }
 
 .following-button{
-  margin: 10px auto 0px auto;
+  margin: 10px auto 10px auto;
   width: fit-content;
 }
 

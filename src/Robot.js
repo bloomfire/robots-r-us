@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Avatar from './Avatar'
 import FollowButton from './FollowButton'
 import UnfollowButton from './UnfollowButton'
 
@@ -8,26 +9,21 @@ function Robot({robotData}) {
 
    return (
       <div className="robot">
-
-         {
-            robotData.avatar ?
-            <img src={robotData.avatar} 
-                 alt={`${robotData.first_name} ${robotData.last_name} avatar`}></img> :
-            <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/robot-head-2677164-2221813.png" 
-                 alt={`${robotData.first_name} ${robotData.last_name} avatar`}
-                 width="100px"
-                 height="100px"></img>
-            
-         }
+         <Avatar image={robotData.avatar}
+                 first_name={robotData.first_name}
+                 last_name={robotData.last_name}/>
          <br/>
+
          <b>{`${robotData.first_name} ${robotData.last_name}`}</b>
          <br/>
+
          <div className="following-button" onClick={() => followRobot(!following)}>
             {!following ? <FollowButton /> : <UnfollowButton />}
          </div>
-         <br/>
+
          <i>{robotData.title || "No Title"}</i>
          <br/>
+         
          {robotData.email}
       </div>
    )

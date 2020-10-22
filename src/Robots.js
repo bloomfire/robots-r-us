@@ -2,9 +2,10 @@ import React from 'react'
 import Robot from './Robot'
 
 function Robots({data}) {
+
+
    return (
       <div className="robots-grid">
-         {console.log(data)}
          {
             data.sort((a, b) => {
                let nameA = a.last_name.toUpperCase()
