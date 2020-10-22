@@ -16,7 +16,10 @@ function FollowButton() {
 	};
 	return (
 		<div>
-			<Button variant="primary" value="follow" onClick={clickedFollow}>
+			<Button
+				style={{ backgroundColor: '#61dafb' }}
+				value="follow"
+				onClick={clickedFollow}>
 				{follow}
 			</Button>
 		</div>

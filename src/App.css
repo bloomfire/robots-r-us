@@ -37,3 +37,7 @@ h1 {
 	white-space: pre-wrap;
 	text-overflow: ellipsis;
 }
+Button {
+	border: 1px solid #61dafb;
+	border-radius: 3px;
+}
