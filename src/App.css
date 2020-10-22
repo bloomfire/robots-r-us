@@ -1,12 +1,21 @@
-@import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,500&display=swap');
+
 * {
   box-sizing: border-box;
+}
+
+html {
+  background-color: #202020;
 }
 
 .App {
   text-align: center;
   font-size: 16px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Roboto Mono', sans-serif;
+}
+
+h2 {
+  color: white;
 }
 
 span {
@@ -21,6 +30,7 @@ span {
 }
 
 .robotGroup {
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
