@@ -18,15 +18,28 @@ export default class EmployeeDirectory extends Component {
         return (
             <section className="Employee_Info">
                 {alphabeticalStore.map(robot => {
-                    return (
-                        <div className="Employee_Card" key={robot.id}>
-                            <img src={robot.avatar} alt="robot-profile"/>
-                            <p id="name">{robot.first_name} {robot.last_name}</p>
-                            <FollowButton/>
-                            <p id="occupation">{robot.title}</p>
-                            <p id="contact">{robot.email}</p>
-                        </div>
-                    );
+                    if (robot.avatar === null) {
+                        return (
+                            <div className="Employee_Card" key={robot.id}>
+                                <img src="https://robohash.org/rerumassumendaquaerat.jpg?size=100x100&set=set1" id="default-avi" alt="robot-profile"/>
+                                <p id="name">{robot.first_name} {robot.last_name}</p>
+                                <FollowButton/>
+                                <p id="occupation">{robot.title}</p>
+                                <p id="contact">{robot.email}</p>
+                            </div>
+                        );
+                    }
+                    else {
+                        return (
+                            <div className="Employee_Card" key={robot.id}>
+                                <img src={robot.avatar} alt="robot-profile" id="custom-avi"/>
+                                <p id="name">{robot.first_name} {robot.last_name}</p>
+                                <FollowButton/>
+                                <p id="occupation">{robot.title}</p>
+                                <p id="contact">{robot.email}</p>
+                            </div>
+                        );
+                    }
                 })}
             </section>
         );

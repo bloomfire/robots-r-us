@@ -17,6 +17,18 @@
     border-radius: 2em;
 }
 
+#custom-avi, #default-avi {
+    border-radius: 100%;
+}
+
+#custom-avi {
+    background-color: #C1DBB3;
+}
+
+#default-avi {
+    background-color: #BFD7EA;
+}
+
 /* change flex-basis as screen grows, starting with tablets */
 @media only screen and (min-width: 768px) {
     .Employee_Card {
