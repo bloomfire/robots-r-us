@@ -4,6 +4,17 @@ import { Card } from 'react-bootstrap';
 import FollowButton from './FollowButton';
 
 function EmployeeData() {
+	//Sort the data
+	// eslint-disable-next-line no-lone-blocks
+	{
+		data.sort((a, b) => {
+			if (a.last_name < b.last_name) {
+				return -1;
+			} else {
+				return 1;
+			}
+		});
+	}
 	return (
 		<div className="parent">
 			{data.map((info) => {
