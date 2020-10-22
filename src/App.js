@@ -5,12 +5,13 @@ import RobotCard from "./components/card/card-robot";
 
 import data from "./data";
 import "./App.css";
+import colors from "./theme/colors";
 
 const App = () => {
   const [robotData] = useState(data);
   return (
     <div className="App">
-      <h1>Robots-R-Us</h1>
+      <Title>Robots-R-Us</Title>
       <RobotCardWrapper>
         {robotData.map((robot) => (
           <RobotCard
@@ -26,6 +27,10 @@ const App = () => {
     </div>
   );
 };
+
+export const Title = styled.h1`
+  color: ${colors.offWhite};
+`;
 
 const RobotCardWrapper = styled.div`
   display: flex;
