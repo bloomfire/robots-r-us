@@ -48,13 +48,8 @@
   padding: 2px 16px;
   margin: 10px 10px;
   background-color: rgb(94, 161, 248);
-  display: inline;
 }
 
 .robotCard:hover {
   background-color: rgb(13, 212, 152);
-}
-
-.cardContents {
-  position: relative;
 }
