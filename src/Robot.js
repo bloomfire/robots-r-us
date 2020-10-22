@@ -4,13 +4,13 @@ import styled from 'styled-components';
 const RobotProfile = styled.div`
   border-radius: 25px;
   border: 1px solid black;
-  margin: 10px;
+  margin: 11px;
   padding: 15px;
   width: 300px;
   height: 300px;
   color: black;
   background-color: #72C4B6;
-  float:left
+  float:left;
 `;
 
 const RobotPhoto = styled.img`
@@ -62,23 +62,4 @@ function Robot(props) {
   );
 }
 
-
 export default Robot;
-
-
-
-
-
-
-
-// let Robot extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       following: JSON.parse(localStorage.getItem('following')) || false,
-//       [props.robot.id]: JSON.parse(localStorage.getItem('following')) || false,
-//     };
-//     // this.handleFollowRobotClick = this.handleFollowRobotClick.bind(this);
-//     this.toggleFollowing = this.toggleFollowing.bind(this);
-
-//   }

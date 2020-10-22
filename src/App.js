@@ -2,6 +2,20 @@ import React from 'react';
 import data from './data';
 import './App.css';
 import Robot from './Robot';
+import styled from 'styled-components';
+
+// const Container = styled.div`
+//   // justify-content:  flex-end;
+//   justify-content:  space-evenly;
+//   display: block;
+//   flex-wrap: wrap;
+//   flex-direction: column;
+// `;
+
+const Title = styled.h1`
+  text-align: center;
+`
+
 
 class App extends React.Component {
   constructor(props) {
@@ -65,10 +79,7 @@ class App extends React.Component {
     };
     this.sortRobotsByLastName = this.sortRobotsByLastName.bind(this);
     this.toggleFollowing = this.toggleFollowing.bind(this);
-
   }
-
-
 
   sortRobotsByLastName(robotData){
     let sortedRobotData = robotData.sort((a, b) => (a.last_name > b.last_name) ? 1 : -1);
@@ -86,26 +97,17 @@ class App extends React.Component {
     })
   }
 
-
-
-
-
-  // handleFollowRobotClick() {
-  //   this.setState(state => ({
-  //     following: !state.following
-  //   }));
-  // }
-
   componentDidMount() {
     this.sortRobotsByLastName(data)
-    console.log('monted')
   }
 
   render(){
     return (
-      <div className="App">
-        <h1>Robots-R-Us</h1>
-        {this.state.data.map(robot => <Robot robot={robot} booleanFollowing={this.state[robot.id]} toggleFollowing={this.toggleFollowing} key={robot.id}/>)}
+      <div>
+        <Title>Robots-R-Us</Title>
+        <div className="App">
+          {this.state.data.map(robot => <Robot robot={robot} booleanFollowing={this.state[robot.id]} toggleFollowing={this.toggleFollowing} key={robot.id}/>)}
+        </div>
       </div>
     );
   }
