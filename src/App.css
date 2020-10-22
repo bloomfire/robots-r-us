@@ -25,7 +25,7 @@ span {
   flex-direction: column;
   flex: 1 1 20%;
   margin: 5px;
-  height: 200px;
+  height: 225px;
   border-radius: 8px;
   border: 1px solid black;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -42,6 +42,7 @@ span {
 
 .robotName {
   margin-top: 10px;
+  font-weight: 800;
 }
 
 .robotFollowButton {
@@ -53,11 +54,25 @@ span {
 }
 
 .robotFollowedButton {
-  
+  color: white;
+  background-color: darkgreen;
+  border: 1px gray solid;
+  border-radius: 4px;
+  margin-top: 10px;
+  padding: 2px 4px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.robotTitle {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.robotEmail {
+  margin-top: 5px;
+}
+
+@media all and (max-width: 600px) {
+  .robotGroup {
+    flex: 1 1 33%;
   }
 }

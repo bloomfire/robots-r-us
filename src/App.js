@@ -6,7 +6,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      follow: [],
+      follow: [0],
     };
   }
 
@@ -18,15 +18,38 @@ class App extends React.Component {
           {data.map((robot, i) => {
             return (
               // Flex
-              <div onClick={() => {}} key={i} className="robotGroup">
+              <div
+                onClick={() => {
+                  this.setState({
+                    follow:
+                      this.state.follow.indexOf(i) !== -1
+                        ? this.state.follow.filter((f) => f !== Number(i))
+                        : [...this.state.follow, i],
+                  });
+                }}
+                key={i}
+                className="robotGroup"
+              >
                 <div
                   style={{ backgroundImage: "url(" + robot.avatar + ")" }}
                   className="robotAvatar"
                 ></div>
-                <div className="robotName">{robot.first_name + " " + robot.last_name}</div>
-                <div className="robotFollowButton">Follow</div>
-            <span className="robotTitle">{robot.title}</span>
-            <span className="robotEmail">{robot.email}</span>
+                <div className="robotName">
+                  {robot.first_name + " " + robot.last_name}
+                </div>
+                <div
+                  className={
+                    this.state.follow.indexOf(i) !== -1
+                      ? "robotFollowedButton"
+                      : "robotFollowButton"
+                  }
+                >
+                  {this.state.follow.indexOf(i) !== -1
+                      ? "Followed"
+                      : "Follow"}
+                </div>
+                <span className="robotTitle">{robot.title}</span>
+                <span className="robotEmail">{robot.email}</span>
               </div>
             );
           })}
