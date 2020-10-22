@@ -31,7 +31,7 @@ class App extends React.Component {
                 className="robotGroup"
               >
                 <div
-                  style={{ backgroundImage: "url(" + robot.avatar + ")" }}
+                  style={{ backgroundImage: (robot.avatar ? "url(" + robot.avatar + ")" : "url('https://place-hold.it/100x100?text=NO%20ROBO')") }}
                   className="robotAvatar"
                 ></div>
                 <div className="robotName">
