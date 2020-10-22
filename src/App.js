@@ -7,10 +7,13 @@ import './App.css';
 class App extends React.Component {
   constructor(props) {
     super(props);
+
+    // initialize state
     this.state = {
       followed: []
     };
 
+    // bind context for App methods
     this.toggleFollower = this.toggleFollower.bind(this);
 
   }
@@ -33,6 +36,7 @@ class App extends React.Component {
     this.setState({
       followed: robotsFollowed
     });
+
   }
 
   render() {
@@ -45,7 +49,10 @@ class App extends React.Component {
           {/* render each robot's info to its own robot card using map func */}
         <div className="card-container">
           {data.map((robot) => {
-            return <Card robotData={robot} key={robot.id} toggleFollower={this.toggleFollower} followed={this.state.followed} />;
+            return <Card robotData={robot}
+                         key={robot.id}
+                         toggleFollower={this.toggleFollower}
+                         followed={this.state.followed} />;
           })}
         </div>
 
