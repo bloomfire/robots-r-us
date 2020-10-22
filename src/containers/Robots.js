@@ -9,7 +9,10 @@ import '../styles/robots.css'
 import Robot from '../components/Robot'
 
 export default function Robots() {
-    const [robots, setRobots] = useState(data) // make new copy of data
+    if (!localStorage.getItem('robots')) {
+        localStorage.setItem('robots', JSON.stringify(data))
+    }
+    const [robots, setRobots] = useState(JSON.parse(localStorage.getItem('robots'))) // make new copy of data
 
     const handleOnChange = e => {
         const sort = e.target.value
