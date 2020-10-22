@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.robots-grid{
+  margin: 50px 50px;
+  display: inline-flex;
+  flex-flow: row wrap;
+}
+
+.robot{
+  flex: 1 1 auto;
+  width: 215px;
+  height: 215px;
+}
+
+img{
+  background-color: pink;
+  border-radius: 50px;
+}
