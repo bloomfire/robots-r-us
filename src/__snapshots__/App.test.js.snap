@@ -1,0 +1,1411 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders learn react link 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <h1
+      class="sc-eCApGN igksSC"
+    >
+      Robots-R-Us
+    </h1>
+    <div
+      class="sc-jSFkmK fUvCQZ"
+    >
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Loralee Bagg's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/temporequibusdamipsum.jpg?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Loralee
+           
+          Bagg
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3>
+          Account Representative III
+        </h3>
+        <p>
+          lbagg18@live.com
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Anders Baily's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/recusandaequasqui.png?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Anders
+           
+          Baily
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3>
+          Actuary
+        </h3>
+        <p>
+          abailyp@oracle.com
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Enrique Benda's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/ealaboriosamharum.bmp?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Enrique
+           
+          Benda
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3>
+          Senior Quality Engineer
+        </h3>
+        <p>
+          ebendag@nymag.com
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx fayYxt"
+        >
+          <img
+            alt="Curtice Birney's Avatar"
+            class="sc-gtssRu bgModd"
+            src="https://robohash.org/autautet.bmp?size=100x100&set=set2"
+          />
+        </div>
+        <h2>
+          Curtice
+           
+          Birney
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3>
+          Computer Systems Analyst II
+        </h3>
+        <p>
+          cbirneyk@smh.com.au
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Frankie Brawn's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/ipsumconsecteturcommodi.jpg?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Frankie
+           
+          Brawn
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3 />
+        <p>
+          fbrawnj@squarespace.com
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Krystyna Carrier's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/essequihic.jpg?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Krystyna
+           
+          Carrier
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3 />
+        <p>
+          kcarrieri@infoseek.co.jp
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Smitty Chieze's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/mollitiafacilisprovident.png?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Smitty
+           
+          Chieze
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3>
+          Financial Analyst
+        </h3>
+        <p>
+          schieze13@cisco.com
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Pete Claire's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/cupiditaterepellenduslaboriosam.png?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Pete
+           
+          Claire
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3>
+          Chief Design Engineer
+        </h3>
+        <p>
+          pclaire1b@army.mil
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Gwennie Clancy's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/quiareprehenderitsunt.bmp?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Gwennie
+           
+          Clancy
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3>
+          Chief Design Engineer
+        </h3>
+        <p>
+          gclancy4@ifeng.com
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Towny Dagworthy's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/sitetaut.png?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Towny
+           
+          Dagworthy
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3>
+          Financial Analyst
+        </h3>
+        <p>
+          tdagworthyb@tinyurl.com
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Luke Di Biagi's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/autveroodio.jpg?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Luke
+           
+          Di Biagi
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3 />
+        <p>
+          ldibiagif@tinypic.com
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Byrle Dick's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/nobisquibusdamet.jpg?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Byrle
+           
+          Dick
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3 />
+        <p />
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Jessika Dodsley's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/repellatnihilqui.jpg?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Jessika
+           
+          Dodsley
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3>
+          Research Assistant II
+        </h3>
+        <p>
+          jdodsleys@google.es
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Hakim Fincken's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/autemquiculpa.png?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Hakim
+           
+          Fincken
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3 />
+        <p>
+          hfinckenh@amazonaws.com
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Meriel Form's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/rationedolorumet.jpg?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Meriel
+           
+          Form
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3 />
+        <p>
+          mform5@mozilla.org
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx fayYxt"
+        >
+          <img
+            alt="Georgiana Gehrts's Avatar"
+            class="sc-gtssRu bgModd"
+            src="https://robohash.org/autautet.bmp?size=100x100&set=set2"
+          />
+        </div>
+        <h2>
+          Georgiana
+           
+          Gehrts
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3>
+          Chemical Engineer
+        </h3>
+        <p>
+          ggehrts1d@mapquest.com
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Allianora Gormally's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/culpaomnisrerum.png?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Allianora
+           
+          Gormally
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3>
+          Assistant Professor
+        </h3>
+        <p>
+          agormallyo@mit.edu
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Gage Greest's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/doloremquecumet.bmp?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Gage
+           
+          Greest
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3>
+          General Manager
+        </h3>
+        <p>
+          ggreest19@independent.co.uk
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Arabela Itzig's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/quisquamautbeatae.jpg?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Arabela
+           
+          Itzig
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3 />
+        <p>
+          aitzigq@icio.us
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Abie Janeway's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/veritatiscorporisnon.jpg?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Abie
+           
+          Janeway
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3 />
+        <p>
+          ajanewayc@google.co.uk
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx fayYxt"
+        >
+          <img
+            alt="Marchall Jorio's Avatar"
+            class="sc-gtssRu bgModd"
+            src="https://robohash.org/autautet.bmp?size=100x100&set=set2"
+          />
+        </div>
+        <h2>
+          Marchall
+           
+          Jorio
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3>
+          Business Systems Development Analyst
+        </h3>
+        <p>
+          mjoriow@admin.ch
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx fayYxt"
+        >
+          <img
+            alt="Olva Kellegher's Avatar"
+            class="sc-gtssRu bgModd"
+            src="https://robohash.org/autautet.bmp?size=100x100&set=set2"
+          />
+        </div>
+        <h2>
+          Olva
+           
+          Kellegher
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3 />
+        <p>
+          okellegher1@prlog.org
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx fayYxt"
+        >
+          <img
+            alt="Sunny Kenion's Avatar"
+            class="sc-gtssRu bgModd"
+            src="https://robohash.org/autautet.bmp?size=100x100&set=set2"
+          />
+        </div>
+        <h2>
+          Sunny
+           
+          Kenion
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3 />
+        <p />
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Tanney Kimbling's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/nequedoloremconsequatur.png?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Tanney
+           
+          Kimbling
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3 />
+        <p>
+          tkimblingz@timesonline.co.uk
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Adora Kless's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/iddistinctioanimi.jpg?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Adora
+           
+          Kless
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3>
+          Clinical Specialist
+        </h3>
+        <p>
+          aklessn@illinois.edu
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Giavani Kolakowski's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/suscipitevenietet.bmp?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Giavani
+           
+          Kolakowski
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3 />
+        <p>
+          gkolakowski7@mlb.com
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Georgie Kubala's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/consequaturnobisamet.bmp?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Georgie
+           
+          Kubala
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3>
+          Librarian
+        </h3>
+        <p>
+          gkubalae@columbia.edu
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Nerta Labroue's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/repellatminusquia.bmp?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Nerta
+           
+          Labroue
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3 />
+        <p>
+          nlabroue1a@hc360.com
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Terese Lacrouts's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/modiquieius.bmp?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Terese
+           
+          Lacrouts
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3 />
+        <p>
+          tlacrouts8@google.pl
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Ammamaria MacCard's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/remnemodelectus.png?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Ammamaria
+           
+          MacCard
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3>
+          Human Resources Manager
+        </h3>
+        <p>
+          amaccard17@mysql.com
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx fayYxt"
+        >
+          <img
+            alt="Samantha McKnish's Avatar"
+            class="sc-gtssRu bgModd"
+            src="https://robohash.org/autautet.bmp?size=100x100&set=set2"
+          />
+        </div>
+        <h2>
+          Samantha
+           
+          McKnish
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3>
+          Chemical Engineer
+        </h3>
+        <p>
+          smcknishd@wikipedia.org
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Basilius Nowaczyk's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/quoutratione.png?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Basilius
+           
+          Nowaczyk
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3>
+          Clinical Specialist
+        </h3>
+        <p>
+          bnowaczyk16@apple.com
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx fayYxt"
+        >
+          <img
+            alt="Idell Oates's Avatar"
+            class="sc-gtssRu bgModd"
+            src="https://robohash.org/autautet.bmp?size=100x100&set=set2"
+          />
+        </div>
+        <h2>
+          Idell
+           
+          Oates
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3>
+          Programmer Analyst III
+        </h3>
+        <p>
+          ioates1c@hp.com
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Kerby Owtram's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/voluptasveritatisdeserunt.jpg?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Kerby
+           
+          Owtram
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3 />
+        <p>
+          kowtram15@accuweather.com
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx fayYxt"
+        >
+          <img
+            alt="Kelley Paterno's Avatar"
+            class="sc-gtssRu bgModd"
+            src="https://robohash.org/autautet.bmp?size=100x100&set=set2"
+          />
+        </div>
+        <h2>
+          Kelley
+           
+          Paterno
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3 />
+        <p>
+          kpaterno14@youku.com
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Charla Phelp's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/nostrumautet.jpg?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Charla
+           
+          Phelp
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3 />
+        <p>
+          cphelp9@4shared.com
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Laney Pottinger's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/suscipitsuntlabore.png?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Laney
+           
+          Pottinger
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3 />
+        <p>
+          lpottingeru@nature.com
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Red Pudner's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/autautet.bmp?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Red
+           
+          Pudner
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3>
+          Pharmacist
+        </h3>
+        <p>
+          rpudner0@shareasale.com
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Cecile Rainton's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/adipisciautsit.png?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Cecile
+           
+          Rainton
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3>
+          Recruiter
+        </h3>
+        <p>
+          crainton3@artisteer.com
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx fayYxt"
+        >
+          <img
+            alt="Maighdiln Ricket's Avatar"
+            class="sc-gtssRu bgModd"
+            src="https://robohash.org/autautet.bmp?size=100x100&set=set2"
+          />
+        </div>
+        <h2>
+          Maighdiln
+           
+          Ricket
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3>
+          Help Desk Technician
+        </h3>
+        <p>
+          mricket10@purevolume.com
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Allyn Rutt's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/molestiaeidvoluptatem.png?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Allyn
+           
+          Rutt
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3 />
+        <p>
+          aruttl@pen.io
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Wilburt Scarfe's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/molestiaeutofficiis.jpg?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Wilburt
+           
+          Scarfe
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3>
+          Electrical Engineer
+        </h3>
+        <p>
+          wscarfet@ifeng.com
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Waverly Slisby's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/corporiseligendiaut.jpg?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Waverly
+           
+          Slisby
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3 />
+        <p />
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx fayYxt"
+        >
+          <img
+            alt="Skylar Swadlinge's Avatar"
+            class="sc-gtssRu bgModd"
+            src="https://robohash.org/autautet.bmp?size=100x100&set=set2"
+          />
+        </div>
+        <h2>
+          Skylar
+           
+          Swadlinge
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3 />
+        <p>
+          sswadlingev@webeden.co.uk
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Vito Trevino's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/providentperspiciatiset.bmp?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Vito
+           
+          Trevino
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3 />
+        <p>
+          vtrevino12@mail.ru
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Wainwright Tureville's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/rerumquiqui.jpg?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Wainwright
+           
+          Tureville
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3 />
+        <p>
+          wturevillex@printfriendly.com
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx fayYxt"
+        >
+          <img
+            alt="Drake Uccello's Avatar"
+            class="sc-gtssRu bgModd"
+            src="https://robohash.org/autautet.bmp?size=100x100&set=set2"
+          />
+        </div>
+        <h2>
+          Drake
+           
+          Uccello
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3 />
+        <p>
+          duccello6@wordpress.com
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx fayYxt"
+        >
+          <img
+            alt="Zacherie Westrope's Avatar"
+            class="sc-gtssRu bgModd"
+            src="https://robohash.org/autautet.bmp?size=100x100&set=set2"
+          />
+        </div>
+        <h2>
+          Zacherie
+           
+          Westrope
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3 />
+        <p />
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx beQvbC"
+        >
+          <img
+            alt="Carroll Whapham's Avatar"
+            class="sc-gtssRu tgyqt"
+            src="https://robohash.org/rerumassumendaquaerat.jpg?size=100x100&set=set1"
+          />
+        </div>
+        <h2>
+          Carroll
+           
+          Whapham
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3>
+          Junior Executive
+        </h3>
+        <p>
+          cwhaphama@bigcartel.com
+        </p>
+      </div>
+      <div
+        class="sc-dlnjPT eotBDv"
+      >
+        <div
+          class="sc-bdnylx fayYxt"
+        >
+          <img
+            alt="Karisa Wisbey's Avatar"
+            class="sc-gtssRu bgModd"
+            src="https://robohash.org/autautet.bmp?size=100x100&set=set2"
+          />
+        </div>
+        <h2>
+          Karisa
+           
+          Wisbey
+        </h2>
+        <button
+          class="sc-hKFyIo BUrGL"
+        >
+          Follow
+        </button>
+        <h3>
+          Accountant III
+        </h3>
+        <p>
+          kwisbeyr@cisco.com
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
