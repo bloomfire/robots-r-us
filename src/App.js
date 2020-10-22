@@ -47,7 +47,7 @@ function App() {
                 {!followedRobots.has(robot.id) ? "Follow" : "Following"}
               </button>
               <p className="Robot-title">{robot.title}</p>
-              <p className="Robot-email">{robot.email}</p>
+              <a className="Robot-email" href={`mailto:${robot.email}`}>{robot.email}</a>
             </div>
           );
         })}
