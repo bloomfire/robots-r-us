@@ -1,22 +1,26 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import data from './data';
 import './App.css';
 
 function App() {
+
   const handleFollow = (e) => {
-    
+    let value = e.target.text;
+    // console.log(value)
+    value == 'Following' ? value = 'Follow' : value = 'Following';
+    e.target.text = value;
   }
   return (
     <div className="App">
       <h1>Robots-R-Us</h1>
       <div className="container">
-      {data.map(robot => 
+      {sort.map(robot => 
       <div className="wrapper">
         <div className="card" style={{width: "14rem"}}>
           <div className="img-wrapper"
-          style={{backgroundImage: `url( ${robot.avatar ? robot.avatar :  'https://www.jbrhomes.com/wp-content/uploads/blank-avatar.png'}`}}
+          style=
+          {{backgroundImage: `url( ${robot.avatar ? robot.avatar :  'https://www.jbrhomes.com/wp-content/uploads/blank-avatar.png'}`}}
           >
-            {/* <img src={robot.avatar ? robot.avatar : '/> */}
           </div>
           <div className="card-body">
             <h5 className="card-title">{robot.first_name} {robot.last_name}</h5>
