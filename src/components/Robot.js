@@ -24,7 +24,7 @@ function Robot({robotData}) {
          <i>{robotData.title || "No Title"}</i>
          <br/>
          
-         {robotData.email}
+         {robotData.email || "No Email"}
       </div>
    )
 }

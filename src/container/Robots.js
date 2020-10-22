@@ -2,8 +2,6 @@ import React from 'react'
 import Robot from '../components/Robot.js'
 
 function Robots({data}) {
-
-
    return (
       <div className="robots-grid">
          {
@@ -18,7 +16,7 @@ function Robots({data}) {
                }
                return 0
             })
-            .map(rd => <Robot key={rd.id} robotData={rd} />)
+            .map(robotData => <Robot key={robotData.id} robotData={robotData} />)
          }
       </div>
    )
