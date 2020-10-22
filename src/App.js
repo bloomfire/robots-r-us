@@ -1,6 +1,6 @@
 import React from 'react';
 import data from './data';
-import Robots from './Robots'
+import Robots from './container/Robots'
 import './App.css';
 
 function App() {

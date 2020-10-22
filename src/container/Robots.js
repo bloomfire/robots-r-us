@@ -1,5 +1,5 @@
 import React from 'react'
-import Robot from './Robot'
+import Robot from '../components/Robot.js'
 
 function Robots({data}) {
 
