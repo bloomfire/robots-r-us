@@ -21,7 +21,6 @@ const PlayerCard = (props) => {
       return (
         <>
           <Card
-          style={cardStyle}
             >
               <CardMedia
               component='img'
