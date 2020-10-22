@@ -38,46 +38,18 @@ const FollowButton = styled.button`
   border-radius: 3px;
 `;
 
-
-
 const defaultAvatarFry = 'https://pbs.twimg.com/profile_images/3555009298/146c8cd1fca9ab61b0b1b86fad1d627f.jpeg';
 const defaultEmptyRobotInfo = '?';
 
 function Robot(props) {
-  // let isFollowingRobot = this.state.following;
-  // let isFollowingRobot = false;
   let robotID = props.robot.id;
-
-
-  // let isFollowingRobot = this.state[props.robot.id];
-
-
   let followingBooleanButton;
-  // if (props.booleanFollowing === true) {
-  //   followingBooleanButton = <UnfollowButton>Unfollow</UnfollowButton>
-  //   //onClick={this.toggleFollowing(this.props)}
-  //   console.log(followingBooleanButton)
-  // } 
-
-  // else if (props.booleanFollowing === [] || props.booleanFollowing === false) {
-  //   followingBooleanButton = <FollowButton>Follow</FollowButton>
-  //   //onClick={this.toggleFollowing(this.props)}
-  //   console.log(followingBooleanButton)
-
-  // }
-  // onClick={(e) => this.deleteRow(id, e)}
  
-
   if (props.booleanFollowing === true) {
-    // console.log('true')
     followingBooleanButton = <UnfollowButton onClick={() => props.toggleFollowing(robotID)}>Unfollow</UnfollowButton>
   } else {
-    // console.log('false')
     followingBooleanButton = <FollowButton onClick={() => props.toggleFollowing(robotID)}>Follow</FollowButton>
   }
-  // followingBooleanButton = <FollowButton>Follow</FollowButton>
-  // console.log(props.booleanFollowing)
-
 
   return (
     <RobotProfile className="robot">
