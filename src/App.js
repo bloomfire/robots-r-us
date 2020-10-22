@@ -8,20 +8,15 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      followers: []
+      followed: [1, 3, 5]
     };
 
-    this.addFollower = this.addFollower.bind(this);
-    this.removeFollower = this.removeFollower.bind(this);
+    this.toggleFollower = this.toggleFollower.bind(this);
 
   }
 
-  addFollower = () => {
-
-  }
-
-  removeFollower = () => {
-
+  toggleFollower = () => {
+    console.log('click')
   }
 
   render() {
@@ -34,7 +29,7 @@ class App extends React.Component {
           {/* render each robot's info to its own robot card using map func */}
         <div className="card-container">
           {data.map((robot) => {
-            return <Card robotData={robot} key={robot.id} />;
+            return <Card robotData={robot} key={robot.id} toggleFollower={this.toggleFollower} followed={this.state.followed} />;
           })}
         </div>
 

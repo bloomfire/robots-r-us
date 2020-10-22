@@ -1,8 +1,16 @@
 import React from 'react';
 
-function Card({ robotData }) {
+function Card({ robotData, toggleFollower, followed }) {
 
-  var followStatus = 'unfollowed';
+  let followStatus = 'unfollowed';
+  let followText = 'Follow';
+
+  if (followed.includes(robotData.id)) {
+    followStatus = 'followed';
+    followText = 'Unfollow';
+  }
+
+  console.log(followed)
 
   return (
     <div className="card">
@@ -10,7 +18,11 @@ function Card({ robotData }) {
       <div className="name">{robotData.first_name} {robotData.last_name}</div>
       <div className="title">{robotData.title}</div>
       <div className="email">{robotData.email}</div>
-      <div id={followStatus} className="follow">Follow</div>
+      <div id={followStatus}
+           className="follow"
+           onClick={toggleFollower}>
+        {followText}
+      </div>
     </div>
   );
 };
