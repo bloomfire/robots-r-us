@@ -15,8 +15,8 @@ class App extends React.Component {
     var followRobot = e.target.id;
     this.setState((prevState) => {
       prevState.followed[followRobot] = followRobot;
-    }, () => console.log(this.state));
-    document.getElementById(followRobot).innerText = "Followed";
+    });
+    document.getElementById(followRobot).innerText = "Following";
   }
 
   render() {
@@ -29,7 +29,7 @@ class App extends React.Component {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "1fr 1fr 1fr",
+            gridTemplateColumns: "1fr 1fr 1fr 1fr",
             gap: "15px 15px",
           }} 
         >
@@ -44,25 +44,40 @@ class App extends React.Component {
                     width: "200px",
                     border: "1px solid black",
                     display: "inline-block",
-                    margin: "10px"
+                    margin: "10px",
+                    backgroundColor: "#ffffff",
+                    borderRadius: "5px",
                   }}
                 >
                   <img 
-                    src={robot.avatar} 
-                    alt="avatar here"
+                    src={
+                      robot.avatar ? 
+                      robot.avatar : 
+                      ''
+                    }
+                    style={
+                      robot.avatar ? 
+                      {} :
+                      {display: "none"}
+                    }
                   >
                   </img>
                   <br></br>
+                  
+                  
                   {robot.first_name}&nbsp;{robot.last_name}<br></br>
-                  {robot.email}<br></br>
-  
-                  {robot.title}<br></br>
                   <button 
                     id={`${robot.first_name} ${robot.last_name}`} 
                     onClick={this.handleClick}
                   >
-                    {followed[`${robot.first_name} ${robot.last_name}`] ? "Followed" : `Follow ${robot.first_name}`}
-                  </button>
+                    {followed[`${robot.first_name} ${robot.last_name}`] ? 'Followed' : 'Follow'}
+                  </button><br></br>
+  
+                  {robot.title}<br></br>
+
+                  {robot.email}<br></br>
+
+                  
                 </div>
               )
             })
