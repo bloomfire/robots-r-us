@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import data from "./data";
 import "./App.css";
 
 function App() {
+  const [following, setFollowing] = useState([]);
   return (
     <div className="App">
-        <h1>Robots-R-Us</h1>
-        <div className="robot-images-container">
+      <h1>Robots-R-Us</h1>
+      <div className="robot-images-container">
         {data.map((robot) => {
           let robotName = robot.first_name + " " + robot.last_name;
+          let buttonValue;
+          if (following.indexOf(robotName) !== -1){
+            buttonValue = "Following";
+          } else {
+            buttonValue = "Follow";
+          }        
           return (
             <div
               className="robot-card-container"
@@ -20,7 +27,20 @@ function App() {
               </div>
               <div className="robot-name">{robotName}</div>
               <div className="follow-button-container">
-                <button className="follow-button">Follow</button>
+                <button
+                  className="follow-button"
+                  value={robotName}
+                  onClick={(e) => {
+                    if (following.indexOf(e.target.value) !== -1){
+                      let newArray = following.filter(robotName => robotName != e.target.value);
+                      setFollowing(newArray);
+                    } else {
+                      setFollowing([...following, e.target.value])
+                    }
+                  }}
+                >
+                  {buttonValue}
+                </button>
               </div>
               <div className="robot-title">{robot.title}</div>
               <div className="robot-email">{robot.email}</div>
