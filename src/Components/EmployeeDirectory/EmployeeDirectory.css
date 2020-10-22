@@ -1,0 +1,32 @@
+/* mobile-first style, min 320px */
+.Employee_Info {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    padding: 1em;
+}
+
+.Employee_Card {
+    flex-basis: 100%; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    text-align: center; 
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 2em;
+}
+
+/* change flex-basis as screen grows, starting with tablets */
+@media only screen and (min-width: 768px) {
+    .Employee_Card {
+        flex-basis: 40%;
+    }
+}
+
+/* larger desktops */
+@media only screen and (min-width: 1200px) {
+    .Employee_Card {
+        flex-basis: 20%;
+    }
+}
