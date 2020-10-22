@@ -14,6 +14,7 @@ class App extends React.Component {
   }
 
   render() {
+    ls.set('follow', JSON.stringify(this.state.follow));
     return (
       <div className="App">
         <h2>Robots-R-Us</h2>
