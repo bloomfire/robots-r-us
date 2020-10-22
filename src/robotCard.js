@@ -5,7 +5,7 @@ import { Button } from '@material-ui/core'
 
 const PlayerCard = (props) => {
 
-    const {id, first_name, last_name, email, title, avatar} = props
+    const {first_name, last_name, email, title, avatar} = props
     
     const [isToggled, setIsToggled] = React.useState('true')
     
@@ -54,10 +54,12 @@ const PlayerCard = (props) => {
     }
 
     const backgroundColorMarkup = backgroundColorChecker(isToggled)
+    console.log(backgroundColorMarkup)
 
 
 
     let cardStyle = {
+      height: '525px',
       width: '300px',
       backgroundColor: {backgroundColorMarkup},
     }
