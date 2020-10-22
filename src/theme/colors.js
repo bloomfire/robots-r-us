@@ -6,4 +6,4 @@ const colors = {
   tan: "#fdcb9e",
 };
 
-export default colors
+export default colors;
