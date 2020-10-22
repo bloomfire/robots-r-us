@@ -1,14 +1,38 @@
-import React from 'react';
-import data from './data';
-import './App.css';
+import React from "react";
+import data from "./data";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Robots-R-Us</h1>
-      {/* {data.map(robot => ...)} */}
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      follow: [],
+    };
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <h1>Robots-R-Us</h1>
+        <div className="robotContain">
+          {data.map((robot, i) => {
+            return (
+              // Flex
+              <div onClick={() => {}} key={i} className="robotGroup">
+                <div
+                  style={{ backgroundImage: "url(" + robot.avatar + ")" }}
+                  className="robotAvatar"
+                ></div>
+                <div className="robotFollowButton"></div>
+                <span className="robotTitle"></span>
+                <span className="robotEmail"></span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
