@@ -9,12 +9,29 @@ import colors from "./theme/colors";
 
 const App = () => {
   const withFollowData = data.map((prevData) => ({ ...prevData, isFollowing: false }));
-  const [robotData] = useState(withFollowData);
+  const [robotData, setRobotData] = useState(withFollowData);
+
+  const handleFollow = (idx) => {
+    setRobotData((robotData) =>
+      robotData.map((item) => {
+        if (item.isFollowing === false) {
+          return item.id === idx + 1 ? { ...item, isFollowing: true } : item;
+        }
+
+        if (item.isFollowing === true) {
+          return item.id === idx + 1 ? { ...item, isFollowing: false } : item;
+        }
+
+        return item;
+      })
+    );
+  };
+
   return (
     <div className="App">
       <Title>Robots-R-Us</Title>
       <RobotCardWrapper>
-        {robotData.map((robot) => (
+        {robotData.map((robot, index) => (
           <RobotCard
             key={robot.id}
             firstName={robot.first_name}
@@ -23,6 +40,7 @@ const App = () => {
             title={robot.title}
             email={robot.email}
             follow={robot.isFollowing}
+            clickFollow={() => handleFollow(index)}
           />
         ))}
       </RobotCardWrapper>
