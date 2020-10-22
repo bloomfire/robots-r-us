@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 import RobotCard from "./components/card/card-robot";
@@ -10,6 +10,18 @@ import colors from "./theme/colors";
 const App = () => {
   const withFollowData = data.map((prevData) => ({ ...prevData, isFollowing: false }));
   const [robotData, setRobotData] = useState(withFollowData);
+
+  useEffect(() => {
+    const localData = localStorage.getItem("robot-data");
+
+    if (localData) {
+      setRobotData(JSON.parse(localData));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("robot-data", JSON.stringify(robotData));
+  }, [robotData]);
 
   const handleFollow = (idx) => {
     setRobotData((robotData) =>
