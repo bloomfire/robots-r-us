@@ -46,9 +46,7 @@ const defaultEmptyRobotInfo = '?';
 function Robot(props) {
   // let isFollowingRobot = this.state.following;
   // let isFollowingRobot = false;
-  // console.log(props.robot.id)
   let robotID = props.robot.id;
-  // let robotID = 45;
 
 
   // let isFollowingRobot = this.state[props.robot.id];
@@ -75,7 +73,7 @@ function Robot(props) {
     followingBooleanButton = <UnfollowButton onClick={() => props.toggleFollowing(robotID)}>Unfollow</UnfollowButton>
   } else {
     // console.log('false')
-    followingBooleanButton = <UnfollowButton onClick={() => props.toggleFollowing(robotID)}>Unfollow</UnfollowButton>
+    followingBooleanButton = <FollowButton onClick={() => props.toggleFollowing(robotID)}>Follow</FollowButton>
   }
   // followingBooleanButton = <FollowButton>Follow</FollowButton>
   // console.log(props.booleanFollowing)

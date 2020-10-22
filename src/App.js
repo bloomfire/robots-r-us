@@ -8,8 +8,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       data: data,
-      1: [],
-      2: [],
+      1: true,
+      2: false,
       3: [],
       4: [],
       5: [],
@@ -74,7 +74,7 @@ class App extends React.Component {
     this.setState({
       // following: !this.state.following
       // [props.robot.id]: 'hello world' //!this.state[props.robot.id]
-      id: 'hello world' //!this.state[props.robot.id]
+      [id]: !this.state[id] //!this.state[props.robot.id]
 
     })
     // () => {
