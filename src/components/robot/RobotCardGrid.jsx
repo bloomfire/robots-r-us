@@ -1,20 +1,19 @@
 import React from 'react';
 import styled from 'styled-components'
 import RobotCard from './RobotCard'
-import data from '../../data.js'
 
 const RobotCardGridWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 100px;
-    margin: 0 20px;
+    margin: 0 20px 40px 20px;
 `
 
-const RobotCardGrid = () => {
+const RobotCardGrid = (props) => {
     return (
         <RobotCardGridWrapper>
-            {data.map(profile => (
-                <RobotCard profile={profile} />
+            {props.data.map(profile => (
+                <RobotCard profile={profile} key={profile.id}/>
             ))}
         </RobotCardGridWrapper>
     )

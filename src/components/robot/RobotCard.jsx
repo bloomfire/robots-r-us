@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import defaultImg from "../../assets/anon.png"
 import styled from 'styled-components'
 
 const RobotCardWrapper = styled.div`
@@ -19,14 +20,20 @@ const RobotCardWrapper = styled.div`
 `
 
 const ButtonActive = styled.button`
+    font-size: 15px;
+    padding: 4px 7px;
     background-color: green;
     border: 1px solid green;
+    border-radius: 3px;
     color: #f9f9f9;
 `
 
 const ButtonNotActive = styled.button`
+    font-size: 15px;
+    padding: 4px 7px;
     background-color: #f9f9f9;
     border: 1px solid #242424;
+    border-radius: 3px;
     color: #242424;
 `
 
@@ -36,7 +43,7 @@ const RobotCard = (props) => {
 
     return (
         <RobotCardWrapper>
-            <img alt="" src={robot.avatar} />
+            {robot.avatar ? <img alt="" src={robot.avatar} /> : <img alt="" src={defaultImg} /> }
             <h1>{robot.first_name} {robot.last_name}</h1>
 
             {following 
@@ -44,8 +51,8 @@ const RobotCard = (props) => {
             : <ButtonNotActive onClick={() => setFollowing(!following)}>Follow</ButtonNotActive>}
 
             
-            <h2>{robot.title}</h2>
-            <h3>{robot.email}</h3>
+            {robot.title && <h2 style={{ margin: "10px 0" }}>{robot.title}</h2>}
+            {robot.email && <h3>{robot.email}</h3>}
         </RobotCardWrapper>
     )
 }
