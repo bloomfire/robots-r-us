@@ -17,8 +17,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
+
 function App() {
   const classes = useStyles();
+
+  const [state, setState] = React.useState({
+    robots: data
+  })
 
   return (
     <div className="App">
@@ -27,7 +33,18 @@ function App() {
       {/* Display raw data first, in a grid */}
       <div className={classes.root}>
         <Grid container spacing={3}>
-          <Grid item xs={3}>
+
+          {state.robots.map((robot, id) => (
+            <Grid key={id} item xs={3}>
+              <Paper className={classes.paper}>
+                <img src={robot.avatar} />
+                <h1>{robot.first_name} {robot.last_name}</h1>
+              </Paper>
+            </Grid>
+          ))}
+
+
+          {/* <Grid item xs={3}>
             <Paper className={classes.paper}>
 
             </Paper>
@@ -37,12 +54,6 @@ function App() {
             <Paper className={classes.paper}>
 
             </Paper>
-          </Grid>
-
-          <Grid item xs={3}>
-            <Paper className={classes.paper}>
-
-            </Paper>
 
           </Grid>
 
@@ -50,7 +61,7 @@ function App() {
             <Paper className={classes.paper}>
 
             </Paper>
-          </Grid>
+          </Grid> */}
         </Grid>
       </div>
     </div>
