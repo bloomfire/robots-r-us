@@ -35,10 +35,13 @@ function App() {
         <Grid container spacing={3}>
 
           {state.robots.map((robot, id) => (
-            <Grid key={id} item xs={3}>
+            <Grid key={id} item xs>
               <Paper className={classes.paper}>
-                <img src={robot.avatar} />
+                <img src={robot.avatar} alt="robot headshot" />
                 <h1>{robot.first_name} {robot.last_name}</h1>
+                <button>Follow button placeholder; component this</button>
+                <h2>{robot.title}</h2>
+                <h4>{robot.email}</h4>
               </Paper>
             </Grid>
           ))}
