@@ -1,6 +1,11 @@
+body {
+  background-color: #cfd0d1;
+}
+
 .App {
   text-align: center;
   background-color: #cfd0d1;
+  font-family: 'Roboto', sans-serif;
 }
 
 .App-logo {
