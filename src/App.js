@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import data from "./data";
 import "./App.css";
 import { makeStyles } from "@material-ui/core/styles";
@@ -13,7 +13,7 @@ import Button from "@material-ui/core/Button";
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: "90%",
-    width: "920px",
+    width: "300px",
     margin: "15px auto",
     paddingTop: 10,
     paddingBottom: 10,
@@ -35,34 +35,31 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function App() {
-  const classes = useStyles();
-  const [follow, setFollow] = useState(data);
-
-  const updateFollow = (id, status) => {
-    let statusObject = { ...follow };
-    statusObject[id] = {
-      status: status,
-    };
-    setFollow(statusObject);
+export default function App() {
+  const [followed, setFollowed] = useState();
+  useEffect(() => {
+    if (!followed) {
+      data.forEach((i) => (i.follow = false));
+      setFollowed(data);
+    }
+  }, [followed]);
+  const updateFollowed = (index, status) => {
+    const newState = [...followed];
+    newState[index].follow = status;
+    setFollowed(newState);
   };
-
-  const isFollowed = Object.keys(follow).map(
-    (key) => follow[key].status === "follow"
-  );
-
   return (
     <div className="App">
       <CssBaseline>
-        <Container className="App-header" align="center">
+        <Container className="App-header">
           <h1>ROBOTS-R-US</h1>
         </Container>
         <Container>
           {data.map((robot) => {
             const { id, first_name, last_name, email, title, avatar } = robot;
             return (
-              <Grid container spacing={1} key={id}>
-                <Grid item xs>
+              <Grid className="grid-X" key={id}>
+                <Grid className="grid-item" xs={12} spacing={3}>
                   <Paper classes={{ root: classes.root }} elevation={1}>
                     <Container align="center">
                       <Avatar className={classes.large} src={avatar} />
@@ -95,5 +92,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
