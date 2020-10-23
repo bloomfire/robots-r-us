@@ -10,6 +10,7 @@
 }
 
 .avatar-profile > img {
+  width: 100px;
   background: lightskyblue;
   border-radius: 50px;
 }

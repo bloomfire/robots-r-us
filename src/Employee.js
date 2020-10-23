@@ -11,7 +11,7 @@ const Employee = ({robot}) => {
 
   return (
     <div className="avatar-profile">
-      <img className="profile-info" src={robot.avatar} alt="robot avatar"/>
+      <img className="profile-info profile-image" src={robot.avatar ? robot.avatar : "https://charbase.com/images/glyph/65110"} alt=""/>
       <div className="profile-info robot-name">
         <b>
           {`${robot.first_name} ${robot.last_name}`}
