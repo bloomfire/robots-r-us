@@ -31,10 +31,15 @@
 
 .title-center{
   text-align: center;
-  color: black;
+  color: rgb(170, 145, 34);
   font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
   text-transform: uppercase;
   font-size: 64px;
+  text-shadow: -2px 2px 0  rgb(94, 92, 92),
+				  2px 2px 0 rgb(94, 92, 92),
+				 2px -2px 0 rgb(94, 92, 92),
+				-2px -2px 0  rgb(94, 92, 92);
 }
 
 @keyframes App-logo-spin {
