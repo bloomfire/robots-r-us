@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: rgb(144, 189, 190);
 }
 
 .App-logo {
@@ -30,6 +31,10 @@
 
 .title-center{
   text-align: center;
+  color: black;
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-transform: uppercase;
+  font-size: 64px;
 }
 
 @keyframes App-logo-spin {

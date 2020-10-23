@@ -18,7 +18,7 @@ export default class Profile extends React.Component {
 
         return (
             <Card style={{ width: '18rem' }} bg="light" border="info" className="mb-2" >
-                <Card.Img variant="top" src={profile.avatar ? profile.avatar : "https://upload.wikimedia.org/wikipedia/en/8/86/Avatar_Aang.png"} class="img-fluid img-thumbnail" />
+                <Card.Img variant="top" src={profile.avatar ? profile.avatar : "https://vignette.wikia.nocookie.net/kingdomheartsfanon/images/a/a9/Walle1.gif/revision/latest/scale-to-width-down/150?cb=20131108025542"} class="img-fluid img-thumbnail" />
                 <Card.Body>
                     <Card.Title>{profile.first_name + " " + profile.last_name}</Card.Title>
                     <Card.Text>
