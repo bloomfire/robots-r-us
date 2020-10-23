@@ -36,3 +36,124 @@
     transform: rotate(360deg);
   }
 }
+
+.Jumbotron-background {
+  display: grid;
+  background-color: rgba(0, 0, 0, 0.911);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.data-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 60px;
+  justify-content: space-around;
+  justify-items: center;
+  align-items: center;
+}
+
+.PTitle {
+  font-family: sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 4em;
+  margin-bottom: 30px;
+  justify-self: center;
+  margin-right: 25px;
+}
+
+.card {
+  display: grid;
+  width: 321px;
+  grid-template-columns: 320px;
+  grid-template-rows: 50px 200px 100px 80px;
+  grid-template-areas: "title" "image" "text" "stats";
+  border-radius: 18px;
+  background: rgb(255, 255, 255);
+  font-family: roboto;
+  text-align: center;
+}
+
+.card-text {
+  grid-area: text;
+}
+.card-stats {
+  grid-area: stats;
+}
+
+.title {
+  font-weight: 500;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 30px;
+  background-color: rgb(248, 194, 76);
+  height: 70px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.card-image {
+  margin-top: 20px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.card-image img {
+  width: 200px;
+}
+
+.card-image2 {
+  display: flex;
+  margin-top: 40px;
+  align-content: center;
+  margin-left: auto;
+  margin-right: 150px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  width: 100px;
+}
+.card-image2 img {
+  width: 200px;
+}
+
+.card-text {
+  grid-area: text;
+  margin: 25px;
+}
+.card-text p {
+  color: rgb(37, 37, 37);
+  font-size: 17px;
+  font-weight: 300;
+}
+.card-text h2 {
+  margin-top: 0px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.like-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.like .card:hover {
+  transform: scale(1);
+}
+
+.card {
+  transition: 0.5s ease;
+  margin: 30px;
+}
