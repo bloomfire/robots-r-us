@@ -30,12 +30,9 @@ const useStyles = makeStyles((theme) => ({
   padding: {
     padding: "8px 20px",
   },
-  selectorSize: {
-    minWidth: 600,
-  },
-  inputMargin: {
-    margin: "10px 0px",
-    minWidth: 600,
+  large: {
+    width: theme.spacing(7),
+    height: theme.spacing(7),
   },
 }));
 
@@ -63,17 +60,21 @@ function App() {
           {data.map((robot) => {
             const { id, first_name, last_name, email, title, avatar } = robot;
             return (
-              <Grid key={id}>
-                <Grid>
+              <Grid container spacing={1} key={id}>
+                <Grid item xs>
                   <Paper classes={{ root: classes.root }} elevation={1}>
                     <CardContent>
-                      <dl>
-                        <Avatar src={avatar} />
-                        <dt>{first_name}</dt>
-                        <dt>{last_name}</dt>
-                        <dt>{email}</dt>
-                        <dt>{title}</dt>
-                      </dl>
+                      <Avatar className={classes.large} src={avatar} />
+                      <Typography
+                        classes={{ root: classes.padding }}
+                        variant="h5"
+                        gutterBottom
+                      >
+                        {last_name}, {first_name}
+                      </Typography>
+                      <Typography></Typography>
+                      <Typography>{email}</Typography>
+                      <Typography>{title}</Typography>
                       {isFollowed.includes(true) ? (
                         <Button onClick={(e) => updateFollow(id, "unfollow")}>
                           Unfollow
