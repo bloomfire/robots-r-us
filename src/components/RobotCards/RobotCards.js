@@ -8,7 +8,7 @@ function RobotCards(props) {
     <Wrapper>
     <div className="card">
       <div className="img-container">
-        <img alt={props.firstname} src={props.avatar} />
+        <img alt={props.firstname} src={props.avatar  != null ? props.avatar : "https://i.ibb.co/yNz7yWL/a2863ef9df99f34890d48808610bb5fe.jpg"} />
       </div>
       <div className="content">
         <ul>
