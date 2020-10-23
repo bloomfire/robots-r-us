@@ -3,6 +3,7 @@ import data from "./data";
 import "./App.css";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
+import Card from “@material-ui/core/Card”;
 import CardContent from "@material-ui/core/CardContent";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
@@ -17,6 +18,7 @@ function App() {
           return (
             <Grid>
               <Grid>
+                <Card>
                 <CardContent>
                   <dl>
                     <Avatar src={avatar} />
@@ -27,6 +29,7 @@ function App() {
                   </dl>
                   <Button>Button</Button>
                 </CardContent>
+                </Card>
               </Grid>
             </Grid>
           );
