@@ -7,7 +7,9 @@ function App() {
   return (
     <div className="App">
       <h1>Robots-R-Us</h1>
-      {data.map(robot => (<Employee robot={robot}/>))}
+      <div className="profile-container">
+        {data.map(robot => (<Employee robot={robot}/>))}
+      </div>
     </div>
   );
 }

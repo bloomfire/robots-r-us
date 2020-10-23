@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import "./Employee.css";
 
 const Employee = ({robot}) => {
   const [following, setFollowing] = useState(false);
