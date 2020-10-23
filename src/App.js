@@ -9,8 +9,8 @@ function App() {
     <div className="App">
       <h1>Robots-R-Us</h1>
       <Wrapper>
-        {data.map((robot) => {
-          return <Robot robot={robot} />;
+        {data.map((robot, idx) => {
+          return <Robot robot={robot} key={idx} />;
         })}
       </Wrapper>
     </div>

@@ -19,6 +19,8 @@ export const Avatar = styled.img`
   background-color: #6699cd;
   border-radius: 50px;
   margin-bottom: 20px;
+  max-height: 100px;
+  max-width: 100px;
 `;
 
 export const Name = styled.div`
@@ -35,7 +37,7 @@ export const Title = styled.div`
 
 export const Follow = styled.button`
   margin-bottom: 20px;
-  background: green;
+  background: ${({ buttonState }) => (buttonState ? "green" : "")};
   border-radius: 5px;
-  color: white;
+  color: ${({ buttonState }) => (buttonState ? "white" : "")};
 `;
