@@ -57,8 +57,12 @@ export default function App() {
                     <Typography gutterBottom variant="h5" component="h2">
                       {last_name}, {first_name}
                     </Typography>
-                    <Typography variant="body2">{email}</Typography>
-                    <Typography variant="body2">{title}</Typography>
+                    <Typography variant="body2">
+                      {email ? email : "No Email Found"}
+                    </Typography>
+                    <Typography variant="body2">
+                      {title ? title : "No Title Found"}
+                    </Typography>
                     {follow ? (
                       <Button onClick={() => updateFollowed(index, false)}>
                         Unfollow
