@@ -18,7 +18,7 @@ export default class Following extends React.Component {
                 }, () => { }) : this.setState({
                     following: false,
                 }, () => { })
-            }} variant="success" > { (this.state.following === false) ? "Follow" : "Following"}</Button >
+            }} variant={(this.state.following === true)? "success" : "outline-success"} > { (this.state.following === false) ? "Follow" : "Following"}</Button >
         )
     }
 }
