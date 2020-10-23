@@ -1,10 +1,54 @@
 .App {
-  text-align: center;
+  display: grid;
+  grid-gap: 40px;
+}
+
+@media screen and (min-width: 0px) {
+  .App {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .App {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    grid-gap: 20px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .App {
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 3%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .App {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+h1 {
+  color: #333333;
+  margin-left: 3%;
+}
+
+.sort-row {
+}
+
+.sort {
+  color: #333333;
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0 0 2% 3%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
