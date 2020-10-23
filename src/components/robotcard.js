@@ -17,7 +17,6 @@ function Robotcard({
   clickHandler,
   id,
 }) {
-  const robot = { first_name, last_name, email, title, avatar };
   function handleClick(id, lastName) {
     const newobject = {
       [id]: lastName,
