@@ -61,3 +61,9 @@
   background-color: #3c8104;
   border: 2px solid black;
 }
+
+.robot-avatar {
+  background-color: #6599cc;
+  border-radius: 50%;
+  height: 6rem;
+}
