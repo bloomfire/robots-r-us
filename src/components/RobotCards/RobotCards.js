@@ -13,7 +13,7 @@ function RobotCards(props) {
       <div className="content">
         <ul>
           <li>
-            <strong>{props.firstname} {props.lastname} </strong> 
+            <strong>{props.lastname} {props.firstname}</strong> 
           </li>
           <li>
             <FollowButton /> 
