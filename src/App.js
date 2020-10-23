@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import data from "./data";
 import "./App.css";
+import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
@@ -11,7 +12,20 @@ import CardHeader from "@material-ui/core/CardHeader";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 1,
+  },
+}));
+
 export default function App() {
+  const classes = useStyles();
   const [followed, setFollowed] = useState();
   useEffect(() => {
     if (!followed) {
@@ -27,7 +41,7 @@ export default function App() {
 
   return (
     <CssBaseline>
-      <Container className="App">
+      <Container maxWidth="xl" className="App">
         <h1 className="App-header">Robots-R-Us</h1>
         <Grid container spacing={3}>
           {data.map((robot, index) => {
@@ -53,6 +67,7 @@ export default function App() {
                             height: 100,
                             width: 100,
                             backgroundColor: "#efa032",
+                            marginLeft: 70,
                           }}
                         />
                       }
@@ -62,18 +77,13 @@ export default function App() {
                     <Typography gutterBottom variant="h6" component="h2">
                       {last_name}, {first_name}
                     </Typography>
-                    <Typography variant="body2">
-                      {email ? email : "No Email Found"}
-                    </Typography>
-                    <Typography variant="body2">
-                      {title ? title : "No Title Found"}
-                    </Typography>
                     {follow ? (
                       <Button
+                        gutterBottom
                         size="small"
                         variant="contained"
                         style={{
-                          backgroundColor: follow ? "#6BBF98" : "white",
+                          backgroundColor: follow ? "#46b59b" : "white",
                           color: follow ? "#F2F1F0" : "black",
                         }}
                         onClick={() => updateFollowed(index, false)}
@@ -89,6 +99,12 @@ export default function App() {
                         Follow
                       </Button>
                     )}
+                    <Typography variant="body2">
+                      {email ? email : "No Email Found"}
+                    </Typography>
+                    <Typography variant="body2">
+                      {title ? title : "No Title Found"}
+                    </Typography>
                   </CardContent>
                 </Card>
               </Grid>

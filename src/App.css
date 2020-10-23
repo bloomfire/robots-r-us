@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
   background: #017e7f;
 }
 
@@ -9,7 +8,7 @@
 }
 
 .App-header {
-  font-size: 3rem;
+  font-size: 4rem;
   text-align: center;
   height: 15vh;
   line-height: 15vh;
@@ -19,11 +18,6 @@
   text-shadow: 2px 2px 0px #eb452b, 4px 4px 0px #efa032, 6px 6px 0px #46b59b,
     8px 8px 0px #017e7f, 10px 10px 0px #052939, 12px 12px 0px #c11a2b,
     14px 14px 0px #c11a2b, 16px 16px 0px #c11a2b, 18px 18px 0px #c11a2b;
-}
-
-html {
-  width: 100%;
-  background-color: #017e7f;
 }
 
 @media (prefers-reduced-motion: no-preference) {
