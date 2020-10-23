@@ -1,10 +1,9 @@
 body {
-  background-color: #cfd0d1;
+  background-image: url('./components/moroccan-flower.png');
 }
 
 .App {
   text-align: center;
-  background-color: #cfd0d1;
   font-family: 'Roboto', sans-serif;
 }
 
