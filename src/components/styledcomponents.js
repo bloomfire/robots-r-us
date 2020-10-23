@@ -21,8 +21,15 @@ text-align: center;
 border-radius: 4px;
 width: 300px;
 height: 300px;
-
 }`;
+
+export const ContentArea = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-grow: 1;
+`;
+
 export const Avatar = styled.img`
   background-color: #6699cc;
   border-radius: 50%;

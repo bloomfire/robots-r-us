@@ -2,14 +2,17 @@ import React from "react";
 import data from "./data";
 import "./App.css";
 import RobotCard from "./components/robotcard";
+import { PageTitle, RobotGrid } from "./components/styledcomponents";
 
 function App() {
   return (
     <div className="App">
-      <h1>Robots-R-Us</h1>
-      {data.map((robot) => (
-        <RobotCard key={robot.id} {...robot} />
-      ))}
+      <PageTitle>Robots-R-Us</PageTitle>
+      <RobotGrid>
+        {data.map((robot) => (
+          <RobotCard key={robot.id} {...robot} />
+        ))}
+      </RobotGrid>
     </div>
   );
 }
