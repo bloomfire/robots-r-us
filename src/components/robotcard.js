@@ -7,13 +7,31 @@ import {
   Content,
   ContentArea,
 } from "./styledcomponents";
-function Robotcard({ first_name, last_name, email, title, avatar, follow }) {
+function Robotcard({
+  first_name,
+  last_name,
+  email,
+  title,
+  avatar,
+  follow,
+  clickHandler,
+  id,
+}) {
+  const robot = { first_name, last_name, email, title, avatar };
+  function handleClick(id, lastName) {
+    const newobject = {
+      [id]: lastName,
+    };
+    clickHandler(newobject);
+  }
   return (
     <RobotCard>
       <Avatar src={avatar ? avatar : "https://robohash.org/unknown?set=set4"} />
       <ContentArea>
         <Name>{first_name + " " + last_name}</Name>
-        <Button follow={follow}>{follow ? "Following" : "Follow"}</Button>
+        <Button follow={follow} onClick={() => handleClick(id, last_name)}>
+          {follow ? "Following" : "Follow"}
+        </Button>
         {title && <Content>{title}</Content>}
         {email && <Content>{email}</Content>}
       </ContentArea>
