@@ -55,3 +55,9 @@
   text-align: center;
   background-color: white;
 }
+
+.followed {
+  color: white;
+  background-color: #3c8104;
+  border: 2px solid black;
+}
