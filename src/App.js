@@ -7,7 +7,6 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 
@@ -55,7 +54,9 @@ function App() {
   return (
     <div className="App">
       <CssBaseline>
-        <h1>Robots-R-Us</h1>
+        <Container className="App-header" align="center">
+          <h1>ROBOTS-R-US</h1>
+        </Container>
         <Container>
           {data.map((robot) => {
             const { id, first_name, last_name, email, title, avatar } = robot;
@@ -63,28 +64,27 @@ function App() {
               <Grid container spacing={1} key={id}>
                 <Grid item xs>
                   <Paper classes={{ root: classes.root }} elevation={1}>
-                    <CardContent>
+                    <Container align="center">
                       <Avatar className={classes.large} src={avatar} />
-                      <Typography
-                        classes={{ root: classes.padding }}
-                        variant="h5"
-                        gutterBottom
-                      >
-                        {last_name}, {first_name}
-                      </Typography>
-                      <Typography></Typography>
-                      <Typography>{email}</Typography>
-                      <Typography>{title}</Typography>
-                      {isFollowed.includes(true) ? (
-                        <Button onClick={(e) => updateFollow(id, "unfollow")}>
-                          Unfollow
-                        </Button>
-                      ) : (
-                        <Button onClick={(e) => updateFollow(id, "follow")}>
-                          Follow
-                        </Button>
-                      )}
-                    </CardContent>
+                    </Container>
+                    <Typography
+                      classes={{ root: classes.padding }}
+                      variant="h5"
+                      gutterBottom
+                    >
+                      {last_name}, {first_name}
+                    </Typography>
+                    <Typography variant="body2">{email}</Typography>
+                    <Typography variant="body2">{title}</Typography>
+                    {isFollowed.includes(true) ? (
+                      <Button onClick={(e) => updateFollow(id, "unfollow")}>
+                        Unfollow
+                      </Button>
+                    ) : (
+                      <Button onClick={(e) => updateFollow(id, "follow")}>
+                        Follow
+                      </Button>
+                    )}
                   </Paper>
                 </Grid>
               </Grid>
