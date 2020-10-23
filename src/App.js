@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <h1>Robots-R-Us</h1>
       {data.map((robot) => (
-        <RobotCard key={robot.id} />
+        <RobotCard key={robot.id} {...robot} />
       ))}
     </div>
   );
