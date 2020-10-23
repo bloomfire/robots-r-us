@@ -42,7 +42,15 @@ export const Name = styled.h2`
   margin: 0;
   margin-bottom: 1rem;
 `;
-export const Button = styled.button``;
+export const Button = styled.button`
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border-radius: 4px;
+  color: ${(props) => (props.follow ? "white" : "")};
+  background-color: ${(props) => (props.follow ? "#008001" : "")};
+  border: 2px solid ${(props) => (props.follow ? "white" : "")};
+`;
 export const Content = styled.p`
   font-size: 0.8rem;
   margin: 0;
