@@ -1,11 +1,12 @@
 import React from 'react';
 import data from './data';
+import Header from './components/Header'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Robots-R-Us</h1>
+      <Header />
       {/* {data.map(robot => ...)} */}
     </div>
   );
