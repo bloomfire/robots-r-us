@@ -11,15 +11,17 @@ const Employee = ({robot}) => {
 
   return (
     <div className="avatar-profile">
-      <img src={robot.avatar} alt="robot avatar"/>
-      <div>
-        {`${robot.first_name} ${robot.last_name}`}
+      <img className="profile-info" src={robot.avatar} alt="robot avatar"/>
+      <div className="profile-info robot-name">
+        <b>
+          {`${robot.first_name} ${robot.last_name}`}
+        </b>
       </div>
-      <button onClick={e => handleFollow(e)}>{following ? "Unfollow" : "Follow"}</button>
-      <div>
+      <button className="profile-info" style={following ? {background: "green", color: "white"} : null} onClick={e => handleFollow(e)}>{following ? "Unfollow" : "Follow"}</button>
+      <div className="profile-info">
         {robot.title}
       </div>
-      <div>
+      <div className="profile-info">
         {robot.email}
       </div>
     </div>
