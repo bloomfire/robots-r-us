@@ -1,12 +1,35 @@
-import React from 'react';
-import data from './data';
-import './App.css';
+import React from "react";
+import data from "./data";
+import "./App.css";
+import Container from "@material-ui/core/Container";
+import Grid from "@material-ui/core/Grid";
+import CardContent from "@material-ui/core/CardContent";
+import Avatar from "@material-ui/core/Avatar";
 
 function App() {
   return (
     <div className="App">
       <h1>Robots-R-Us</h1>
-      {/* {data.map(robot => ...)} */}
+      <Container>
+        {data.map((robot) => {
+          const { id, first_name, last_name, email, title, avatar } = robot;
+          return (
+            <Grid>
+              <Grid>
+                <CardContent>
+                  <dl>
+                    <Avatar src={avatar} />
+                    <dt>{first_name}</dt>
+                    <dt>{last_name}</dt>
+                    <dt>{email}</dt>
+                    <dt>{title}</dt>
+                  </dl>
+                </CardContent>
+              </Grid>
+            </Grid>
+          );
+        })}
+      </Container>
     </div>
   );
 }
