@@ -1,3 +1,7 @@
+body {
+  background: lightskyblue;
+}
+
 .App {
   text-align: center;
 }
@@ -11,6 +15,15 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.profile-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile-container > div {
+  width: 20%;
 }
 
 .App-header {
