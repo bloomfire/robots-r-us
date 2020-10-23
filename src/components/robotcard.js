@@ -1,14 +1,14 @@
 import React from "react";
-
+import { RobotCard, Avatar, Name, Button, Content } from "./styledcomponents";
 function Robotcard() {
   return (
-    <div>
-      <div>Avatar</div>
-      <div>name</div>
-      <button>follow</button>
-      <p>Title</p>
-      <p>email</p>
-    </div>
+    <RobotCard>
+      <Avatar src="https://robohash.org/autautet.bmp?size=100x100&set=set1" />
+      <Name>name</Name>
+      <Button>follow</Button>
+      <Content>Title</Content>
+      <Content>email</Content>
+    </RobotCard>
   );
 }
 
