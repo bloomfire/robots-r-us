@@ -4,7 +4,7 @@ import data from '../data'
 
 const Robots = () => {
     return (
-        <div>
+        <div className="robots">
            {
                 data.map(robot => 
                     <RobotCard key={robot.id} robot={robot}/>

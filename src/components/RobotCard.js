@@ -9,6 +9,7 @@ const RobotCard = (props) => {
         avatar} = props.robot
     return (
         <div className="robot-card">
+            <img className="robot-avatar" src={avatar} alt='robot-user'/>
             <h2>{`${first_name} ${last_name}`}</h2>
             <h3>{title}</h3>
             <h3>{email}</h3>
