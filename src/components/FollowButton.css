@@ -1,7 +1,14 @@
 /* If following, make button green. If not following, make button gray. */
 
+button {
+    border-radius: 4px;
+    border: 1px solid;
+}
+
 .Following {
     background-color: rgb(27, 146, 27);
+    color: white;
+    border: 1px solid black;
 }
 
 .Follow {

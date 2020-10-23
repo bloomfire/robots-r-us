@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(2),
     textAlign: 'center',
+    backgroundColor: '#ffffff',
   },
 }));
 
@@ -39,9 +40,9 @@ function App() {
             <Grid key={id} item xs>
               <Paper className={classes.paper}>
                 <img src={robot.avatar} alt="robot headshot" />
-                <h1>{robot.first_name} {robot.last_name}</h1>
+                <h2>{robot.first_name} {robot.last_name}</h2>
                 <FollowButton />
-                <h2>{robot.title}</h2>
+                <h3>{robot.title}</h3>
                 <h4>{robot.email}</h4>
               </Paper>
             </Grid>
