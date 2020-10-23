@@ -14,8 +14,8 @@ function Robotcard({ first_name, last_name, email, title, avatar }) {
       <ContentArea>
         <Name>{first_name + " " + last_name}</Name>
         <Button>follow</Button>
-        <Content>{title}</Content>
-        <Content>{email}</Content>
+        {title && <Content>{title}</Content>}
+        {email && <Content>{email}</Content>}
       </ContentArea>
     </RobotCard>
   );
