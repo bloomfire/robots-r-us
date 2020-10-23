@@ -5,6 +5,7 @@ import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import CardContent from "@material-ui/core/CardContent";
 import Avatar from "@material-ui/core/Avatar";
+import Button from "@material-ui/core/Button";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
                     <dt>{email}</dt>
                     <dt>{title}</dt>
                   </dl>
+                  <Button>Button</Button>
                 </CardContent>
               </Grid>
             </Grid>
