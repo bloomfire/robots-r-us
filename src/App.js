@@ -1,13 +1,13 @@
 import React from 'react';
-import data from './data';
 import Header from './components/Header'
+import Robots from './components/Robots'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      {/* {data.map(robot => ...)} */}
+      <Robots />
     </div>
   );
 }
