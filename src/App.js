@@ -1,39 +1,14 @@
 import React, { useState, useEffect } from "react";
 import data from "./data";
 import "./App.css";
-import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Card";
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    maxWidth: "90%",
-    width: "300px",
-    margin: "15px auto",
-    paddingTop: 10,
-    paddingBottom: 10,
-  },
-  paperTransparent: {
-    maxWidth: "90%",
-    width: "920px",
-    margin: "15px auto",
-    paddingTop: 5,
-    paddingBottom: 5,
-    backgroundColor: "#fff0",
-  },
-  padding: {
-    padding: "8px 20px",
-  },
-  large: {
-    width: theme.spacing(7),
-    height: theme.spacing(7),
-  },
-}));
 
 export default function App() {
   const [followed, setFollowed] = useState();
@@ -48,47 +23,58 @@ export default function App() {
     newState[index].follow = status;
     setFollowed(newState);
   };
+
   return (
-    <div className="App">
-      <CssBaseline>
-        <Container className="App-header">
-          <h1>ROBOTS-R-US</h1>
-        </Container>
-        <Container>
-          {data.map((robot) => {
-            const { id, first_name, last_name, email, title, avatar } = robot;
+    <CssBaseline>
+      <Container className="App">
+        <h1 className="App-header">Robots-R-Us</h1>
+        <Grid container spacing={3}>
+          {data.map((robot, index) => {
+            const {
+              id,
+              first_name,
+              last_name,
+              email,
+              follow,
+              title,
+              avatar,
+            } = robot;
             return (
-              <Grid className="grid-X" key={id}>
-                <Grid className="grid-item" xs={12} spacing={3}>
-                  <Paper classes={{ root: classes.root }} elevation={1}>
-                    <Container align="center">
-                      <Avatar className={classes.large} src={avatar} />
-                    </Container>
-                    <Typography
-                      classes={{ root: classes.padding }}
-                      variant="h5"
-                      gutterBottom
-                    >
+              <Grid key={id} item xs={12} sm={6} md={4} lg={3} xl={3}>
+                <Card raised style={{ justifyContent: "center" }}>
+                  <Container align="center">
+                    <Avatar
+                      aria-label="avatar"
+                      src={avatar}
+                      style={{
+                        height: 100,
+                        width: 100,
+                        backgroundColor: "#efa032",
+                      }}
+                    />
+                  </Container>
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
                       {last_name}, {first_name}
                     </Typography>
                     <Typography variant="body2">{email}</Typography>
                     <Typography variant="body2">{title}</Typography>
-                    {isFollowed.includes(true) ? (
-                      <Button onClick={(e) => updateFollow(id, "unfollow")}>
+                    {follow ? (
+                      <Button onClick={() => updateFollowed(index, false)}>
                         Unfollow
                       </Button>
                     ) : (
-                      <Button onClick={(e) => updateFollow(id, "follow")}>
+                      <Button onClick={() => updateFollowed(index, true)}>
                         Follow
                       </Button>
                     )}
-                  </Paper>
-                </Grid>
+                  </CardContent>
+                </Card>
               </Grid>
             );
           })}
-        </Container>
-      </CssBaseline>
-    </div>
+        </Grid>
+      </Container>
+    </CssBaseline>
   );
 }
