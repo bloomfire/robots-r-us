@@ -25,6 +25,7 @@ export default function OutlinedCard() {
   return (
     <Card className={classes.root} variant='outlined'>
       <CardContent>
+
       <Follow />
       </CardContent>
     </Card>
