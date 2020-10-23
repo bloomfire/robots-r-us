@@ -26,6 +26,12 @@ body {
   width: 20%;
 }
 
+@media (max-width: 1200px) {
+  .profile-container > div {
+    width: 40%;
+  }
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
