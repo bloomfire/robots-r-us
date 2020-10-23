@@ -1,14 +1,26 @@
 import React from 'react';
 import data from './data';
+import RobotCards from "./components/RobotCards/RobotCards";
+import Title from "./components/Title/Title"
 import './App.css';
 
-function App() {
+function App() { 
+
   return (
-    <div className="App">
-      <h1>Robots-R-Us</h1>
-      {/* {data.map(robot => ...)} */}
-    </div>
-  );
+    <div className="wrapper">
+      <Title />
+     
+    {data.map(robodata => 
+      <RobotCards
+        avatar={robodata.avatar}
+        lastname={robodata.last_name}
+        firstname={robodata.first_name}
+        email={robodata.email}
+        title={robodata.title}
+        />
+  )}
+  </div>
+  )
 }
 
 export default App;
