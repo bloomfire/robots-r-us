@@ -72,9 +72,13 @@ export default function App() {
                       <Button
                         size="small"
                         variant="contained"
+                        style={{
+                          backgroundColor: follow ? "#6BBF98" : "white",
+                          color: follow ? "#F2F1F0" : "black",
+                        }}
                         onClick={() => updateFollowed(index, false)}
                       >
-                        Unfollow
+                        Following
                       </Button>
                     ) : (
                       <Button

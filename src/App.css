@@ -21,6 +21,11 @@
     14px 14px 0px #c11a2b, 16px 16px 0px #c11a2b, 18px 18px 0px #c11a2b;
 }
 
+html {
+  width: 100%;
+  background-color: #017e7f;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
