@@ -9,6 +9,20 @@ import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 
 function App() {
+  const [follow, setFollow] = useState(data);
+
+  const updateFollow = (id, status) => {
+    let statusObject = { ...follow };
+    statusObject[id] = {
+      status: status,
+    };
+    setFollow(statusObject);
+  };
+
+  const isFollowed = Object.keys(follow).map(
+    (key) => follow[key].status === "follow"
+  );
+
   return (
     <div className="App">
       <h1>Robots-R-Us</h1>
@@ -27,7 +41,15 @@ function App() {
                       <dt>{email}</dt>
                       <dt>{title}</dt>
                     </dl>
-                    <Button>Button</Button>
+                    {isFollowed.includes(true) ? (
+                      <Button onClick={(e) => updateFollow(id, "unfollow")}>
+                        Unfollow
+                      </Button>
+                    ) : (
+                      <Button onClick={(e) => updateFollow(id, "follow")}>
+                        Follow
+                      </Button>
+                    )}
                   </CardContent>
                 </Card>
               </Grid>
