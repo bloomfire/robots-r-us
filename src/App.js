@@ -7,6 +7,7 @@ import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
+import CardHeader from "@material-ui/core/CardHeader";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 
@@ -42,19 +43,23 @@ export default function App() {
             return (
               <Grid key={id} item xs={12} sm={6} md={4} lg={3} xl={3}>
                 <Card raised style={{ justifyContent: "center" }}>
-                  <Container align="center">
-                    <Avatar
-                      aria-label="avatar"
-                      src={avatar}
-                      style={{
-                        height: 100,
-                        width: 100,
-                        backgroundColor: "#efa032",
-                      }}
+                  <Container>
+                    <CardHeader
+                      avatar={
+                        <Avatar
+                          aria-label="avatar"
+                          src={avatar}
+                          style={{
+                            height: 100,
+                            width: 100,
+                            backgroundColor: "#efa032",
+                          }}
+                        />
+                      }
                     />
                   </Container>
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <Typography gutterBottom variant="h6" component="h2">
                       {last_name}, {first_name}
                     </Typography>
                     <Typography variant="body2">
@@ -64,11 +69,19 @@ export default function App() {
                       {title ? title : "No Title Found"}
                     </Typography>
                     {follow ? (
-                      <Button onClick={() => updateFollowed(index, false)}>
+                      <Button
+                        size="small"
+                        variant="contained"
+                        onClick={() => updateFollowed(index, false)}
+                      >
                         Unfollow
                       </Button>
                     ) : (
-                      <Button onClick={() => updateFollowed(index, true)}>
+                      <Button
+                        size="small"
+                        variant="contained"
+                        onClick={() => updateFollowed(index, true)}
+                      >
                         Follow
                       </Button>
                     )}
