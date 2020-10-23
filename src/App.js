@@ -5,7 +5,13 @@ import RobotCard from "./components/robotcard";
 import { PageTitle, RobotGrid } from "./components/styledcomponents";
 
 function App() {
-  const [robot, setRobotFollow] = useState();
+  const [robot, setRobotFollow] = useState(() => {
+    const returnedRobots = localStorage.getItem("robots");
+    if (returnedRobots) {
+      return JSON.parse(returnedRobots);
+    }
+    return {};
+  });
 
   //to be used to handle local storage
   // useEffect(() => {
