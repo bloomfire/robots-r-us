@@ -1,17 +1,18 @@
 import React from "react";
+import { Card, Avatar, Name, Title, Follow } from "../CoreStyles";
 
 export default function Robot({ robot }) {
   return (
-    <div>
+    <Card>
       <div>
-        <img src={robot.avatar} />
+        <Avatar src={robot.avatar} />
       </div>
-      <div>
+      <Name>
         {robot.first_name} {robot.last_name}
-      </div>
-      <button>Follow</button>
-      <div>{robot.title}</div>
+      </Name>
+      <Follow>Follow</Follow>
+      <Title>{robot.title}</Title>
       <div>{robot.email}</div>
-    </div>
+    </Card>
   );
 }
