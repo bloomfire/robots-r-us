@@ -1,7 +1,15 @@
 import styled from "styled-components";
 
-export const PageTitle = styled.h1``;
-export const RobotGrid = styled.div``;
+export const PageTitle = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: black;
+`;
+export const RobotGrid = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
 
 export const RobotCard = styled.div`padding: 1rem;
 display: flex;
@@ -22,6 +30,15 @@ export const Avatar = styled.img`
   width: 100px;
   margin-bottom: 1rem;
 `;
-export const Name = styled.h2``;
+export const Name = styled.h2`
+  font-size: 1rem;
+  margin: 0;
+  margin-bottom: 1rem;
+`;
 export const Button = styled.button``;
-export const Content = styled.p``;
+export const Content = styled.p`
+  font-size: 0.8rem;
+  margin: 0;
+  margin-bottom: 1rem;
+  font-weight: bold;
+`;
