@@ -11,3 +11,17 @@ div.card {
   align-items: center;
   justify-content: space-evenly;
 }
+
+.card .follow-button {
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid #666;
+  cursor: pointer;
+  width: 85px;
+  padding: 3px;
+}
+
+.following {
+  background-color: green !important;
+  color: white;
+}
