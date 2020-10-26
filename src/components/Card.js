@@ -16,7 +16,7 @@ const Card = ({ profile, followed, toggleFollow }) => {
         {followed ? "Following" : "Follow"}
       </button>
       <h3>{title}</h3>
-      <p>{email}</p>
+      <p className="email">{email}</p>
     </div>
   );
 };

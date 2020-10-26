@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import data from "./data";
 // components
 import Card from "./components/Card";
@@ -9,12 +9,18 @@ function App() {
   // chose Set as data structure due to its search efficiency
   const [follows, setFollows] = useState(new Set());
 
+  useEffect(() => {
+    // TODO: read data from local storage and initialize state
+  }, []);
+
   const handleFollowClick = (id) => {
     const newFollows = new Set(follows);
 
     // delete id from set if value is found, otherwise add it to set
     // delete method returns false if value is not found
     !newFollows.delete(id) && newFollows.add(id);
+
+    // TODO: save data in local storage
 
     // update state
     setFollows(newFollows);

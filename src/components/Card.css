@@ -1,6 +1,8 @@
 div.card {
   background-color: white;
   width: 22%;
+  max-width: 340px;
+  min-height: 320px;
   margin-bottom: 20px;
   padding: 20px 15px;
   border-radius: 5px;
@@ -10,6 +12,26 @@ div.card {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+}
+
+@media (max-width: 1028px) {
+  div.card {
+    width: 30%;
+  }
+}
+
+@media (max-width: 776px) {
+  div.card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 520px) {
+  div.card {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .card .follow-button {
@@ -24,4 +46,8 @@ div.card {
 .following {
   background-color: green !important;
   color: white;
+}
+
+.card .email {
+  font-weight: bold;
 }
