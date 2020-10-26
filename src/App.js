@@ -10,7 +10,13 @@ function App() {
   const [follows, setFollows] = useState(new Set());
 
   useEffect(() => {
-    // TODO: read data from local storage and initialize state
+    // read data from local storage and initialize state
+    const localStorageFollows = JSON.parse(
+      window.localStorage.getItem("follows"),
+    );
+
+    // set state with a new Set created from data retrieved from localStorage
+    setFollows(new Set(localStorageFollows));
   }, []);
 
   const handleFollowClick = (id) => {
@@ -20,7 +26,11 @@ function App() {
     // delete method returns false if value is not found
     !newFollows.delete(id) && newFollows.add(id);
 
-    // TODO: save data in local storage
+    // save data in local storage
+    window.localStorage.setItem(
+      "follows",
+      JSON.stringify(Array.from(newFollows)),
+    );
 
     // update state
     setFollows(newFollows);
