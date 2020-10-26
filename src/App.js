@@ -9,9 +9,11 @@ function App() {
   return (
     <div className="App">
       <h1>Robots-R-Us</h1>
-      {data.map((robot) => (
-        <Card key={robot.id} profile={robot} />
-      ))}
+      <div className="cards-container">
+        {data.map((robot) => (
+          <Card key={robot.id} profile={robot} />
+        ))}
+      </div>
     </div>
   );
 }
