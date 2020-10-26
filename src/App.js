@@ -8,7 +8,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <h1>Robots-R-Us</h1>
+      <h1 className="title">Robots-R-Us</h1>
       <div className="cards-container">
         {data.map((robot) => (
           <Card key={robot.id} profile={robot} />

@@ -1,0 +1,16 @@
+.App {
+  background-color: #6699cc;
+  padding: 0 1.4%;
+}
+
+.App .title {
+  padding: 14px 0;
+  text-align: center;
+}
+
+.App div.cards-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

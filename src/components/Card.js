@@ -1,10 +1,12 @@
 import React from "react";
+// style
+import "./Card.css";
 
 const Card = ({ profile }) => {
   const { id, first_name, last_name, email, title, avatar } = profile;
 
   return (
-    <div>
+    <div className="card">
       {avatar && <img src={avatar} alt={`${first_name} ${last_name}`} />}
       <h2>{`${first_name} ${last_name}`}</h2>
       <button>Follow</button>
