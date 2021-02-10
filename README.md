@@ -2,13 +2,15 @@
 
 ## Description
 
-You've just been hired at Robots-R-Us. Your first task is to build a social-media inspired employee directory using React with a backend API written in Rails. [Example data](src/data.json) is provided, and the designer gave you this spec to work off:
+You've just been hired at Robots-R-Us. Your first task is to finish an employee directory using React with a backend API written in Rails. [Example data](src/data.json) is provided, and the designer gave you this spec to work off:
 
-![Image of Robots-R-Us](https://i.imgur.com/kcDj5a5.png)
+![Image of Robots-R-Us](https://i.imgur.com/rIN6Ehp.png)
+
+Before the project was assigned to you, your co-worker started building out the feature with [React-Table 6](https://www.npmjs.com/package/react-table-6). The scaffolding of the API and React-Table are both done, there are just a few small tasks left...
 
 ## Objective
 
-* Build employee directory using reusable React components, _inspired_ by the spec above
+* Finish the employee directory using the existing React-Table component; finished product should resemble the spec above
 * Build a database-backed API to return (optionally filtered) employee data
 * Open a pull request against `main` with whatever you've completed to have your code reviewed
 
@@ -65,19 +67,46 @@ $ yarn start
 Navigate to `localhost:3000`
 
 ## To-Do
-* Render robot `data` on the page — include the robots' full names, email addresses, avatars, and job titles in their profiles
-* Add a dynamic, clickable "Follow" button to each profile that distinguishes between followed and unfollowed robots
-* Style the page to make it your own (background colors, layouts, cards vs list-items, etc)
-* Build out the `/api/employees` API endpoint to return data in the same structure as `[Example data](src/data.json)`.  (Yes, it's supposed to be a little odd.  Sometimes life is that way ...)
-* Make sure the API is fed by a database (e.g. SQLite3)
-* Build in filtering to the API based on query parameter, e.g. `/api/employees?first_name=Red&last_name=Pudner`
+1. Massage the data (either hardcoded data.json OR the API) into the following form:
+
+```
+const formattedColumns = [
+  { Header: "ID", accessor: "id" },
+  { Header: "First Name", accessor: "first_name" },
+  { Header: "Last Name", accessor: "last_name" },
+  { Header: "Email Address", accessor: "email" },
+  { Header: "Job Title", accessor: "title" },
+  { Header: "Profile Picture", accessor: "avatar" },
+];
+
+const formattedData = [
+  { id: 1, first_name: "Red", last_name: "Pudner", email: "rpudner0@shareasale.com", title: "Pharmacist", avatar: '...' },
+  { id: 2, first_name: "Olva", last_name: "Kellegher", email: "okellegher1@prlog.org", title: null, avatar: '...' },
+  { id: 3, first_name: "Byrle", last_name: "Dick", email: null, title: null, avatar: '...' },
+  { id: 4, first_name: "Cecile", last_name: "Rainton", email: "crainton3@artisteer.com", title: "Recruiter", avatar: '...' },
+  { id: 5, first_name: "Gwennie", last_name: "Clancy", email: "gclancy4@ifeng.com", title: "Chief Design Engineer", avatar: '...' },
+  { id: 6, first_name: "Meriel", last_name: "Form", email: "mform5@mozilla.org", title: null, avatar: '...' },
+...
+];
+```
+You can use format the data on the backend
+or if you're familiar with Redux, you can do it in the selector...
+formattedColumns = useSelector(Selectors.getFormattedColumns);
+formattedData = useSelector(Selectors.getFormattedData);
+
+or you can manipulate the hardcoded directly in the data.json file...
+formatted Data = data.map(...);
+
+All are viable options, and we will not think less of either solution!
+No matter _how_ you do it, we just need to see the data manipulated into the correct shape :)
+
+2. Build out the `/api/employees` API endpoint to return data in the same structure as `[Example data](src/data.json)`.  (Yes, it's supposed to be a little odd.  Sometimes life is that way ...)
+3. Make sure the API is fed by a database (e.g. SQLite3)
+4. Build in filtering to the API based on query parameter, e.g. `/api/employees?first_name=Red&last_name=Pudner`
 
 #### Bonus points if you...
-* Add responsive styling
-* Use React Hooks
+* Render the robots' avatars (with a default avatar for those who don't have one)
 * Sort robots by last name (API and/or React)
-* Add a default avatar for robots who don't have one
-* Retain following state on refresh (API and/or React)
 
 ## Guidelines
 * Please don't spend more than 1 or 2 hours on this challenge.  It's okay to not finish everything.  Do what you can as well as you can.
