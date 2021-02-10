@@ -1,2 +1,6 @@
-export const getFormattedData = ({ data }) => data;
-export const isLoading = state => state.data.isLoading;
+export const getFormattedData = ({ data }) => {
+  return [];
+};
+export const getFormattedColumns = ({ data }) => {
+  return [];
+};
