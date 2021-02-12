@@ -20,7 +20,7 @@
   "scripts": {
     "start": "concurrently --kill-others \"yarn start-react\" \"yarn start-rails\"",
     "start-react": "react-scripts start",
-    "start-rails": "cd api && rails s",
+    "start-rails": "cd api && rails db:create && rails db:migrate && rails db:seed && rails s",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
