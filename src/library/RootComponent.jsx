@@ -21,21 +21,19 @@
 
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Actions, Selectors } from "../data/index";
-import { data, fields, field_types } from '../data.json';
-
 // Import React Table
 import ReactTable from "react-table-6";
 import "react-table-6/react-table.css";
+import { Actions, Selectors } from "../data/index";
 
 const RootComponent = () => {
-  let formattedColumns = [];
-  let formattedData = [];
+  // let formattedColumns = [];
+  // let formattedData = [];
 
   // You can use format the data on the backend
   // or if you're familiar with Redux, you can do it in the selector...
-  // formattedColumns = useSelector(Selectors.getFormattedColumns);
-  // formattedData = useSelector(Selectors.getFormattedData);
+  const formattedColumns = useSelector(Selectors.getFormattedColumns);
+  const formattedData = useSelector(Selectors.getFormattedData);
 
   // or you can manipulate the hardcoded directly in the data.json file...
   // formatted Data = data.map(...);
@@ -51,10 +49,7 @@ const RootComponent = () => {
   return (
     <>
       <h1>Robots-R-Us</h1>
-      <ReactTable
-        columns={formattedColumns}
-        data={formattedData}
-      />
+      <ReactTable columns={formattedColumns} data={formattedData} />
     </>
   );
 };
