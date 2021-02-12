@@ -1,5 +1,12 @@
 // Eventually we need our data to look like this....
 
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+// Import React Table
+import ReactTable from "react-table-6";
+import "react-table-6/react-table.css";
+import { Actions, Selectors } from "../data/index";
+
 // const formattedColumns = [
 //   { Header: "ID", accessor: "id" },
 //   { Header: "First Name", accessor: "first_name" },
@@ -18,13 +25,6 @@
 //   { id: 6, first_name: "Meriel", last_name: "Form", email: "mform5@mozilla.org", title: null, avatar: '...' },
 // ...
 // ];
-
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-// Import React Table
-import ReactTable from "react-table-6";
-import "react-table-6/react-table.css";
-import { Actions, Selectors } from "../data/index";
 
 const RootComponent = () => {
   // let formattedColumns = [];
@@ -47,10 +47,10 @@ const RootComponent = () => {
   }, [dispatch]);
 
   return (
-    <>
+    <div className="table-root">
       <h1>Robots-R-Us</h1>
       <ReactTable columns={formattedColumns} data={formattedData} />
-    </>
+    </div>
   );
 };
 
