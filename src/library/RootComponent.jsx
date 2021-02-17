@@ -20,17 +20,28 @@
 // ];
 
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Actions, Selectors } from "../data/index";
-import { data, fields, field_types } from '../data.json';
+import { useDispatch } from "react-redux";
+import { Actions } from "../data/index";
+import { data, fields } from "../data.json";
 
 // Import React Table
 import ReactTable from "react-table-6";
 import "react-table-6/react-table.css";
+import styled from "styled-components";
 
 const RootComponent = () => {
-  let formattedColumns = [];
-  let formattedData = [];
+  const formattedColumns = fields.map((field) => ({
+    Header: field.name,
+    accessor: field.id,
+  }));
+  const formattedData = data.map((employee) => ({
+    id: employee[0],
+    first_name: employee[1],
+    last_name: employee[2],
+    email: employee[3],
+    title: employee[4],
+    avatar: employee[5],
+  }));
 
   // You can use format the data on the backend
   // or if you're familiar with Redux, you can do it in the selector...
@@ -49,14 +60,15 @@ const RootComponent = () => {
   }, [dispatch]);
 
   return (
-    <>
+    <Container>
       <h1>Robots-R-Us</h1>
-      <ReactTable
-        columns={formattedColumns}
-        data={formattedData}
-      />
-    </>
+      <ReactTable columns={formattedColumns} data={formattedData} />
+    </Container>
   );
 };
+
+const Container = styled.div`
+  padding: 0px 50px;
+`;
 
 export default RootComponent;
