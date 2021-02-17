@@ -19,9 +19,7 @@
 // ...
 // ];
 
-import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { Actions } from "../data/index";
+import React, { useEffect, useState } from "react";
 import { data, fields } from "../data.json";
 
 // Import React Table
@@ -42,6 +40,7 @@ const RootComponent = () => {
     title: employee[4],
     avatar: employee[5],
   }));
+  const [fetchedData, setFetchedData] = useState([]);
 
   // You can use format the data on the backend
   // or if you're familiar with Redux, you can do it in the selector...
@@ -54,10 +53,11 @@ const RootComponent = () => {
   // All are viable options, and we will not think less of either solution!
   // No matter _how_ you do it, we just need to see the data manipulated into the correct shape :)
 
-  const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(Actions.getData());
-  }, [dispatch]);
+    fetch("http://localhost:3001/api/employees")
+      .then((response) => response.json())
+      .then((data) => setFetchedData(data));
+  });
 
   return (
     <Container>
