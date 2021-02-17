@@ -62,7 +62,9 @@ const RootComponent = () => {
   return (
     <Container>
       <h1>Robots-R-Us</h1>
-      <ReactTable columns={formattedColumns} data={formattedData} />
+      <div data-testid="employee-table">
+        <ReactTable columns={formattedColumns} data={formattedData} />
+      </div>
     </Container>
   );
 };
