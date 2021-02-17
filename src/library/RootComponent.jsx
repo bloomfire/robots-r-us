@@ -27,19 +27,47 @@ import ReactTable from "react-table-6";
 import "react-table-6/react-table.css";
 import styled from "styled-components";
 
-const RootComponent = () => {
-  const formattedColumns = fields.map((field) => ({
+const formattedColumns = fields.slice(1).map((field) => {
+  if (field.id === "avatar") {
+    return {
+      Header: field.name,
+      accessor: field.id,
+      Cell: (props) => (
+        <img
+          src={`${
+            props.value ?? "https://robohash.org/default?size=100x100"
+          }`}
+          alt="avatar"
+        />
+      ),
+    };
+  }
+  return {
     Header: field.name,
     accessor: field.id,
-  }));
-  const formattedData = data.map((employee) => ({
-    id: employee[0],
-    first_name: employee[1],
-    last_name: employee[2],
-    email: employee[3],
-    title: employee[4],
-    avatar: employee[5],
-  }));
+  };
+});
+
+const formattedData = data.map((employee) => ({
+  id: employee[0],
+  first_name: employee[1],
+  last_name: employee[2],
+  email: employee[3],
+  title: employee[4],
+  avatar: employee[5],
+})).sort((a, b) => {
+  if (a.last_name < b.last_name) {
+    return -1
+  }
+
+  if (a.last_name > b.last_name) {
+    return 1
+  }
+
+  return 0
+});
+
+const RootComponent = () => {
   const [fetchedData, setFetchedData] = useState([]);
 
   // You can use format the data on the backend
