@@ -39,6 +39,23 @@ const RootComponent = () => {
 
   // or you can manipulate the hardcoded directly in the data.json file...
   // formatted Data = data.map(...);
+  formattedColumns = fields.map(item => {
+      return {
+          Header: item.name,
+          accessor: item.id
+      }
+  });
+
+  formattedData = data.map(item => {
+      return {
+          id: item[0],
+          first_name: item[1],
+          last_name: item[2],
+          email: item[3] || "No Email",
+          title: item[4] || "No Title",
+          avatar: item[5]
+      }
+  })
 
   // All are viable options, and we will not think less of either solution!
   // No matter _how_ you do it, we just need to see the data manipulated into the correct shape :)
