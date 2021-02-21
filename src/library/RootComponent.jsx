@@ -36,7 +36,6 @@ const RootComponent = () => {
   // or if you're familiar with Redux, you can do it in the selector...
   // formattedColumns = useSelector(Selectors.getFormattedColumns);
   // formattedData = useSelector(Selectors.getFormattedData);
-
   // or you can manipulate the hardcoded directly in the data.json file...
   // formatted Data = data.map(...);
   formattedColumns = fields.map(item => {
@@ -51,8 +50,8 @@ const RootComponent = () => {
           id: item[0],
           first_name: item[1],
           last_name: item[2],
-          email: item[3] || "No Email",
-          title: item[4] || "No Title",
+          email: item[3],
+          title: item[4],
           avatar: item[5]
       }
   })
