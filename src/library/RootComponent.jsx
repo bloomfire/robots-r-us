@@ -38,11 +38,13 @@ const RootComponent = () => {
   // formattedData = useSelector(Selectors.getFormattedData);
   // or you can manipulate the hardcoded directly in the data.json file...
   // formatted Data = data.map(...);
-  formattedColumns = fields.map(item => {
-      return {
-          Header: item.name,
-          accessor: item.id
-      }
+  formattedColumns = fields
+      .filter(item => item.id !== "avatar" && item.id !== "id")
+      .map(item => {
+          return {
+              Header: item.name,
+              accessor: item.id
+          }
   });
 
   formattedData = data.map(item => {
