@@ -72,6 +72,10 @@ const RootComponent = () => {
       <ReactTable
         columns={formattedColumns}
         data={formattedData}
+        sorted={[{ // the sorting model for the table
+            id: 'last_name',
+            asc: true
+        }]}
       />
     </>
   );
