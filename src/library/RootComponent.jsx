@@ -19,66 +19,68 @@
 // ...
 // ];
 
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Actions, Selectors } from "../data/index";
-import { data, fields, field_types } from '../data.json';
+import React from "react";
+import Axios from 'axios';
 
 // Import React Table
 import ReactTable from "react-table-6";
 import "react-table-6/react-table.css";
 
-const RootComponent = () => {
-  let formattedColumns = [];
-  let formattedData = [];
+class RootComponent extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            loading: true,
+            data: [],
+            columns: []
+        };
+    }
 
-  // You can use format the data on the backend
-  // or if you're familiar with Redux, you can do it in the selector...
-  // formattedColumns = useSelector(Selectors.getFormattedColumns);
-  // formattedData = useSelector(Selectors.getFormattedData);
-  // or you can manipulate the hardcoded directly in the data.json file...
-  // formatted Data = data.map(...);
-  formattedColumns = fields
-      .filter(item => item.id !== "avatar" && item.id !== "id")
-      .map(item => {
-          return {
-              Header: item.name,
-              accessor: item.id
-          }
-  });
+    render() {
+        return (
+            <>
+                <h1>Robots-R-Us</h1>
+                <ReactTable
+                    data={this.state.data} // should default to []
+                    columns={this.state.columns}
+                    loading={this.state.loading}
+                    onFetchData={(state, instance) => {
+                        // show the loading overlay
+                        this.setState({
+                            loading: true
+                        })
+                        // fetch your data
+                        Axios.get('http://localhost:3001/api/employees', {})
+                            .then((res) => {
+                                // Update react-table
+                                this.setState({
+                                    data: res.data.data.map(item => {
+                                        return {
+                                            id: item[0],
+                                            first_name: item[1],
+                                            last_name: item[2],
+                                            email: item[3],
+                                            title: item[4],
+                                            avatar: item[5]
+                                        }
+                                    }),
+                                    columns: res.data.fields
+                                        .filter(item => item.id !== "avatar" && item.id !== "id")
+                                        .map(item => {
+                                            return {
+                                                Header: item.name,
+                                                accessor: item.id
+                                            }
+                                        }),
+                                    loading: false
+                                })
+                            })
+                    }}
+                />
+            </>
+        );
+    }
 
-  formattedData = data.map(item => {
-      return {
-          id: item[0],
-          first_name: item[1],
-          last_name: item[2],
-          email: item[3],
-          title: item[4],
-          avatar: item[5]
-      }
-  })
-
-  // All are viable options, and we will not think less of either solution!
-  // No matter _how_ you do it, we just need to see the data manipulated into the correct shape :)
-
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(Actions.getData());
-  }, [dispatch]);
-
-  return (
-    <>
-      <h1>Robots-R-Us</h1>
-      <ReactTable
-        columns={formattedColumns}
-        data={formattedData}
-        sorted={[{ // the sorting model for the table
-            id: 'last_name',
-            asc: true
-        }]}
-      />
-    </>
-  );
 };
 
 export default RootComponent;
