@@ -45,10 +45,6 @@ class RootComponent extends React.Component {
                     columns={this.state.columns}
                     loading={this.state.loading}
                     onFetchData={(state, instance) => {
-                        // show the loading overlay
-                        this.setState({
-                            loading: true
-                        })
                         // fetch your data
                         Axios.get('http://localhost:3001/api/employees', {})
                             .then((res) => {
