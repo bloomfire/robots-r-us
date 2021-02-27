@@ -29,11 +29,10 @@ import ReactTable from "react-table-6";
 import "react-table-6/react-table.css";
 
 const RootComponent = () => {
-  // let columns = []
-  let formattedColumns = [];
+  // let formattedColumns = [];
   // let formattedData = [];
   const [formattedData, setEmployees] = useState([])
-  // let [formattedColumns, setColumns] = useState([])
+  const [formattedColumns, setColumns] = useState([])
   // You can use format the data on the backend
   // or if you're familiar with Redux, you can do it in the selector...
   // formattedColumns = useSelector(Selectors.getFormattedColumns);
@@ -41,10 +40,11 @@ const RootComponent = () => {
 
   // or you can manipulate the hardcoded directly in the data.json file...
   // formatted Data = data.map(...);
+
   // formattedData = data.map((employee) => ({ id: employee[0], first_name: employee[1], last_name: employee[2], email: employee[3], title: employee[4], avatar: employee[5]}))
-  formattedColumns = fields.map((field) => {
-    return (field.id === "id" || field.id === "avatar") ? ({Header: field.name, accessor: field.id, show:false}) : ({Header: field.name, accessor: field.id})
-  });
+  // formattedColumns = fields.map((field) => {
+  //   return (field.id === "id" || field.id === "avatar") ? ({Header: field.name, accessor: field.id, show:false}) : ({Header: field.name, accessor: field.id})
+  // });
 
   // All are viable options, and we will not think less of either solution!
   // No matter _how_ you do it, we just need to see the data manipulated into the correct shape :)
@@ -58,7 +58,29 @@ const RootComponent = () => {
       const response = await fetch('http://localhost:3001/api/employees');
       const json = await response.json();
       setEmployees(json);
-
+      let columns = []
+      for(const key in json[0]){
+        columns.push(key)
+      }
+      columns = columns.map((key)=> {
+        switch (key){
+          case "id":
+            return {Header: "ID", accessor: key, show:false}
+          case "avatar":
+            return {Header: "Profile Picture", accessor: key, show:false}
+          case "first_name":
+            return {Header: "First Name", accessor: key}
+          case "last_name":
+            return {Header: "Last Name", accessor: key}
+          case "email":
+            return {Header: "Email Address", accessor: key}
+          case "title":
+            return {Header: "Job Title", accessor: key}
+          default:
+            break;
+        } 
+      })
+      setColumns(columns);
     }
     fetchEmployees();
   }, []);
