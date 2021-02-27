@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2021_02_27_003031) do
     t.string "first_name"
     t.string "last_name"
     t.string "email"
-    t.string "job_position"
+    t.string "title"
     t.string "avatar"
   end
 
