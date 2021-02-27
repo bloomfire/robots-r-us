@@ -19,10 +19,11 @@
 // ...
 // ];
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Actions, Selectors } from "../data/index";
 import { data, fields, field_types } from '../data.json';
+import axios from 'axios';
 
 // Import React Table
 import ReactTable from "react-table-6";
@@ -31,14 +32,15 @@ import "react-table-6/react-table.css";
 const RootComponent = () => {
   let formattedColumns = [];
   let formattedData = [];
+  const [employee, setEmployees] = useState(null)
   // You can use format the data on the backend
   // or if you're familiar with Redux, you can do it in the selector...
-  formattedColumns = useSelector(Selectors.getFormattedColumns);
-  formattedData = useSelector(Selectors.getFormattedData);
+  // formattedColumns = useSelector(Selectors.getFormattedColumns);
+  // formattedData = useSelector(Selectors.getFormattedData);
 
   // or you can manipulate the hardcoded directly in the data.json file...
   // formatted Data = data.map(...);
-  // formattedData = data.map((employee) => ({ id: employee[0], first_name: employee[1], last_name: employee[2], email: employee[3], title: employee[4], avatar: employee[5]}))
+  formattedData = data.map((employee) => ({ id: employee[0], first_name: employee[1], last_name: employee[2], email: employee[3], title: employee[4], avatar: employee[5]}))
   formattedColumns = fields.map((field) => {
     return (field.id === "id" || field.id === "avatar") ? ({Header: field.name, accessor: field.id, show:false}) : ({Header: field.name, accessor: field.id})
   });
@@ -46,18 +48,23 @@ const RootComponent = () => {
   // All are viable options, and we will not think less of either solution!
   // No matter _how_ you do it, we just need to see the data manipulated into the correct shape :)
 
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(Actions.getData());
-  }, [dispatch]);
+  // const dispatch = useDispatch();
+  // useEffect(() => {
+  //   dispatch(Actions.getData());
+  // }, [dispatch]);
 
   // fetch(
   //   'http://localhost:3001/api/employees'
-  // ).then(response => response.json()
-  // ).then(data => {
-  //   formattedData = data;
-  //   console.log(formattedData);
-  // });
+  useEffect(() => {
+    async function fetchEmployees() {
+      const response = await fetch('http://localhost:3001/api/employees');
+      const json = await response.json();
+      setEmployees(json);
+    }
+
+    fetchEmployees();
+  }, []);
+  console.log(employee);
 
   return (
     <>
