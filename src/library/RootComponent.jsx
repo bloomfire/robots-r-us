@@ -30,8 +30,8 @@ import "react-table-6/react-table.css";
 
 const RootComponent = () => {
   let formattedColumns = [];
-  let formattedData = [];
-  const [employee, setEmployees] = useState(null)
+  // let formattedData = [];
+  const [formattedData, setEmployees] = useState([])
   // You can use format the data on the backend
   // or if you're familiar with Redux, you can do it in the selector...
   // formattedColumns = useSelector(Selectors.getFormattedColumns);
@@ -52,8 +52,6 @@ const RootComponent = () => {
   //   dispatch(Actions.getData());
   // }, [dispatch]);
 
-  // fetch(
-  //   'http://localhost:3001/api/employees'
   useEffect(() => {
     async function fetchEmployees() {
       const response = await fetch('http://localhost:3001/api/employees');
@@ -62,9 +60,7 @@ const RootComponent = () => {
     }
 
     fetchEmployees();
-    formattedData = employee;
   }, []);
-  console.log(employee);
 
   return (
     <>
