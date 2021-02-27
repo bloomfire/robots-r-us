@@ -23,7 +23,6 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Actions, Selectors } from "../data/index";
 import { data, fields, field_types } from '../data.json';
-import axios from 'axios';
 
 // Import React Table
 import ReactTable from "react-table-6";
@@ -40,7 +39,7 @@ const RootComponent = () => {
 
   // or you can manipulate the hardcoded directly in the data.json file...
   // formatted Data = data.map(...);
-  formattedData = data.map((employee) => ({ id: employee[0], first_name: employee[1], last_name: employee[2], email: employee[3], title: employee[4], avatar: employee[5]}))
+  // formattedData = data.map((employee) => ({ id: employee[0], first_name: employee[1], last_name: employee[2], email: employee[3], title: employee[4], avatar: employee[5]}))
   formattedColumns = fields.map((field) => {
     return (field.id === "id" || field.id === "avatar") ? ({Header: field.name, accessor: field.id, show:false}) : ({Header: field.name, accessor: field.id})
   });
@@ -63,6 +62,7 @@ const RootComponent = () => {
     }
 
     fetchEmployees();
+    formattedData = employee;
   }, []);
   console.log(employee);
 
