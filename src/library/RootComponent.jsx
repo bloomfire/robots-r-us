@@ -31,17 +31,16 @@ import "react-table-6/react-table.css";
 const RootComponent = () => {
   let formattedColumns = [];
   let formattedData = [];
-
   // You can use format the data on the backend
   // or if you're familiar with Redux, you can do it in the selector...
-  // formattedColumns = useSelector(Selectors.getFormattedColumns);
-  // formattedData = useSelector(Selectors.getFormattedData);
+  formattedColumns = useSelector(Selectors.getFormattedColumns);
+  formattedData = useSelector(Selectors.getFormattedData);
 
   // or you can manipulate the hardcoded directly in the data.json file...
   // formatted Data = data.map(...);
-  formattedData = data.map((employee) => ({ id: employee[0], first_name: employee[1], last_name: employee[2], email: employee[3], title: employee[4], avatar: employee[5]}))
+  // formattedData = data.map((employee) => ({ id: employee[0], first_name: employee[1], last_name: employee[2], email: employee[3], title: employee[4], avatar: employee[5]}))
   formattedColumns = fields.map((field) => {
-    return (field.id == "id" || field.id == "avatar") ? ({Header: field.name, accessor: field.id, show:false}) : ({Header: field.name, accessor: field.id})
+    return (field.id === "id" || field.id === "avatar") ? ({Header: field.name, accessor: field.id, show:false}) : ({Header: field.name, accessor: field.id})
   });
 
   // All are viable options, and we will not think less of either solution!
@@ -51,6 +50,14 @@ const RootComponent = () => {
   useEffect(() => {
     dispatch(Actions.getData());
   }, [dispatch]);
+
+  // fetch(
+  //   'http://localhost:3001/api/employees'
+  // ).then(response => response.json()
+  // ).then(data => {
+  //   formattedData = data;
+  //   console.log(formattedData);
+  // });
 
   return (
     <>
