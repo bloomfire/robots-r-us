@@ -1,2 +1,2 @@
-export const getFormattedColumns = ({ data }) => {console.log(data.fields)};
+export const getFormattedColumns = ({ data }) => [];
 export const getFormattedData = ({ data }) => [];
