@@ -22,15 +22,15 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Actions, Selectors } from "../data/index";
-import { data, fields, field_types } from '../data.json';
+// import { data, fields, field_types } from '../data.json';
 
 // Import React Table
 import ReactTable from "react-table-6";
 import "react-table-6/react-table.css";
 
 const RootComponent = () => {
-  let formattedColumns = [];
-  let formattedData = [];
+  const formattedColumns = useSelector(Selectors.getFormattedColumns);
+  const formattedData = useSelector(Selectors.getFormattedData);
 
   // You can use format the data on the backend
   // or if you're familiar with Redux, you can do it in the selector...
