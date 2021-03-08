@@ -22,6 +22,7 @@ export const getFormattedData = ({ data }) => {
           title: robot[4],
           avatar: robot[5],
         };
-      });
+      })
+      .sort((a, b) => a.last_name.localeCompare(b.last_name));
   }
 };

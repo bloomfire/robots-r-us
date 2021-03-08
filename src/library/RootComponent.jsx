@@ -52,7 +52,22 @@ const RootComponent = () => {
     <>
       <h1>Robots-R-Us</h1>
       <ReactTable
-        columns={formattedColumns}
+        columns={formattedColumns.map((column) => {
+          if (column.accessor === 'avatar') {
+            return {
+              ...column,
+              Cell: ({ value }) => {
+                const src = value ? value : 'https://robohash.org/robot?size=100x100';
+                return (
+                  <div style={{ textAlign: 'center' }}>
+                    <img src={src} alt='avatar' />
+                  </div>
+                );
+              },
+            };
+          }
+          return column;
+        })}
         data={formattedData}
       />
     </>
