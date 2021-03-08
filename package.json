@@ -21,6 +21,7 @@
     "start": "concurrently --kill-others \"yarn start-react\" \"yarn start-rails\"",
     "start-react": "react-scripts start",
     "start-rails": "cd api && rails s",
+    "setup-data": "cd api && rails db:setup && rails db:migrate",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
