@@ -1,14 +1,4 @@
 export const getFormattedColumns = ({ data }) => {
-  // if (data.fields) {
-  //   return data.fields.map((field) => {
-  //     const { id, name } = field;
-  //     return {
-  //       Header: name,
-  //       accessor: id,
-  //     };
-  //   });
-  // }
-  // return [];
   const formattedColumns = [];
   if (Array.isArray(data)) {
     const columnKeys = Object.keys(data[0]);
@@ -19,6 +9,7 @@ export const getFormattedColumns = ({ data }) => {
       switch (columnKey) {
         case 'id':
           formattedColumn.Header = 'ID';
+          formattedColumn.show = false;
           break;
         case 'first_name':
           formattedColumn.Header = 'First Name';
@@ -44,20 +35,6 @@ export const getFormattedColumns = ({ data }) => {
   return formattedColumns;
 };
 export const getFormattedData = ({ data }) => {
-  // if (data.data) {
-  //   return data.data
-  //     .map((robot) => {
-  //       return {
-  //         id: robot[0],
-  //         first_name: robot[1],
-  //         last_name: robot[2],
-  //         email: robot[3],
-  //         title: robot[4],
-  //         avatar: robot[5],
-  //       };
-  //     })
-  //     .sort((a, b) => a.last_name.localeCompare(b.last_name));
-  // }
   if (Array.isArray(data)) {
     return data
       .map(({ id, first_name, last_name, email, title, avatar }) => {
@@ -72,4 +49,5 @@ export const getFormattedData = ({ data }) => {
       })
       .sort((a, b) => a.last_name.localeCompare(b.last_name));
   }
+  return [];
 };
