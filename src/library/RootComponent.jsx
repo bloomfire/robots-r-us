@@ -55,6 +55,10 @@ const RootComponent = () => {
       <ReactTable
         columns={formattedColumns}
         data={formattedData}
+        filterable={true}
+        defaultSortMethod={
+          (a, b) => a.last_name.localeCompare(b.last_name)
+        }
       />
     </>
   );

@@ -1,10 +1,11 @@
 export const getFormattedColumns = ({ data }) => {
-    let columns = []
+    const columns = [];
     if (data != null) {
-    for (const key in data[0]) {
+        const keys = Object.keys([data][0]);
+    for (const key in keys) {
         columns.push(key)
     }
-    columns = columns.map((key) => {
+    const column = columns.map((key) => {
         switch (key) {
             case "id":
                 return { Header: "Id", accessor: key, show: false }
@@ -21,9 +22,10 @@ export const getFormattedColumns = ({ data }) => {
             default:
                 break;
         }
+        columns.push(column);
     })
 }   
-    columns.push(columns);
+    
     return columns
 
 };
