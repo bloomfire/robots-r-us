@@ -34,8 +34,8 @@ const RootComponent = () => {
 
   // You can use format the data on the backend
   // or if you're familiar with Redux, you can do it in the selector...
-  // formattedColumns = useSelector(Selectors.getFormattedColumns);
-  // formattedData = useSelector(Selectors.getFormattedData);
+  formattedColumns = useSelector(Selectors.getFormattedColumns);
+  formattedData = useSelector(Selectors.getFormattedData);
 
   // or you can manipulate the hardcoded directly in the data.json file...
   // formatted Data = data.map(...);
